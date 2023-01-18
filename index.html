@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
-
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <script src="https://kit.fontawesome.com/b98dec1c1a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="=ttf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -29,17 +28,14 @@
                 <li><a href="#">eTicket</a></li>
                 <li><a href="#">About</a></li>
                 <li>
-                    <form method="get" action="">
-                        <div class="tb">
-                          <div class="td"><input type="text" placeholder="Search" required></div>
-                          <div class="td" id="s-cover">
-                            <button type="submit">
-                              <div id="s-circle"></div>
-                              <span></span>
+                    <div class="search">
+                        <!-- <form action="#"> -->
+                            <input type="text" placeholder=" Search" name="search">
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
                             </button>
-                          </div>
-                        </div>
-                      </form>
+                        <!-- </form> -->
+                    </div>
                 </li>
             </ul>
     </div>
@@ -112,7 +108,7 @@
         <ul>
             <li>
                 <img src="img/slide-1.png" alt="">
-                <div class="slidetext">
+                <div class="slidetext1">
                     <h2>Art After Dark</h2>
                     <p>Join us on the 4th Friday of each month for a free open house event featuring art, music, and light refreshments at our museum.</p>
                     <a href="#">Visit</a>
@@ -121,7 +117,7 @@
 
             <li>
                 <img src="img/slide-2.png" alt="">
-                <div class="slidetext">
+                <div class="slidetext2">
                     <h2>Embrace the power of creativity</h2>
                     <p>Join us for a special event featuring interactive art installations and workshops designed to inspire and empower your creativity.</p>
                     <a href="#">Buy a ticket</a>
@@ -130,7 +126,7 @@
 
             <li>
                 <img src="img/slide-3.png" alt="">
-                <div class="slidetext">
+                <div class="slidetext3">
                     <h2>Garden of Wonders</h2>
                     <p>Outdoor Sculpture in the Natural World.</p>
                     <a href="#">Plan your  Visit</a>
@@ -140,7 +136,7 @@
 
             <li>
                 <img src="img/slide-4.png" alt="">
-                <div class="slidetext">
+                <div class="slidetext4">
                     <h2>Immersive Art</h2>
                     <p>Dive into immersive art through virtual reality at our exhibit, 'Virtual Realms.</p>
                     <a href="#">Buy a ticket</a>
@@ -148,10 +144,11 @@
             </li>
         </ul>
     </div>
+
     <div class="subscribe">
             <h6>Subscribe to our newsletter</h6>
-            <input type="text" id="submail" name="submail">
-            <input type="submit" value="Submit">
+            <input type="text" id="submail" name="submail" placeholder="enter your email">
+            <input type="submit" value="send">
 
     </div>
     <footer>
@@ -196,23 +193,16 @@
         </div>
         <div class="contactus">
             <h6>Contact Us</h6>
-            <ul>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                    </li>
-            </ul>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                 
         </div>
 
-        <p>本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。<a href="#">參考資料</a></p>
+        
         
     </footer>
-
+    <p>本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。<a href="#">參考資料</a></p>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>

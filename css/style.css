@@ -1,4 +1,8 @@
 @import url('reset.css');
+@font-face{
+    font-family: 'MinSans-Bold';
+    src: url('fonts/MinSans-Bold-v0400.woff2') format("woff");
+  }
 
 body{
     background-color: black;
@@ -47,6 +51,34 @@ body{
     font-family: 'MinSans-Bold';
     
 }
+.search input[type=text]{
+    width:200px;
+    height:25px;
+    border-radius:8px;
+    border: none;
+    padding-left: 10px;
+}
+     
+.search{
+    /* float:right; */
+    margin:7px;
+    position: relative;
+}
+     
+.search button{
+    background-color: transparent;
+    color: #a4a4a4;
+    /* float: right; */
+    position: absolute;
+    right: 5px;
+    padding: 4px 5px;
+    /* margin-right: 10px; */
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+}
+
+
 /* ----banner slider---- */
 
 .banner{
@@ -119,9 +151,9 @@ body{
 .whatson{}
 
 .whatson h1{
-    font-family: 'MinSans-Bold';
     font-size: 2em;
     margin-left: 270px;
+    font-family: 'MinSans-Bold';
 }
 
 .whatson h3{
@@ -164,7 +196,7 @@ body{
 }
 
 .slider li h2{
-    font-family: "MinSans";
+    font-family: 'MinSans-Bold';
     max-width: 450px;
     color: white;
     font-size: 3em;
@@ -186,14 +218,19 @@ body{
 /* ----slogan---- */
 .slogan{
     background-image: url("../img/spotlight1.png");
-    height: 405px;
+    height: 305px;
+    padding-top: 100px;
+
 
 }
 .slogantext{
     display: flex;
     width: 1000px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+
     
 }
 .slogan img{
@@ -201,12 +238,105 @@ body{
 }
 .slogan p{
     /* float: right; */
-    font-size: 2em;
-    justify-self: flex-end;
+    font-size: 2.1em;
+    font-family: MinSans-Bold;
+    
+    
 }
 
 
 /* ----homenews---- */
+.homenews{
+    position: relative;
+    height: 350px;
+    margin-bottom: 30px;
+}
+.homenews h1{
+    font-size: 2em;
+    margin-left: 270px;
+    font-family: 'MinSans-Bold';
+    position: absolute;
+}
+
+.homenews ul{
+    /* border: 1px solid red; */
+    width: 1020px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+.homenews li{
+    margin-bottom: 30px;
+}
+.homenews a{
+    /* text-decoration: none; */
+    color: white;
+    font-size: 1.4em;
+}
+.homenews p{
+    font-size: 1.1em;
+}
+
+.homenews button{
+    /* border: 1px solid red; */
+    background-color: #426a63;
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    font-size: 1.05em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
 
 
-footer{}
+/* ----sbanner---- */
+
+.sbanner li{
+    display: flex;
+}
+
+.sbanner h2{
+    font-size: 1.5em;
+    font-family: 'MinSans-Bold';
+}
+.slidetext1, .slidetext3{
+    width: 740px;
+    background-color: white;
+    /* padding-right: 270px; */
+}
+
+.slidetext2, .slidetext4{
+    width: 740px;
+    background-color: black;
+    order:-1;
+    padding-left: 270px;
+    /* border: 1px solid red; */
+}
+
+
+/* ----subscribe---- */
+.subscribe{
+    display: flex;
+}
+
+
+
+
+/* ----footer---- */
+
+footer{
+    display: flex;
+}
+
+.contactus{
+
+}
+
+.contactus a{
+    color: white;
+    
+}
