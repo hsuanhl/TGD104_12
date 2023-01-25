@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <script src="https://kit.fontawesome.com/b98dec1c1a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/calendar.css"> -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="js/calscript.js" defer></script>
+
+</head>
+<body>
+<!-- <div class="main"> -->
+    <div class="top">
+        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+            <ul class = topbar>
+                <li><a href="#">Visit</a>
+                    <ul class = secondbar>
+                        <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
+                        <li><a href="floorplan1.html">Floor Plan</a></li>
+                    </ul>
+                </li>
+                <li><a href="exhibition.html">Exhibition</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">eTicket</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <div class="search">
+                        <!-- <form action="#"> -->
+                            <input type="text" placeholder=" Search" name="search">
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
+                            </button>
+                        <!-- </form> -->
+                    </div>
+                </li>
+            </ul> 
+    </div>
+    <div class="ticketbanner">
+        <ul>
+            <li class = "icon thispage"><i class="fa-solid fa-ticket"></i></li>
+            <li class = "tline"></li>
+            <li class = "icon"><i class="fa-solid fa-check-double"></i></li>
+            <li class = "tline"></li>
+            <li class = "icon"><i class="fa-solid fa-credit-card"></i></li>
+        </ul>
+        <ul class = "ttitle">
+            <li>Book Ticket</li>
+            <li class ="center">Confirm Booking</li>
+            <li>Payment</li>
+        </ul>
+        <img src="img/ticketbanner.png" alt="">
+    </div>
+    
+    <div class="selectdate">
+        <h2>1. Select a day</h2>
+        <div class="wrapper">
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <p class="current-date"></p>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+            <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+            </div>
+        </div>
+        </div>
+    <div class="dateevlist">
+        <h2>2. Select the Tickets</h2>
+        <p>2023/04/09  (Tuesday)</p>
+        <table>
+            <tr>
+                <td class = "role">Adult</td>
+                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>150</td>
+                <td class = "count">
+                    <div>
+                        <button id="plus" class="plus"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" class="input-num" id="input-num" value="0" />
+                        <button id="minus" class="minus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </tr>
+            <tr>
+                <td class = "role">Senior</td>
+                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+            </tr>
+            <tr>
+                <td class = "role">Student</td>
+                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+            </tr>
+            <tr>
+                <td class = "role">Children</td>
+                <td class = "money">FREE</td>
+            </tr>
+        </table>
+        <h3>Exhibition</h3>
+        <h3>Event</h3>
+    </div>
+
+        <footer>
+            <img src="img/vLogo.png" alt="">
+            <div class="visitus">
+                <h6>Visit Us</h6>
+                <ul>
+                    <li>
+                        <p>123 Park Avenue,<br>Apple City, <br>Taiwan 99999</p>
+                    </li>
+                    <br>
+                    <li>
+                        <p>(123) 456-7890</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="mova">
+                <h6>About Mova</h6>
+                <ul>
+                    <li>
+                        <img src="img/arrowg.png" alt="">
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <img src="img/arrowg.png" alt="">
+                        <a href="#">Story</a>
+                    </li>
+                    <li>
+                        <img src="img/arrowg.png" alt="">
+                        <a href="#">Exhibition</a>
+                    </li>
+                    <li>
+                        <img src="img/arrowg.png" alt="">
+                        <a href="#">Event</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="openhour">
+                <h6>Open Hours</h6>
+                <p>
+                    
+                </p>
+            </div>
+            <div class="contactus">
+                <h6>Contact Us</h6>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                     
+            </div>
+    
+            
+            
+        </footer>
+        <div class="tibame">
+            <p>本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。<a href="#">參考資料</a></p>
+        </div>
+   
+</div>
+
+<script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $('.slider').slick({
+            centerMode: true,
+            centerPadding: '280px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true
+        });
+
+
+    
+    </script>
+
+</body>
+</html>

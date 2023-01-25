@@ -1,0 +1,149 @@
+
+.selectdate{
+  position: relative;
+  width: 1000px;
+  min-height: 750px;
+  margin: 0 auto;
+}
+
+.selectdate h2{
+    font-family: 'MinSans-Bold';
+    font-size: 2em;
+    margin-top: 100px;
+}
+.wrapper{
+  background: black;
+  /* border-radius: 10px; */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  position: absolute;
+  top: 80px;
+}
+.wrapper .icons{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: center;
+}
+/* header .icons{
+  display: flex;
+} */
+.wrapper .icons p{
+    font-size: 2em;
+    font-family: 'MinSans-Bold';
+}
+
+.wrapper .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 20px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  /* border-radius: 50%; */
+}
+/* .icons span:last-child{
+  margin-right: -10px;
+} */
+
+
+.icons span:hover{
+  background: #3a3a3a;
+}
+.current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  /* margin-bottom: 20px; */
+  font-size: 1.5em;
+  font-family: 'MinSans-Bold';
+}
+.calendar li{
+  /* color: white; */
+  width: calc(100% / 7);
+  font-size: 1.5em;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+  font-family: 'MinSans-Bold';
+}
+
+.days{
+    background-color: transparent;
+}
+
+
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  /* margin-top: 30px; */
+  border-radius: 5%;
+  background-image: linear-gradient(to top left,#426a639c,#000000);
+  color: rgb(255, 255, 255);
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.days li:nth-child(7n+2){
+    color: rgb(56, 56, 56);
+}
+.days li.inactive{
+  color: rgba(59, 59, 59, 0);
+}
+
+
+
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  width: 135px;
+  z-index: -1;
+  border-radius: 5%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background-color: #ffadad;
+}
+.days li:not(.active):hover::before{
+  background: #ffffff;
+}
+.days li.active:hover::before{
+    background: #ffffff;
+  }
+
+.days li:hover{
+    color: black;
+}
+
+.dateevlist{
+    width: 1000px;
+    min-height: 1500px;
+    margin: 0 auto;
+  }
+  
+  .dateevlist h2{
+      font-family: 'MinSans-Bold';
+      font-size: 2em;
+      margin-top: 120px;
+  }
