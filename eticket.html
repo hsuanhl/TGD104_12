@@ -32,21 +32,22 @@
                     </ul>
                 </li>
                 <li><a href="exhibition.html">Exhibition</a></li>
-                <li><a href="#">Event</a></li>
-                <li><a href="#">eTicket</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="eticket.html">eTicket</a></li>
+                <li><a href="about.html">About</a></li>
                 <li>
                     <div class="search">
-                        <!-- <form action="#"> -->
+                        <form action="#">
                             <input type="text" placeholder=" Search" name="search">
                             <button>
                                 <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
                             </button>
-                        <!-- </form> -->
+                        </form>
                     </div>
                 </li>
             </ul> 
     </div>
+
     <div class="ticketbanner">
         <ul>
             <li class = "icon thispage"><i class="fa-solid fa-ticket"></i></li>
@@ -85,40 +86,114 @@
             </div>
         </div>
         </div>
-    <div class="dateevlist">
+    <div class="dateexlist">
         <h2>2. Select the Tickets</h2>
-        <p>2023/04/09  (Tuesday)</p>
+        <p>&nbsp 2023/04/09  (Tuesday)</p>
+        <h3>&nbsp Exhibition</h3>
         <table>
             <tr>
                 <td class = "role">Adult</td>
                 <td class = "money"><i class="fa-solid fa-dollar-sign"></i>150</td>
                 <td class = "count">
-                    <div>
-                        <button id="plus" class="plus"><i class="fa-solid fa-minus"></i></button>
+                    <div class = "pmbutton">
+                        <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button>
                         <input type="text" class="input-num" id="input-num" value="0" />
-                        <button id="minus" class="minus"><i class="fa-solid fa-plus"></i></button>
+                        <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button>
                     </div>
-                </tr>
+                </td>
             <tr>
                 <td class = "role">Senior</td>
                 <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+                <td class = "count">
+                    <div class = "pmbutton">
+                        <button id="minus1" class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" class="input-num" id="input-num1" value="0" />
+                        <button id="plus1" class="plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td class = "role">Student</td>
                 <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+                <td class = "count">
+                    <div class = "pmbutton">
+                        <button id="minus2" class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" class="input-num" id="input-num2" value="0" />
+                        <button id="plus2" class="plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td class = "role">Children</td>
                 <td class = "money">FREE</td>
+                <td class = "count">
+                    <div class = "pmbutton">
+                        <button id="minus3" class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" class="input-num" id="input-num3" value="0" />
+                        <button id="plus3" class="plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </td>
             </tr>
         </table>
-        <h3>Exhibition</h3>
-        <h3>Event</h3>
+        <div class="ticketevent">
+            <h3>&nbsp Event</h3>
+            <ul>
+                <li>
+                    <img src="img/booking_ad.png" alt="">
+                    <div class="tevlist">
+                        <h4>Workshop | Exploring the Art of Drawing </h4>
+                        <h5>14:00 -15:00 @ Art Center</h5>
+                        <h5>Remaining Spots: <span>10</span></h5>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>150</h6>
+                        <div class = "pmbutton">
+                            <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <img src="img/booking_perf.png" alt="">
+                    <div class="tevlist">
+                        <h4>Performance | Interactive Soundscapes </h4>
+                        <h5>19:00 - 21:00 @ Auditorium</h5>
+                        <h5>Remaining Spots: <span>50</span></h5>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>FREE</h6>
+                        <div class = "pmbutton">
+                            <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <img src="img/booking_gw.png" alt="">
+                    <div class="tevlist">
+                        <h4>Tour | Garden of Wonders </h4>
+                        <h5>9:00 - 11:00 @ Sculpture garden</h5>
+                        <h5>Remaining Spots: <span>25</span></h5>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>FREE</h6>
+                        <div class = "pmbutton">
+                            <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="checkoutone">
+        <h3 class = "total">Total &nbsp<i class="fa-solid fa-dollar-sign"></i><span class = "totalmoney">&nbsp500</span></h3>
+        <button type="button">Continue to Review<img src="img/whitearrow.png"></button>
     </div>
 
         <footer>
             <img src="img/vLogo.png" alt="">
-            <div class="visitus">
+            <div class="visitus"> 
                 <h6>Visit Us</h6>
                 <ul>
                     <li>
@@ -153,9 +228,20 @@
             </div>
             <div class="openhour">
                 <h6>Open Hours</h6>
-                <p>
-                    
-                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Currently Open<br>
+                            Today (Sun): 12:00pm - 5:30pm<br>
+                            Tomorrow: Closed
+                        </p>
+                    </li>
+                    <br>
+                    <li>
+                        <img src="img/arrowg.png" alt="">
+                        <a href="#">Full Open Hours</a>
+                    </li>
+                </ul>
             </div>
             <div class="contactus">
                 <h6>Contact Us</h6>
@@ -176,8 +262,9 @@
 
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $('.slider').slick({
             centerMode: true,
             centerPadding: '280px',
@@ -188,7 +275,7 @@
 
 
     
-    </script>
+    </script> -->
 
 </body>
 </html>

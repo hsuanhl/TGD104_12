@@ -7,6 +7,10 @@
     font-family: 'MinSans-Medium';
     src: url('fonts/MinSans-Medium-v0400.woff2') format("woff2");
   }
+  @font-face{
+    font-family: 'MinSans-Reg';
+    src: url('fonts/MinSans-Regular-v0400.woff2') format("woff2");
+  }
 
 
 body{
@@ -62,16 +66,21 @@ body{
     text-align: center;
     line-height: auto;    
 }
+
+.top li:nth-child(1){
+    position: relative;
+}
 .top .secondbar{
+    width: 380px;
     flex-direction: column;
     position: absolute;
-    top: 80px;
-    left: 850px;
+    top: 40px;
+    left: -20px;
     z-index: 1;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     background-color: black;
-    padding-left: 10px;
-    margin: auto;
+    padding-left: 20px;
+    /* margin: auto; */
 
     display: none;
     
@@ -86,22 +95,23 @@ body{
     margin: 10px 10px;
 }
 
+.search form {
+    width:215px;
+    /* float:right; */
+    margin:7px;
+    position: relative;
+}
 
-.search input[type=text]{
+.search form input[type=text]{
     width:200px;
     height:25px;
     border-radius:15px;
     border: none;
     padding-left: 10px;
+    outline: none;
 }
-     
-.search{
-    /* float:right; */
-    margin:7px;
-    position: relative;
-}
-     
-.search button{
+       
+.search form button{
     background-color: transparent;
     color: #a4a4a4;
     /* float: right; */
@@ -212,20 +222,35 @@ body{
     left: 260px;
     width: 60px;
     height: 60px;
-    z-index: 1;
-    
+    z-index: 1;    
 }
+.whatson .slick-prev:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f053";
+}
+
 .whatson .slick-next{
     right: 240px;
     width: 60px;
     height: 60px;
 }
 
+.whatson .slick-next:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f054";
+}
+
 .whatson .slick-prev:before,.whatson .slick-next:before {
-    font-family: 'slick';
+    /* font-family: 'slick'; */
     font-size: 60px;
     line-height: 1;
-    opacity: .5;
+    /* opacity: .5; */
     color: #426a63;
     -webkit-font-smoothing: antialiased;
 }
@@ -239,17 +264,16 @@ body{
 
 .slider li h2{
     font-family: 'MinSans-Bold';
-    max-width: 450px;
+    max-width: 390px;
     color: white;
-    font-size: 3em;
+    font-size: 4em;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
-    
-    
+    text-shadow: 0px 0px 10px rgb(0,0,0);
+    line-height: 1.3;
 }
 
 .slider li img{
@@ -367,22 +391,27 @@ body{
     color: black;
     width: 740px;
     padding: 150px 270px 100px 50px;
-
 }
 
 .slidetext2, .slidetext4{
     background-color: black;
     order: -1;
     width: 740px;
-    padding: 150px 50px 100px 270px;
-   
+    padding: 150px 50px 100px 270px;   
 }
 
-
-
-.sbanner a{
+.slidetext1 a, .slidetext3 a{
     text-decoration: none;
+    color: black;
+    text-decoration: underline;
 }
+
+.slidetext2 a, .slidetext4 a{
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
 
 /* ----subscribe---- */
 .subscribe{
@@ -392,7 +421,7 @@ body{
     align-items: center;
     justify-content:center;
     margin: 0 auto;
-    background:linear-gradient(to bottom, transparent 0%, #426a63 100%);
+    background:linear-gradient(to bottom, transparent 0%, #426a637c 100%);
 
 }
 
@@ -401,15 +430,26 @@ body{
     font-size: 1.1em;
 }
 
+.mailtext{
+    position: relative;
+}
+
 .mailtext input{
-    border-radius: 8px;
+    border-radius: 10px;
     width: 300px;
+    border: 1px solid rgb(160, 160, 160);
+    background-color:#cecece;
+    outline: none;
+    color: #575757;
 }
 
 .mailtext button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
     border-radius: 8px;
     background-color: transparent;
-    color:white;
+    color:rgb(71, 71, 71);
     border: none;
 }
 
@@ -420,10 +460,11 @@ body{
 footer{
     width: 100%;
     background-color: rgb(0, 0, 0);
-    padding-top: 50px;
+    padding-top: 60px;
     display: flex;
     height: 400px;
     justify-content: space-evenly;
+    
 }
 
 footer img{
@@ -433,13 +474,19 @@ footer img{
 .visitus{
     margin-top: 10px;
     width: 180px;
-    
+}
 
+.visitus li{
+    margin-left: 10px;
 }
 
 .mova{
     margin-top: 10px;
     width: 180px;
+}
+
+.mova li{
+    margin-left: 10px;
 }
 
 .mova a{
@@ -448,7 +495,16 @@ footer img{
 }
 .openhour{
     margin-top: 10px;
-    width: 180px;
+    width: 250px;
+}
+
+.openhour li{
+    margin-left: 10px;
+}
+
+.openhour a{
+    text-decoration: none;
+    color: white;
 }
 
 .contactus{
@@ -460,6 +516,7 @@ footer img{
 .contactus a{
     color: white;
     font-size: 2em;
+    margin: 5px 10px;
     
 }
 .tibame p{
@@ -480,6 +537,11 @@ footer h6{
     height: 7px;
 }
 
+
+.openhour img{
+    width: 6px;
+    height: 7px;
+}
 
 /* -----------admission hours location page-------------- */
 
@@ -563,7 +625,8 @@ footer h6{
 }
 .adfees table{
     /* border: 1px solid red; */
-    margin-left: 740px;
+    /* margin-left: 740px; */
+    margin: 0 auto;
     margin-bottom: 50px;
     
 }
@@ -597,7 +660,7 @@ footer h6{
 .adfees .event{
     font-size: 1.5rem;
     font-family: 'Noto Sans', sans-serif;
-    margin-left: 125px;
+    margin-left: 135px;
 
 }
 
@@ -655,7 +718,7 @@ footer h6{
 }
 
 
-/* ------------ */
+/* -----parking info------ */
 
 .pinfo{}
 .pinfo h1{
@@ -663,8 +726,15 @@ footer h6{
     margin-left: 370px;
     font-family: 'MinSans-Medium';
 }
-.pinfo img{}
-.pinfo p{}
+.pinfo img{
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+}
+.pinfo p{
+    width: 900px;
+    margin: 20px auto;
+}
 
 
 
@@ -859,16 +929,49 @@ footer h6{
     text-align: center;
     border-radius: 50%;
     margin-right: 10px;
-
 }
-
 
 .facility1F ul li p{
     margin: 0 auto;
     width: 500px;
     text-align: center;
     margin-bottom: 20px;
+}
 
+.facility1F .slick-prev {
+    width: 40px;
+    height: 40px;   
+}
+
+.facility1F .slick-prev:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f053";
+}
+
+.facility1F .slick-next{
+    width: 40px;
+    height: 40px;
+}
+
+.facility1F .slick-next:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f054";
+    color: #426a63;
+}
+
+.facility1F .slick-prev:before,.facility1F .slick-next:before {
+    /* font-family: 'slick'; */
+    font-size: 40px;
+    line-height: 1;
+    /* opacity: .5; */
+    color: #426a63;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -895,6 +998,31 @@ footer h6{
     left: 680px;
 }
 
+/* -----------floor plan 2 -------------- */
+
+.firstF .notone{
+    top: 170px;  
+    left: 680px;
+}
+
+.firstF .nottwo{
+    top: 460px;  
+    left: 110px;
+}
+
+.firstF .notthree{
+    top: 500px;  
+    left: 430px;
+    
+}
+
+.firstF .notfour{
+    top: 310px;  
+    left: 845px;
+   
+}
+
+
 
 /* ----------------exhibition list--------------- */
 .exhbanner{
@@ -920,7 +1048,28 @@ footer h6{
 
 .exhlist{
     margin-bottom: 150px;
+    position: relative;
     
+}
+
+.exhfilter{
+    width: 150px;
+    position: absolute;
+    right: 250px;
+    top: -50px;
+}
+
+.exhfilter select{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    font-weight: 100;
+    text-align: left;
+    outline: 0;
+    border: 1px solid rgb(66, 66, 66);
+    padding-left: 5px;
 }
 
 .exhlist ul{
@@ -933,7 +1082,7 @@ footer h6{
 .exhlist img{
     width: 100%;
     display: block;
-    border: none;
+   
 }
 
 .exhlist li{
@@ -942,22 +1091,24 @@ footer h6{
     position: relative;
     border: none;
     flex-grow: 1;
+    
 }
 
 .exhlist a{
     text-decoration: none;
     color: white;
-    border: none;
+  
 }
 
 .exhinfo{
+    position: relative;
     position: absolute;
     width: calc(100%-12px);
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 10px 6px;
+    padding: 10px 5px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
     border: none;
@@ -967,27 +1118,358 @@ footer h6{
 .exhinfo h3{
     font-family: "MinSans-Bold";
     font-size: 3em;
-    margin-top: 120px;
-    line-height: 48px;
-    margin-left: 10px;
+    margin-top: 70px;
+    line-height: 1.1;
+    margin-left: 15px;
 }
 
 .exhinfo h4{
     font-family: "NotoSans";
     font-size: 1.5em;
     font-weight: 100;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .exhinfo p{
-    margin-top: 50px;
-    margin-left: 10px;
+    margin:10px 15px;
+    /* margin-left: 15px; */
 }
 
 
 .exhlist li:hover .exhinfo{
     display: block;
     
+}
+.excoming{
+    background-color: #426a63;
+    color: white;
+    width: 130px;
+    height: 35px;
+    font-size: 1em;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.dayleft{
+    background-color: #ff778d;
+    color: rgb(0, 0, 0);
+    width: 120px;
+    height: 35px;
+    font-size: 1em;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* ---------exhibition page------------------ */
+.exhpbanner{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.exhpbanner h1{
+    position: absolute;
+    font-family: 'MinSans-Bold';
+    top:45%;
+    left:25%;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.6);
+}
+
+.exhpbanner h2{
+    position: absolute;
+    font-family: 'MinSans-Medium';
+    top:60%;
+    left:25%;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.6);
+}
+
+.exhpcontent{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.exhpiclist{
+    width: 1040px;
+    margin:0 auto;
+}
+
+.exdescript{
+    width: 1050px;
+    margin: 40px auto;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+.exhpiclist .slick-prev {
+    width: 40px;
+    height: 40px;
+    left: -45px;   
+}
+
+.exhpiclist .slick-prev:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f053";
+}
+
+.exhpiclist .slick-next{
+    width: 40px;
+    height: 40px;
+    right: -30px;
+}
+
+.exhpiclist .slick-next:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f054";
+    color: #426a63;
+}
+
+.exhpiclist .slick-prev:before,.exhpiclist .slick-next:before {
+    /* font-family: 'slick'; */
+    font-size: 40px;
+    line-height: 1;
+    /* opacity: .5; */
+    color: #426a63;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+/* -------------------event-------------------- */
+.evbanner{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 200px;
+}
+
+.evbanner h1{
+    position: absolute;
+    font-family: 'MinSans-Bold';
+    bottom: 170px;
+    left: 300px;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.8);
+    background:radial-gradient(ellipse 50% 50% at center,#0000001b);
+}
+
+.evlist{
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;   
+}
+
+.evfilter{
+    width: 150px;
+    position: absolute;
+    right: 20px;
+    top: -50px;
+}
+
+.evfilter select{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    font-weight: 100;
+    text-align: left;
+    outline: 0;
+    border: 1px solid rgb(66, 66, 66);
+    padding-left: 5px;
+}
+
+.evlist ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.evlist li{
+    margin: 10px 10px;
+    width: 700px;
+}
+
+.evlist a{
+    text-decoration: none;
+    position: relative;
+}
+
+.evlist img{
+    display: block;
+}
+
+.evlist .evinfo{
+    height: 110px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.evlist .evinfo h4{
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+.evlist .evinfo h3{
+   font-family: "MinSans-Medium";
+   font-size: 1.3em;
+   padding-left: 20px;
+   width: 450px;
+   line-height: 1.3;
+}
+
+.evlist .evinfo .evdate{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.finalcall{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: black;
+    background-color: rgb(247, 149, 165);
+    width: 100px;
+    height: 30px;
+    border-radius:10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* --------------------event page------------------ */
+.evpbanner{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.evpbanner h1{
+    position: absolute;
+    font-family: 'MinSans-Bold';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.6);
+}
+
+.evpcontent h1{
+    font-family: "MinSans-Reg";
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.evpinfo{
+    width: 1200px;
+    height: 150px;
+    margin: 50px auto;
+    background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
+    font-family: "MinSans-Bold";
+    
+    /* padding-left: 450px; */
+    /* padding-top: 80px; */
+}
+
+.evpinfotext{
+    display: flex;
+    width: 880px;
+    margin: 0 auto;
+}
+
+.evpinfo ul{
+    display: flex;
+    /* flex-grow: 1; */
+    /* justify-content: space-evenly; */
+}
+
+.evpinfo li{
+    width: 220px;
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
+
+.evpinfo span{
+    font-family: "MinSans-Reg";
+    padding-left: 30px;
+    font-size: 1.1rem;
+}
+
+.evpcontent .evdescript{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.evpiclist{
+    width: 1030px;
+    margin:0 auto;
+}
+
+
+.evpiclist .slick-prev {
+    width: 40px;
+    height: 40px;
+    left: -45px;   
+}
+
+.evpiclist .slick-prev:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f053";
+}
+
+.evpiclist .slick-next{
+    width: 40px;
+    height: 40px;
+    right: -30px;
+}
+
+.evpiclist .slick-next:before{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f054";
+    color: #426a63;
+}
+
+.evpiclist .slick-prev:before,.evpiclist .slick-next:before {
+    /* font-family: 'slick'; */
+    font-size: 40px;
+    line-height: 1;
+    /* opacity: .5; */
+    color: #426a63;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -996,8 +1478,7 @@ footer h6{
 .ticketbanner{
     width: 1920px;
     margin: 0 auto;
-    position: relative;
-    
+    position: relative; 
 }
 
 .ticketbanner ul{
@@ -1018,7 +1499,6 @@ footer h6{
     margin: 0 20px;
     margin-top: 10px;
     font-size: 2em;
-    
 }
 
 .ticketbanner li.thispage{
@@ -1034,7 +1514,6 @@ footer h6{
 .ticketbanner ul.ttitle{
     color: rgb(59, 59, 59);
     top: 63%;
-
 }
 
 .ticketbanner .ttitle{
@@ -1051,8 +1530,8 @@ footer h6{
 /* ---calendar--- */
 
 .selectdate{
-    position: relative;
-    width: 1000px;
+    /* position: relative; */
+    width: 1200px;
     min-height: 750px;
     margin: 0 auto;
   }
@@ -1061,13 +1540,18 @@ footer h6{
       font-family: 'MinSans-Bold';
       font-size: 2em;
       margin-top: 100px;
+      margin-bottom: 50px;
   }
+
   .wrapper{
     background: black;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    position: absolute;
+    /* position: absolute; */
     top: 80px;
+    width: 1000px;
+    margin: 20px auto;
   }
+
   .wrapper .icons{
     display: flex;
     align-items: center;
@@ -1095,29 +1579,35 @@ footer h6{
   .icons span:hover{
     background: #3a3a3a;
   }
+
   .current-date{
     font-size: 1.45rem;
     font-weight: 500;
   }
+
   .calendar{
     padding: 20px;
   }
+
   .calendar ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
   }
+
   .calendar .days{
     /* margin-bottom: 20px; */
     font-size: 1.5em;
     font-family: 'MinSans-Bold';
   }
+
   .calendar li{
     /* color: white; */
     width: calc(100% / 7);
     font-size: 1.5em;
   }
+
   .calendar .weeks li{
     font-weight: 500;
     cursor: default;
@@ -1127,8 +1617,7 @@ footer h6{
   .days{
       background-color: transparent;
   }
-  
-  
+
   .calendar .days li{
     z-index: 1;
     cursor: pointer;
@@ -1141,19 +1630,23 @@ footer h6{
     text-align: center;
     line-height: 100px;
   }
+
+  .calendar .days li:hover{
+    color: black;
+  }
   
   .days li:nth-child(7n+2){
       color: rgb(56, 56, 56);
   }
+
   .days li.inactive{
     color: rgba(59, 59, 59, 0);
   }
-  
-  
-  
-  .days li.active{
-    color: #fff;
+
+  .days li.inactive:hover{
+    color: rgba(255, 255, 255, 0);
   }
+
   .days li::before{
     position: absolute;
     content: "";
@@ -1165,89 +1658,735 @@ footer h6{
     border-radius: 5%;
     transform: translate(-50%, -50%);
   }
+
   .days li.active::before{
     background-color: #ffadad;
   }
+
   .days li:not(.active):hover::before{
     background: #ffffff;
   }
+
   .days li.active:hover::before{
       background: #ffffff;
     }
-  
-  .days li:hover{
-      color: black;
-  }
-  
 
   /* ---select ticket--- */
-  .dateevlist{
-      width: 1000px;
+  .dateexlist{
+      width: 1200px;
       min-height: 1500px;
       margin: 0 auto;
     }
     
-    .dateevlist h2{
+    .dateexlist h2{
         font-family: 'MinSans-Bold';
         font-size: 2em;
-        margin-top: 120px;
+        margin-top: 130px;
+        margin-bottom: 50px;
     }
 
-    .dateevlist p{
+    .dateexlist p{
         font-family: 'MinSans-Medium';
         font-size: 2em;
         margin-top: 20px;
+        margin-left: 50px;
+        color: black;
+        background-color: white;
+        line-height: 2em;
     }
 
-    .dateevlist table tr{
+    .dateexlist h3{
+        font-family: 'MinSans-Bold';
+        font-size: 2em;
+        margin-top: 40px;
+        background-image: linear-gradient(to right,#426a639c,#000000);
+        margin-left: 50px;
+        line-height: 2em;
+    }
+
+    .dateexlist table{
+        /* margin-left: 100px; */
+        width: 700px;
+        margin: 20px auto;
+    }
+    .dateexlist table tr{
         height: 60px;
     }
-    .dateevlist .role{
+    .dateexlist .role{
         font-size: 1.6em;
-        width: 150px;
+        width: 600px;
         line-height: 60px;
     }
-    .dateevlist .money{
-        font-size: 1.6em;
-        width: 150px;
+    .dateexlist .money{
+        font-size: 1.4em;
+        width: 200px;
         line-height: 60px;
+        text-align: center;
     }
 
-    .count{
+    .pmbutton{
         vertical-align: middle;
         position: relative;
+        width: 200px;
+    }
+
+    .dateexlist .count div{
+        
     }
     
-    .count .input-num{
+    .pmbutton .input-num{
         width: 200px;
-        height: 40px;
+        height: 35px;
         border-radius: 25px;
         text-align: center;
         font-size: 1.2em;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border:1px solid #575757;
     }
 
-    .count .plus{
+    .pmbutton .plus{
         background-color: transparent;
         color:#426a63;
         cursor: pointer;
         font-size: 1.6em;
         position: absolute;
-        top: 15px;
-        left: 8px;
-        border: none;
-
-    }
-
-    .count .minus{
-        background-color: transparent;
-        color:#426a63;
-        cursor: pointer;
-        font-size: 1.6em;
-        position: absolute;
-        top: 15px;
+        top: 5px;
         right: 8px;
         border: none;
-  
+
+    }
+
+    .pmbutton .minus{
+        background-color: transparent;
+        color:#426a63;
+        cursor: pointer;
+        font-size: 1.6em;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        border: none;
     }
     
+    .ticketevent li{
+        height: 200px;
+        display: flex;
+        width: 1000px;
+        margin: 30px auto;
+
+    }
+    .tevlist{
+        padding: 0 30px;
+        flex-grow: 1;
+        position: relative;
+    }
+
+    .tevlist h4{
+        font-size: 1.5em;
+        font-family: "MinSans-Medium";
+        margin-bottom: 10px;
+    }
+
+    .tevlist h5{
+        font-size: 1em;
+    }
+
+    .tevlist h6{
+        font-size: 1.4em;
+        position: absolute;
+        bottom: 5px;
+        left: 110px;
+
+    }
+    .tevlist .pmbutton{
+        position: absolute;
+        bottom: 5px;
+        right: 150px;
+
+    }
+
+    .checkoutone{
+        width: 1200px;
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .checkoutone .total{
+        margin: 0 auto;
+        padding-right: 50px;
+        font-size: 2em;
+        line-height: 2em;
+        background-image: linear-gradient(to left,#426a639c,#000000);
+        text-align: right;
+        font-family: "Noto Sans";
+    }
+
+
+    .checkoutone button{
+        width: 300px;
+        height: 80px;
+        background-color: #426a63;
+        cursor: pointer;
+        font-size: 1.3em;
+        line-height: 1.3em;
+        border-radius: 40px;
+        color: white;
+        position: relative;
+        text-align: start;
+        padding-left: 35px;
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+
+    }
+
+    .checkoutone .checkoutbtn button:hover{
+    }
+
+    .checkoutone button img{
+        position: absolute;
+        right: 35px;
+        bottom: 26px;
+    }
+
+   /* ---------eticket page2-------------- */
+   .confirmbooking{
+        width: 1200px;
+        margin: 0 auto;
+   }
+
+   .confirmbooking h2{
+        font-family: 'MinSans-Bold';
+        font-size: 2em;
+        margin-top: 130px;
+        margin-bottom: 50px;
+   }
+   .confirmbooking table{
+    margin: 0 auto;
     
+   }
+
+   .confirmbooking table th{
+        border-bottom: 1px solid white;
+        height: 50px;
+        text-align: center;
+        font-size: 1.4em;
+   }
+
+  .checkbox{
+        width: 50px;
+        
+   }
+    .item{
+        width: 600px;
+        
+   }
+   .amount{
+        width: 210px;
+    }
+   .x{
+        width: 50px;
+   }
+   .price{
+        width: 90px;
+    }
+   .trash{
+        width: 50px;
+    }
+
+    .cartitems td{
+        height: 80px;
+        vertical-align: middle;
+        border-top: 1px solid rgb(30, 30, 30);
+    }
+
+    .cartitems td:nth-child(2){
+        font-size: 1.2em;
+    }
+
+
+    .cartitems .times{
+        text-align: center;
+    }
+
+    .cartitems button{
+        color: white;
+        background-color: transparent;
+        font-size: 1.2em;
+        cursor: pointer;
+
+    }
+    .cartitems td:nth-child(4){
+        font-size: 1.1em;
+        text-align: center
+    }
+
+    .cartitems td:nth-child(5){
+        font-size: 1.4em;
+        text-align: center
+    }
+
+    .carttotal{
+        
+    }
+    .carttotal td{
+        height: 80px;
+        font-size: 1.4em;
+        line-height: 80px;
+        border-top: 1px solid white;
+    }
+
+    .carttotal td.ttotal{
+        text-align: right;
+
+    }
+    .carttotal td.ttmoney{
+        padding-left: 25px;
+
+    }
+
+
+
+    .checkouttwo{
+        width: 1200px;
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* .checkouttwo .total{
+        width: 990px;
+        height: 80px;
+        margin: 0 auto;
+        font-size: 1.4em;
+        border-top: 1px solid white;
+        text-align: right;
+        line-height: 80px;
+        padding-right: 60px;
+    } */
+
+    .checkouttwo button.previous{
+        background-color: transparent;
+        color: white;
+        text-align: right;
+        position: relative;
+        position: absolute;
+        left: 90px;
+        bottom: 45px;
+        cursor: pointer;
+
+
+
+    }
+
+    .checkouttwo button.proceed{
+        width: 300px;
+        height: 80px;
+        background-color: #426a63;
+        cursor: pointer;
+        font-size: 1.3em;
+        line-height: 1.3em;
+        border-radius: 40px;
+        color: white;
+        position: relative;
+        text-align: start;
+        padding-left: 30px;
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+
+    }
+
+    .checkouttwo button.proceed img{
+        position: absolute;
+        right: 30px;
+        bottom: 26px;
+    }
+
+    .checkouttwo button.previous img{
+        position: absolute;
+        left: -25px;
+        bottom: 0px;
+        scale: 0.5;
+    }
+
+
+    /* --------ticket page 3----------------- */
+
+    .orderdetail{
+        width: 1200px;
+        margin: 0 auto;
+   }
+
+    .orderdetail h2{
+        width: 1200px;
+        height: 150px;
+        font-family: 'MinSans-Bold';
+        font-size: 2em;
+        line-height: 150px;
+        text-align: center;
+        margin: 100px auto 50px;
+        background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
+    }
+
+    .orderdetail table{
+        margin: 0 auto;
+        
+    }
+
+    .orderdetail table th{
+        border-bottom: 1px solid white;
+        height: 50px;
+        text-align: center;
+        font-size: 1.4em;
+   }
+
+   form{
+        width: 1200px;
+        margin:0 auto;
+        position: relative;
+}
+
+   .purchaseinfo{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .purchaseinfo h2{
+        width: 1200px;
+        height: 150px;
+        font-family: 'MinSans-Bold';
+        font-size: 2em;
+        line-height: 150px;
+        text-align: center;
+        margin: 100px auto 50px;
+        background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
+    }
+    
+    .purchaseinfo .purinfo{
+        width: 850px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .purchaseinfo .purinfo div{
+        margin: 15px 20px;
+    }
+
+    .purchaseinfo .purinfom div p{
+        padding-left: 5px;
+        font-size: 1em;
+        color: #cecece;
+
+    }
+
+    .ques1 input{
+        height: 30px;
+        width: 300px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques2 input{
+        height: 30px;
+        width: 450px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques3 input{
+        height: 30px;
+        width: 800px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques4 input{
+        height: 30px;
+        width: 800px;
+        border-radius:  10px;
+        outline: none;
+    }
+
+    .paymentmethod{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .paymentmethod h2{
+        width: 1200px;
+        height: 150px;
+        font-family: 'MinSans-Bold';
+        font-size: 2em;
+        line-height: 150px;
+        text-align: center;
+        margin: 100px auto 50px;
+        background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
+    }
+    .paymentmethod .paymethod{
+        width: 850px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;  
+    }
+
+    .paymentmethod .paymethod div{
+        margin: 25px 10px;
+        
+    }
+
+    .ques6 input{
+        height: 30px;
+        width: 800px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques7 input{
+        height: 30px;
+        width: 800px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques8 input{
+        height: 30px;
+        width: 385px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .ques9 input{
+        height: 30px;
+        width: 385px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .submitbnt {
+        width: 150px;
+        margin-top: 100px;
+        margin-left:830px;
+    }
+    .submitbnt input{
+        width: 150px;
+        height: 50px;
+        background-color: #426a63;
+        color: white;
+        font-size: 1em;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    form button.previous{
+        background-color: transparent;
+        color: white;
+        position: relative;
+        position: absolute;
+        left: 250px;
+        bottom: 5px;
+        text-align: right;
+        cursor: pointer;
+    }
+
+
+    form button.previous img{
+        position: absolute;
+        left: -25px;
+        bottom: 0px;
+        scale: 0.5;
+    }
+
+/* -------------------about--------------------- */
+
+.aboutbanner{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+}
+
+.aboutbanner h1{
+    /* border: 1px solid yellow; */
+    position: absolute;
+    font-family: 'MinSans-Bold';
+    bottom: 170px;
+    left: 300px;
+    font-size: 4em;
+    /* width: 300px; */
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.8);
+    background:radial-gradient(ellipse 50% 50% at center,#000000a8, rgba(0, 0, 0, 0));
+}
+
+.aboutcontent h2{
+    width: 800px;
+    height: 180px;
+    font-family: 'MinSans-Bold';
+    font-size: 2em;
+    line-height: 180px;
+    text-align: center;
+    margin: 60px auto 60px;
+    background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
+    }
+
+.aboutcontent p{
+    width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* -------------------news--------------------- */
+
+.newsbanner{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+}
+
+.newsbanner h1{
+    /* border: 1px solid yellow; */
+    position: absolute;
+    font-family: 'MinSans-Bold';
+    bottom: 170px;
+    left: 300px;
+    font-size: 4em;
+    /* width: 300px; */
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.8);
+    background:radial-gradient(ellipse 50% 50% at center,#000000a8, rgba(0, 0, 0, 0));
+}
+
+.news2023{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.news2023 h2{
+    text-align: center;
+    font-family: "MinSans-Bold";
+    font-size: 2em;
+    line-height: 70px;
+    border-bottom: 1px solid white;
+}
+
+.news2023 ul{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news2023 li{
+    width: 550px;
+    height: 200px;
+    background-color: #426a63;
+    margin: 10px;
+    padding: 15px;
+    
+}
+
+.news2023 a{
+    text-decoration: none;
+    color: white;
+}
+
+.news2023 li h3{
+    font-family: "MinSans-Reg";
+    font-size: 1.2em;
+    padding:15px 0;
+}
+
+.news2023 li p{
+    font-size: 0.9em;
+    color: rgb(199, 199, 199);
+
+}
+
+.newsdate{
+    font-size: 0.9rem;
+    /* padding-bottom: 10px; */
+
+}
+
+
+
+.oldnews{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.form-control{
+    margin-left: 560px;
+    font-family: "MinSans-Bold";
+    font-size: 2em;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.newsline{
+    border-bottom: 1px solid white;
+    margin-top: 20px;
+}
+
+.news2022 ul{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news2022 li{
+    width: 550px;
+    height: 200px;
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 15px;
+}
+
+.news2022 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.news2022 li h3{
+    font-family: "MinSans-Reg";
+    font-size: 1.2em;
+    padding:15px 0;
+}
+
+.news2022 li p{
+    font-size: 0.9em;
+    color: rgb(77, 77, 77);
+
+}
+/* ---------------news content--------------------- */
+.newscontent{
+    width: 1080px;
+    margin: 100px auto;
+}
+
+.newscontent h4{
+    font-family: "MinSans-Reg";
+}
+
+.newscontent h3{
+    font-family: "MinSans-Reg";
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.newscontent p{
+    width: 1000px;
+    margin: 10px auto;
+}
+
+
