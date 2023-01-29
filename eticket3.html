@@ -83,7 +83,7 @@
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <input type="text" class="input-num" id="input-num" value="2" disabled/>
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
@@ -97,7 +97,7 @@
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <input type="text" class="input-num" id="input-num" value="1" disabled />
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
@@ -111,7 +111,7 @@
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="0" />
+                            <input type="text" class="input-num" id="input-num" value="2" disabled />
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
@@ -123,7 +123,7 @@
             <tfoot>
                 <tr class = "carttotal">
                     <td class= "ttotal" colspan = "4">Total</td>
-                    <td class= "ttmoney" colspan = "2" ><i class="fa-solid fa-dollar-sign"></i><span>500</span></td>
+                    <td class= "ttmoney" colspan = "2" ><i class="fa-solid fa-dollar-sign"></i><span>450</span></td>
                 </tr>
             </tfoot>
         </table>
@@ -174,11 +174,28 @@
         </div>
 
         
-        <p class ="submitbnt"><input type="submit" value="Submit"></p>
+        <input type="button" class ="submitbnt" value="Submit" onclick="javascript:location.href='#popup-one'">
 
         <a href="eticket2.html"><button class="previous" type="button"><img src="img/leftwhitearrow.png">Previous Page</button></a>
 
     </form>
+
+    <div class="popup" id="popup-one" aria-hidden="true">
+        <div class="popup-dialog">
+          <div class="popup-header">
+            <img src="img/Logo.png" alt="">
+            <h2>Thank You for Your Purchase!</h2>
+            <a href="index.html" class="btn-close" aria-hidden="true">×</a>
+          </div>
+          <div class="popup-body">
+            <p>Your order was completed successfully.</p>
+            <p>Please check your email for confirmation letter and etickets.</p>
+          </div>
+          <div class="popup-footer">
+            <a href="index.html" class="btn">Go Back to MoVA</a>
+          </div>
+        </div>
+      </div>
 
     
 
@@ -265,10 +282,23 @@
             slidesToScroll: 1,
             arrows: true
         });
-
-
-    
     </script> -->
+
+         <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(
+         function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+    });
+
+
+    document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+    });
+    </script>
 
 </body>
 </html>
