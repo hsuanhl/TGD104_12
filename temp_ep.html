@@ -18,7 +18,7 @@
 
 </head>
 <body>
-
+<!-- <div class="main"> -->
     <div class="top">
         <a href="index.html"><img src="img/Logo.png" alt=""></a>
             <ul class = topbar>
@@ -45,30 +45,59 @@
             </ul> 
     </div>
 
-    <div class="newscontent">
-        <h4 class = "dateofnews">2023/01/17</h4>
-        <h3>COVID-19 Safety Measures in Museums: Guidelines for Visitors and Staff</h3>
-        <img src="img/news-3.png" alt="">
-        <p>
-            To ensure the safety of visitors and staff, all museums are required to implement strict COVID-19 safety measures. This includes mandatory face mask usage for all visitors and staff, as well as regular temperature checks at the entrance.
-            <br>
-            <br>
-            To limit the number of people inside the museum at any given time, museums will implement a reservation system and may limit the number of visitors allowed in certain areas or exhibitions. Visitors are encouraged to plan their visit in advance and purchase tickets online.
-            <br>
-            <br>
-            Hand sanitizing stations will be placed throughout the museum and visitors are encouraged to use them regularly. Visitors are also asked to maintain a safe distance of at least 6 feet from other visitors and staff at all times.
-            <br>
-            <br>
-            Museums will also increase cleaning and sanitation efforts, particularly in high-touch areas such as restrooms, elevators, and handrails. Staff will also be trained on proper cleaning and disinfection protocols. Visitors are also encouraged to stay home if they are feeling unwell or have been in close contact with someone who has tested positive for COVID-19.
+    <div class="exhpbanner">
+        <h1>This is title placeholder</h1>
+        <h2>2/1 - 4/30</h2>
+        <img src="img/temp_Banner.png" alt="">
+    </div>
+
+    <div class="exhpcontent">
+        <video width="1280" height="550" autoplay>
+            <source src="video/majesticform.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        <p class = "exdescript">
+            "Majestic Forms is a one-of-a-kind exhibition featuring a wide range of ancient monumental sculptures that showcase the power and beauty of large-scale art from the past. From towering marble figures that depict gods and heroes, to sprawling stone installations that depict myth and legend, this exhibition has something for everyone.
+
+            The exhibition features works from a variety of ancient cultures, including Greek, Roman, and Egyptian, and showcases a wide range of styles and approaches to ancient monumental sculpture. Whether you're a fan of figurative work, abstract forms, or something in between, you'll find plenty to admire in this exhibition. In addition to the sculptures themselves, the exhibition also includes a series of educational programs and workshops designed to help visitors learn more about the art and culture of the ancient world. 
         </p>
+        <ul class = "exhpiclist">
+            <li>
+                <img src="img/mf-1.png" alt="">
+                <p></p>
+            </li>
+            <li>
+                <img src="img/mf-2.png" alt="">
+                <p></p>
+            </li>
+            <li>
+                <img src="img/mf-3.png" alt="">
+                <p></p>
+            </li>
+            <li>
+                <img src="img/mf-4.png" alt="">
+                <p></p>
+            </li>
+            <li>
+                <img src="img/mf-5.png" alt="">
+                <p></p>
+            </li>
+            <li>
+                <img src="img/mf-6.png" alt="">
+                <p></p>
+            </li>
+        </ul>
+        <p class = "exdescript">"One of the highlights of this exhibition is the opportunity to see ancient sculptures in their original form. Many of the works on display have been carefully preserved and restored, and offer a rare glimpse into the past. You'll have the chance to see the intricate details and craftsmanship of these ancient works up close, and to learn more about the cultural and historical context in which they were created.
+            In addition to the sculptures, the exhibition also includes a series of interactive displays and multimedia exhibits that help bring the ancient world to life. You'll have the chance to learn about the daily lives of people in ancient cultures, and to see how art played a role in their societies. Whether you're a fan of ancient history, a student of art, or just looking for a unique and memorable experience, you won't want to miss Majestic Forms at our museum."
+            
+            Don't miss this chance to see some of the most impressive and impactful ancient sculptures at our museum. Majestic Forms is a must-see event for art lovers and anyone interested in ancient history and culture."</p>
+
     </div>
 
 
-        
 
 
-
-   
+    
     
     <footer>
         <img src="img/vLogo.png" alt="">
@@ -141,8 +170,9 @@
 
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $('.slider').slick({
             centerMode: true,
             centerPadding: '280px',
@@ -150,7 +180,26 @@
             slidesToScroll: 1,
             arrows: true
         });
-    </script>
+
+        $('.flooronelist').slick({
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+        });
+
+        $('.exhpiclist').slick({
+            // centerMode: true,
+            // centerPadding: '10px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+        });
+
+
+    
+    </script> -->
 
 </body>
 </html>
