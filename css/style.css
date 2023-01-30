@@ -130,68 +130,11 @@ body{
 
 .banner{
     width: 1920px;
-    position: relative;
     margin: 0 auto;
+    position: relative;
+    
+    transition: all 0.5s ease;
 }
-
-/* .banner>a{
-    display: block;
-    position: absolute;
-    top:0;
-    left:0;
-    opacity: 0;
-    filter: alpha(opacity=0);
--webkit-animation: silder 15s linear infinite;
-        animation: silder 15s linear infinite;
-}
-.banner>a>img{
-    max-width: 100%;
-}
-
-
-@-webkit-keyframes silder {
-    3% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    27% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    30% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-}
-@keyframes silder {
-    3% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    27% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-    30% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-}
-
-
-
-
-.banner>a:nth-child(3) {
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s;
-
-}
-
-
-.banner:hover>a{
--webkit-animation-play-state: paused;
-        animation-play-state: paused;
-} */
 
 
 /* ----what's on area----- */
@@ -659,6 +602,7 @@ footer h6{
 }
 
 
+
 /*----admission fee------ */
 
 .adfees{}
@@ -895,7 +839,7 @@ footer h6{
 
 .firstF button:hover{
     color: black;
-    background-color: rgb(252, 166, 155);
+    background-color: #fca69b;
     scale: 1.1;
 }
 
@@ -1113,7 +1057,7 @@ footer h6{
     
 }
 
-.exhfilter{
+/* .exhfilter{
     width: 150px;
     position: absolute;
     right: 250px;
@@ -1131,22 +1075,63 @@ footer h6{
     outline: 0;
     border: 1px solid rgb(66, 66, 66);
     padding-left: 5px;
+} */
+
+.choose{
+    width: 190px;
+    height: 30px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 5px 8px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    right: 250px;
+    top: -30px;
 }
 
-.exhlist ul{
+.choose::placeholder{
+    color: white;
+
+}
+
+.option{
+    display: none;
+    width: 206px;
+    background-color: black;
+    color: white;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    z-index: 1;
+    position: absolute;
+    right: 250px;
+    top: 18px;
+}
+
+.option li{
+    width: 206px;
+    height: 30px;
+    padding: 5px 8px;
+}
+
+.exhlist .listex{
     width:75vw;
+    padding-top: 60px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;   
 }
 
-.exhlist img{
+.exhlist .listex img{
     width: 100%;
     display: block;
    
 }
 
-.exhlist li{
+.exhlist .listex li{
     width: calc(100/3%-20px);
     margin: 10px 10px;
     position: relative;
@@ -1155,7 +1140,7 @@ footer h6{
     
 }
 
-.exhlist a{
+.exhlist .listex a{
     text-decoration: none;
     color: white;
   
@@ -1341,38 +1326,32 @@ footer h6{
     margin-bottom: 100px;   
 }
 
-.evfilter{
-    width: 150px;
+.evlist .choose{
     position: absolute;
-    right: 20px;
-    top: -50px;
+    right: 10px;
+    top: -62px;
 }
 
-.evfilter select{
-    width: 150px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    font-size: 1em;
-    font-weight: 100;
-    text-align: left;
-    outline: 0;
-    border: 1px solid rgb(66, 66, 66);
-    padding-left: 5px;
+.evlist .option{
+
+    position: absolute;
+    right: 10px;
+    top: -20px;
 }
 
-.evlist ul{
+
+.evlist .listev{
     display: flex;
     flex-wrap: wrap;
 }
 
 
-.evlist li{
+.evlist .listev li{
     margin: 10px 10px;
     width: 700px;
 }
 
-.evlist a{
+.evlist .listev a{
     text-decoration: none;
     position: relative;
 }
@@ -1445,45 +1424,62 @@ footer h6{
 
 .evpcontent h1{
     font-family: "MinSans-Reg";
-    font-size: 1.4em;
+    font-size: 2em;
     text-align: center;
 }
 
 .evpinfo{
     width: 1200px;
-    height: 150px;
+    height: 400px;
     margin: 50px auto;
     background:radial-gradient(ellipse 50% 50% at center,#426a63, transparent);
     font-family: "MinSans-Bold";
     
+    
     /* padding-left: 450px; */
-    /* padding-top: 80px; */
+    padding-top: 80px;
 }
 
 .evpinfotext{
-    display: flex;
-    width: 880px;
+    
+     width: 600px;
+    height: 400px;
     margin: 0 auto;
+
 }
 
 .evpinfo ul{
-    display: flex;
-    /* flex-grow: 1; */
-    /* justify-content: space-evenly; */
+    margin: 50px;
 }
 
 .evpinfo li{
-    width: 220px;
-    flex-grow: 1;
+    width: 600px;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid rgba(36, 36, 36, 0.212);
+    vertical-align: bottom;
+    
+}
+
+.evpinfo h4{
     font-size: 1.5rem;
+    line-height: 1.6;
+    width: 180px;
+    vertical-align: baseline;
 }
 
-.evpinfo span{
+.evpinfo p{
     font-family: "MinSans-Reg";
-    padding-left: 30px;
-    font-size: 1.1rem;
+    /* padding-left: 30px; */
+    font-size: 1.3rem;
+    line-height: 2;
+    vertical-align: baseline;
+    
 }
 
+.evpinfo p.also{
+    margin: 0 20px;
+}
 .evpcontent .evdescript{
     width: 1000px;
     margin: 50px auto;
@@ -1537,7 +1533,7 @@ footer h6{
 /* -------------------eticket-------------------- */
 
 .ticketbanner{
-    width: 1920px;
+    width: 100vw;
     margin: 0 auto;
     position: relative; 
 }
@@ -1731,6 +1727,7 @@ footer h6{
   .days li.active:hover::before{
       background: #ffffff;
     }
+
 
   /* ---select ticket--- */
   .dateexlist{
@@ -2373,8 +2370,13 @@ footer h6{
 
 .aboutcontent p{
     width: 800px;
-    margin: 30px auto;
+    margin: 0 auto;
+    margin-bottom: 60px;
     text-align: center;
+}
+
+.hideme{
+    opacity:0;
 }
 
 /* -------------------news--------------------- */
@@ -2411,7 +2413,7 @@ footer h6{
     font-family: "MinSans-Bold";
     font-size: 2em;
     line-height: 70px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .news2023 ul{
@@ -2464,14 +2466,14 @@ footer h6{
     margin-left: 560px;
     font-family: "MinSans-Bold";
     font-size: 2em;
-    background-color: black;
+    background-color: #000000;
     color: white;
     outline: none;
     border: none;
 }
 
 .newsline{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
     margin-top: 20px;
 }
 
@@ -2517,7 +2519,7 @@ footer h6{
 
 .newscontent h3{
     font-family: "MinSans-Reg";
-    font-size: 1.3em;
+    font-size: 2em;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 10px;

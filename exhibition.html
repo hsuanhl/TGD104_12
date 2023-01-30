@@ -53,16 +53,26 @@
 
 
     <div class="exhlist">
-        <div class="exhfilter">
-            <select name="exhsort" id="">
-                <option value="" selected disabled hidden>Sorted by :</option>
-                <option value="evall">Featured</option>
-                <option value="evsemi">Newest</option>
-                <option value="evws">Oldest</option>
-            </select>
+        <input class ="choose" type="text" placeholder = "Sorted by:" readonly="readonly">
+        <div class="option">
+            <ul>
+                <li>Featured</li>
+                <li>Newest</li>
+                <li>Oldest</li>
+            </ul>
         </div>
 
-        <ul>
+        <!-- <div class="exhlist">
+            <div class="exhfilter">
+                <select name="exhsort" id="">
+                    <option value="" selected disabled hidden>Sorted by :</option>
+                    <option value="evall">Featured</option>
+                    <option value="evsemi">Newest</option>
+                    <option value="evws">Oldest</option>
+                </select>
+        </div> -->
+
+        <ul class = "listex">
             <li>
                 <img src="img/e_ai.png" alt="">
                 <a href="#">
@@ -282,18 +292,28 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-    <!-- <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
 
+    <script type="text/javascript">
+   $('.choose').click(
+function () {
+	console.log("a")
+	$('.option').toggle();
+});
+
+$("body").click(function (e) {
+	if (!$(e.target).closest(".choose,.option").length) {
+		$(".option").hide();
+	}
+});
+
+$(".option li").click(function () {
+  var _text = ($(this).text())
+  $(".choose").val(_text)
+  $(".option").hide()
+});
 
     
-    </script> -->
+    </script>
 
 </body>
 </html>

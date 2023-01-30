@@ -51,23 +51,40 @@
         <img src="img/about_banner.png" alt="">
     </div>
     <div class="aboutcontent">
-        <h2>Introduction</h2>
-            <p>The Museum of Visionary Art is a unique institution dedicated to showcasing the work of artists who work outside of the traditional art world. The museum was founded in the early 2000s by a group of art collectors and enthusiasts who were fascinated by the work of self-taught and outsider artists.</p>
-            <p>The museum's collection includes a wide variety of media, from paintings and sculptures to installation and performance art. Many of the artists featured in the collection work in a visionary or surrealist style, creating fantastical worlds and otherworldly imagery.</p>
-        <h2>Collection</h2>
-            <p>One of the most popular exhibits at the Museum of Visionary Art is the annual "Fringe Artists" show, which highlights the work of emerging outsider artists from around the world. The show is known for its eclectic mix of styles and mediums, and is always a hit with visitors.</p>
-            <p>In addition to its exhibitions, the museum also hosts a variety of educational programs, workshops, and events. These programs are designed to introduce visitors to the world of visionary art and provide them with a deeper understanding of the artists and their work.</p>
-        <h2>Building</h2>
-            <p>The museum's location in a renovated industrial building in the heart of the city also adds to its unique charm. The building's history is well preserved, with many of its original features still in place, including exposed brick walls, steel beams and large windows.</p>
-            <p>The Museum of Visionary Art is not just a place for art lovers, but for anyone interested in expanding their perspective and experiencing something new. It's a must-see destination for anyone visiting the city and a unique and inspiring experience for anyone looking to explore the world of visionary art.</p>
+        <section>
+            <h2 class="hideme">Introduction</h2>
+            <p class="hideme">The Museum of Visionary Art is a unique and one-of-a-kind cultural institution, dedicated to showcasing and preserving works of art that explore the boundaries of reality and imagination. The museum was founded with the mission of inspiring and empowering artists to explore their creative potential, and to provide a platform for their work to be seen and appreciated by the public.</p>
+        </section>
+        <section>
+            <h2 class="hideme">Exhibition Space</h2>
+            <p class="hideme">The Museum of Visionary Art features a spacious and modern exhibition space, designed to showcase a diverse range of works from artists from around the world. The galleries are designed to create a immersive and interactive experience for visitors, allowing them to explore and engage with the art in new and exciting ways. The museum's collection is constantly growing and evolving, and new exhibitions are regularly featured throughout the year.</p>
+        </section>
+        <section>
+            <h2  class="hideme">Education and Outreach</h2>
+            <p  class="hideme">In addition to its exhibitions, the Museum of Visionary Art is also dedicated to education and outreach. The museum offers a wide range of programs, workshops, and events for visitors of all ages, designed to inspire creativity, curiosity, and critical thinking. The museum also partners with schools and community organizations to provide educational resources and opportunities for students and underrepresented communities.</p>
+        </section>
+        <section>
+            <h2  class="hideme">Artist Residency Program</h2>
+            <p  class="hideme">One of the most unique and innovative programs offered by the Museum of Visionary Art is its artist residency program. This program provides artists with the opportunity to live and work at the museum for an extended period of time, allowing them to collaborate with other artists, create new works, and engage with the public. The artist residency program has been praised by artists and art lovers alike, and has helped to establish the Museum of Visionary Art as a hub for creativity and innovation in the arts.</p>
+        </section>
+        <section >
+            <h2 class="hideme">The Permanent Collection</h2>
+            <p class="hideme">The Museum of Visionary Art's permanent collection is a diverse and eclectic array of works that reflect the museum's commitment to exploring the boundaries of reality and imagination. The collection includes works in a variety of media, including painting, sculpture, photography, and installation art. Visitors can explore the permanent collection at their own pace, or take part in a guided tour led by one of the museum's knowledgeable staff members.</p>
+        </section>
+        <section>
+            <h2 class="hideme">Special Exhibitions</h2>
+            <p class="hideme">In addition to its permanent collection, the Museum of Visionary Art also features a range of special exhibitions throughout the year. These exhibitions showcase works from some of the most innovative and boundary-pushing artists working today, and provide visitors with an opportunity to see and experience art that pushes the boundaries of what is possible. From solo exhibitions of emerging artists, to large-scale installations by established artists, the museum's special exhibitions are always a highlight of the cultural calendar.</p>
+        </section>
+        <section>
+            <h2 class="hideme">Visitor Services</h2>
+            <p class="hideme">The Museum of Visionary Art is dedicated to providing its visitors with an exceptional experience, and offers a range of visitor services to make sure that every visit is enjoyable and memorable. From the museum shop, where visitors can purchase unique and handcrafted gifts, to the café, where visitors can relax and refuel, the museum has everything visitors need to make the most of their visit. The museum also offers guided tours, audio guides, and interactive workshops, making it easy and fun for visitors to explore and engage with the art.</p>
+        </section>
+        <section>
+            <h2 class="hideme">Conclusion</h2>
+            <p class="hideme">In addition to its exhibitions, the Museum of Visionary Art is also dedicated to education and outreach. The museum offers a wide range of programs, workshops, and events for visitors of all ages, designed to inspire creativity, curiosity, and critical thinking. The museum also partners with schools and community organizations to provide educational resources and opportunities for students and underrepresented communities.</p>
+        </section>
     </div>
 
-
-        
-
-
-
-   
     
     <footer>
         <img src="img/vLogo.png" alt="">
@@ -141,6 +158,9 @@
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="flowup.js"></script> -->
+
 
     <!-- <script type="text/javascript">
         $('.slider').slick({
@@ -151,6 +171,35 @@
             arrows: true
         });
     </script> -->
+
+    <script type="text/javascript">
+        
+        $(document).ready(function() {
+    
+    
+        $(window).scroll( function(){
+        
+        
+            $('.hideme').each( function(i){
+                
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+            
+                if( bottom_of_window > bottom_of_object ){
+                    
+                    $(this).animate({'opacity':'1'},600);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+        
+        </script>
+        
 
 </body>
 </html>

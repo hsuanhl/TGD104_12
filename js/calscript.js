@@ -57,39 +57,4 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
 
 
 
-//加減按鈕
-let num_plus = document.getElementById("plus");
-let num_min = document.getElementById("minus");
-let input_num = document.getElementById("input-num");
 
-    num_plus.onclick = function() {
-        input_num.value = parseInt(input_num.value) + 1;
-        }
-
-    num_min.onclick = function() {
-
-        if(input_num.value <= 0) {
-                input_num.value = 0;
-        } else {
-
-                input_num.value = parseInt(input_num.value) - 1;
-            }
-        }
-
-let num_plus2 = document.getElementById("plus2");
-let num_min2 = document.getElementById("minus2");
-let input_num2 = document.getElementById("input-num2");
-        
-    num_plus2.onclick = function() {
-        input_num2.value = parseInt(input_num2.value) + 1;
-        }
-        
-    num_min2.onclick = function() {
-        
-        if(input_num2.value <= 0) {
-                        input_num2.value = 0;
-        } else {
-        
-                input_num2.value = parseInt(input_num2.value) - 1;
-            }
-        }

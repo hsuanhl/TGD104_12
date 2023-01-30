@@ -54,6 +54,18 @@
 
 
     <div class="evlist">
+        <input class ="choose" type="text" placeholder = "Filter by: Type" readonly="readonly">
+        <div class="option">
+            <ul>
+                <li>All</li>
+                <li>Seminar</li>
+                <li>Workshop</li>
+                <li>Tours</li>
+                <li>Film Screening</li>
+                <li>Performance</li>
+            </ul>
+        </div>
+<!-- 
         <div class="evfilter">
             <select name="evtype" id="">
                 <option value="" selected disabled hidden>Filter by: Type</option>
@@ -64,8 +76,8 @@
                 <option value="evfilm">Film Screening</option>
                 <option value="evpref">Performance</option>
             </select>
-        </div>
-        <ul>
+        </div> -->
+        <ul class ="listev">
             <li>
                 <a href="#">
                     <img src="img/evlist_tips strategies.png" alt="">
@@ -232,18 +244,25 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-    <!-- <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
+    <script type="text/javascript">
+            $('.choose').click(
+            function () {
+                console.log("a")
+                $('.option').toggle();
+            });
 
+            $("body").click(function (e) {
+                if (!$(e.target).closest(".choose,.option").length) {
+                    $(".option").hide();
+                }
+            });
 
-    
-    </script> -->
+            $(".option li").click(function () {
+            var _text = ($(this).text())
+            $(".choose").val(_text)
+            $(".option").hide()
+            });
+    </script>
 
 </body>
 </html>
