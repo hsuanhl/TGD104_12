@@ -432,7 +432,7 @@ body{
     background-color:#eeeeee;
     outline: none;
     color: #575757;
-    outline: 2px solid#426a63;
+    /* outline: 2px solid#426a63; */
 }
 
 .mailtext button{
