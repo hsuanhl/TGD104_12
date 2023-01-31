@@ -19,6 +19,8 @@ body{
     line-height: 1.6;
     font-family: 'Noto Sans', sans-serif;
     color: white;
+    width: 1920px;
+    margin: 0 auto;
 
 }
 
@@ -31,7 +33,7 @@ body{
 /* ----主選單區---- */
 
 .top{
-    width: 100%;
+    width: 1920px;
     display: flex;
     height: 110px;
     justify-content: space-between;
@@ -64,7 +66,7 @@ body{
     color: white;
     font-size: 1.6em;
     font-family: 'MinSans-Medium';
-    text-align: center;
+    text-align:end;
     line-height: auto;    
 }
 
@@ -234,7 +236,7 @@ body{
 
 .slider li img{
     display: block;
-    flex-basis: 400px;
+    flex-basis: calc(100vw-20px);
 }
 
 /* ----slogan---- */
@@ -251,7 +253,7 @@ body{
 }
 .slogantext{
     display: flex;
-    width: 1000px;
+    width:800px;
     margin: 30px auto;
     /* border: 1px solid red; */
     justify-content: space-between;
@@ -265,7 +267,7 @@ body{
 .slogan p{
     /* float: right; */
     font-size: 2.1em;
-    font-family: MinSans-Bold;
+    font-family: "MinSans-Bold";
     
     
 }
@@ -452,7 +454,7 @@ body{
 /* ----footer---- */
 
 footer{
-    width: 100%;
+    width: 1920px;
     background-color: rgb(0, 0, 0);
     padding-top: 60px;
     display: flex;
@@ -1056,26 +1058,6 @@ footer h6{
     position: relative;
     
 }
-
-/* .exhfilter{
-    width: 150px;
-    position: absolute;
-    right: 250px;
-    top: -50px;
-}
-
-.exhfilter select{
-    width: 150px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    font-size: 1em;
-    font-weight: 100;
-    text-align: left;
-    outline: 0;
-    border: 1px solid rgb(66, 66, 66);
-    padding-left: 5px;
-} */
 
 .choose{
     width: 190px;
