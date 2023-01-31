@@ -70,6 +70,10 @@ body{
     line-height: auto;    
 }
 
+.top li a:hover{
+    background:radial-gradient(ellipse 70% 70% at center,#53a799, black);
+}
+
 .top li:nth-child(1){
     position: relative;
 }
@@ -127,6 +131,9 @@ body{
     cursor: pointer;
 }
 
+.topthisp{
+    background:radial-gradient(ellipse 70% 70% at center,#53a799, black);
+}
 
 /* ----banner slider---- */
 
