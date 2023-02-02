@@ -19,7 +19,7 @@ body{
     line-height: 1.6;
     font-family: 'Noto Sans', sans-serif;
     color: white;
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
 
 }
@@ -33,38 +33,38 @@ body{
 /* ----主選單區---- */
 
 .top{
-    width: 1920px;
+    min-width: 1200px;
     display: flex;
     height: 110px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .top img{
     height: 80px;
     margin-top: 15px;
-    margin-left: 50px;
-    scale: 0.8;
+    scale: 0.6;
 }
+
 .top ul{
     margin-left:auto;
     justify-self: flex-end;
     display: flex;
     align-items: center;
     
-    margin-right: 50px;
+    margin-right: 30px;
     /* flex-grow: 1; */
 
     
 }
 .top li{
     justify-items:end;
-    margin-left: 80px;
+    margin-left: 60px;
     
 
 }
 .top li a{
     text-decoration: none;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.5rem;
     font-family: 'MinSans-Medium';
     text-align:end;
     line-height: auto;    
@@ -75,6 +75,7 @@ body{
 }
 
 .top li:nth-child(1){
+    min-width: 70px;
     position: relative;
 }
 .top .secondbar{
@@ -138,41 +139,46 @@ body{
 /* ----banner slider---- */
 
 .banner{
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
-    
     transition: all 0.5s ease;
 }
+
+.banner img{
+    width: 100%;
+    min-width: 1200px;
+}
+
 
 
 /* ----what's on area----- */
 .whatson{
       margin: 0 auto;
       margin-top: 50px;
-      width: 1920px;
+      width: 1200px;
 }
 
 .whatson h1{
-    font-size: 3em;
-    margin-left: 370px;
+    font-size: 2em;
     font-family: 'MinSans-Medium';
 }
 
 .whatson h3{
     font-size: 1.2em;
-    margin-left: 370px;
+
 }
 
 .slider{
+    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 80px;
-    width: 1920px;
+    width: 1200px;
     /* margin: 0 auto; */
 }
 
 .whatson .slick-prev {
-    left: 260px;
+    left: 140px;
     width: 60px;
     height: 60px;
     z-index: 1;    
@@ -181,12 +187,12 @@ body{
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f053";
+    font-family: "Material Icons";
+    content: "\e5cb";
 }
 
 .whatson .slick-next{
-    right: 240px;
+    right: 105px;
     width: 60px;
     height: 60px;
 }
@@ -195,8 +201,8 @@ body{
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f054";
+    font-family: "Material Icons";
+    content: "\e5cc";
 }
 
 .whatson .slick-prev:before,.whatson .slick-next:before {
@@ -243,7 +249,7 @@ body{
 
 .slider li img{
     display: block;
-    flex-basis: calc(100vw-20px);
+    width: 400px;
 }
 
 /* ----slogan---- */
@@ -253,7 +259,7 @@ body{
     height: 405px;
     padding-top: 100px;
     box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
 
 
@@ -283,32 +289,36 @@ body{
 /* ----homenews---- */
 .homenews{
     position: relative;
-    height: 420px;
-    width: 1920px;
+    height: 500px;
+    width: 1200px;
     margin-bottom: 90px;
     margin: 0 auto;
+    /* border: 1px solid red; */
 }
 .homenews h1{
-    font-size: 3em;
-    margin-left: 370px;
+    font-size: 2rem;
+    /* margin-left: 250px; */
     font-family: 'MinSans-Medium';
     position: absolute;
 }
 
 .homenews ul{
     /* border: 1px solid red; */
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     padding-top: 10px;
 
 }
 .homenews li{
     margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(39, 39, 39);
 }
 .homenews ul li a{
     text-decoration: none;
     color: white;
-    font-size: 1.4em;
+    font-size: 1.3em;
+    font-family: 'MinSans-Reg';
 }
 
 .homenews ul li a:hover{
@@ -320,6 +330,7 @@ body{
     padding-left: 20px;
     font-size: 1em;
     font-weight: 100;
+    color: #cecece;
 }
 
 .homenews .viewmore{
@@ -355,30 +366,44 @@ body{
 .sbanner{
     margin: 0 auto;
     margin-top: 120px;
-    width: 1920px;
+    width: 1440px;
+}
+
+.sbanner img{
+    width: 800px;
 }
 .sbanner li{
     display: flex;
 }
 
 .sbanner h2{
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-family: 'MinSans-Medium';
 }
-.slidetext1, .slidetext3{
+
+
+.sbanner p{
+    font-size: 0.9rem;
+}
+
+.slidearea1, .slidearea3{
     background-color: white;
     color: black;
-    width: 740px;
-    padding: 150px 270px 100px 50px;
+    width: calc(100%-800px);
+    /* padding: 150px 270px 100px 50px; */
     transition: all 1.2s ease;
 }
 
-.slidetext2, .slidetext4{
+.slidearea2, .slidearea4{
     background-color: black;
     order: -1;
-    width: 740px;
-    padding: 150px 50px 100px 270px;
+    width: calc(100%-800px);
+    
     transition: all 1.2s ease;   
+}
+
+.slidetext1, .slidetext3, .slidetext2, .slidetext4{
+    padding: 50px 30px 30px 30px;
 }
 
 .slidetext1 a, .slidetext3 a{
@@ -388,7 +413,6 @@ body{
     /* text-decoration: underline; */
     padding: 10px;
     border-radius: 5px;
-    margin-left: 230px;
 }
 
 .slidetext2 a, .slidetext4 a{
@@ -398,16 +422,16 @@ body{
     /* text-decoration: underline; */
     padding: 10px;
     border-radius: 5px;
-    margin-left: 230px;
+
 
 }
 
-.slidetext1:hover, .slidetext3:hover{
+.slidearea1:hover, .slidearea3:hover{
     box-shadow:  0 500px rgb(0, 0, 0) inset;
     color: white;
   }
 
-  .slidetext2:hover, .slidetext4:hover{
+  .slidearea2:hover, .slidearea4:hover{
     box-shadow:  0 500px rgb(255, 255, 255) inset;
     color: rgb(0, 0, 0);  
 }
@@ -416,18 +440,21 @@ body{
 /* ----subscribe---- */
 .subscribe{
     display: flex;
-    height: 100px;
-    width: 1920px;
+    height: 150px;
+    width: 100%;
+    min-width: 1200px;
     align-items: center;
     justify-content:center;
     margin: 0 auto;
-    background:linear-gradient(to bottom, transparent 0%, #426a637c 100%);
+    background:linear-gradient(to bottom right, black, #426a63);
 
 }
 
 .subscribe h6{
     margin-right: 30px;
     font-size: 1.1em;
+    font-family: 'MinSans-Reg';
+    text-transform: capitalize;
 }
 
 .mailtext{
@@ -435,22 +462,23 @@ body{
 }
 
 .mailtext input{
-    border-radius: 10px;
-    width: 300px;
-    border: 1px solid rgb(160, 160, 160);
-    background-color:#eeeeee;
+    border-radius: 20px;
+    height: 30px;
+    width: 350px;
+    padding-left: 10px;
+    border: 1px solid rgb(145, 145, 145);
+    background-color: transparent;
+    color: #ffffff;
     outline: none;
-    color: #575757;
-    /* outline: 2px solid#426a63; */
 }
 
 .mailtext button{
     position: absolute;
-    top:6px;
-    right: 5px;
+    top:8px;
+    right: 6px;
     border-radius: 8px;
     background-color: transparent;
-    color:rgb(71, 71, 71);
+    color:rgb(201, 201, 201);
     border: none;
     cursor: pointer;
     
@@ -461,7 +489,8 @@ body{
 /* ----footer---- */
 
 footer{
-    width: 1920px;
+    width: 100%;
+    min-width: 1200px;
     background-color: rgb(0, 0, 0);
     padding-top: 60px;
     display: flex;
@@ -518,7 +547,7 @@ footer img{
 
 .contactus a{
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
     margin: 5px 10px;
     
 }
@@ -547,23 +576,31 @@ footer h6{
 }
 
 /* -----------admission hours location page-------------- */
-
+ main{
+    width: 100%;
+ }
 
 .halbanner{
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
+
+.halbanner img{
+    width: 100%;
+    min-width: 1200px;
+}
+
 
 .halbanner h1{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    bottom: 170px;
-    left: 300px;
-    font-size: 4em;
+    bottom: 8vw;
+    left: 15vw;
+    font-size: 3.5rem;
     /* width: 300px; */
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.8);
@@ -571,18 +608,18 @@ footer h6{
 }
 
 .openhours{
+    width: 1200px;
+    margin: 0 auto;
  
 }
 
 .openhours h1{
     font-size: 3em;
-    margin-left: 370px;
     font-family: 'MinSans-Medium';
     margin-bottom: 30px;
 }
 .ohcontent{
     display: flex;
-    
     width: 1100px;
     margin: 0 auto;
     justify-content: space-between;
@@ -614,17 +651,19 @@ footer h6{
 
 /*----admission fee------ */
 
-.adfees{}
+.adfees{
+    width: 1200px;
+    margin: 0 auto;
+}
 .adfees h1{
     font-size: 3em;
-    margin-left: 370px;
     font-family: 'MinSans-Medium';
     margin-bottom: 30px;
 
 }
 .adfees h2{
     font-size: 2em;
-    margin-left: 530px;
+    margin-left: 100px;
     font-family: 'MinSans-Medium';
 }
 .adfees table{
@@ -672,10 +711,12 @@ footer h6{
 /* ------location--------- */
 
 
-.location{}
+.location{
+    width: 1200px;
+    margin: 0 auto;
+}
 .location h1{
     font-size: 3em;
-    margin-left: 370px;
     font-family: 'MinSans-Medium';
     margin-bottom: 30px;
 }
@@ -688,10 +729,11 @@ footer h6{
 
 
 .transportation{
+    width: 1200px;
+    margin: 0 auto;
 }
 .transportation h1{
     font-size: 3em;
-    margin-left: 370px;
     font-family: 'MinSans-Medium';
     margin-bottom: 30px;
 }
@@ -724,10 +766,12 @@ footer h6{
 
 /* -----parking info------ */
 
-.pinfo{}
+.pinfo{
+    width: 1200px;
+    margin: 0 auto;
+}
 .pinfo h1{
     font-size: 3em;
-    margin-left: 370px;
     font-family: 'MinSans-Medium';
 }
 .pinfo img{
@@ -746,20 +790,25 @@ footer h6{
 
 
 .floorbanner{
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
     margin-bottom: 150px;
 }
 
+.floorbanner img{
+    width: 100%;
+    min-width: 1200px;
+}
+
 .floorbanner h1{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    bottom: 170px;
-    left: 300px;
-    font-size: 4em;
+    bottom: 8vw;
+    left: 15vw;
+    font-size: 3.5em;
     /* width: 300px; */
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.6);
@@ -1040,20 +1089,25 @@ footer h6{
 
 /* ----------------exhibition list--------------- */
 .exhbanner{
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
     margin-bottom: 100px;
 }
 
+.exhbanner img{
+    width: 100%;
+    min-width: 1200px;
+}
+
 .exhbanner h1{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    bottom: 170px;
+    bottom: 150px;
     left: 300px;
-    font-size: 4em;
+    font-size: 3.5em;
     /* width: 300px; */
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.8);
@@ -1061,10 +1115,13 @@ footer h6{
 }
 
 .exhlist{
+    width: 1200px;
+    margin: 0 auto;
     margin-bottom: 150px;
     position: relative;
     
 }
+
 
 .choose{
     width: 190px;
@@ -1077,9 +1134,10 @@ footer h6{
     color: white;
     z-index: 1;
     position: absolute;
-    right: 250px;
+    right: 10px;
     top: -30px;
     cursor:pointer;
+
 }
 
 .choose::placeholder{
@@ -1098,8 +1156,8 @@ footer h6{
     border-color: rgb(100, 100, 100);
     z-index: 1;
     position: absolute;
-    right: 250px;
-    top: 18px;
+    right: 10px;
+    top: 13px;
     cursor:pointer;
 }
 
@@ -1114,7 +1172,7 @@ footer h6{
 }
 
 .exhlist .listex{
-    width:75vw;
+    width: 1200px;;
     padding-top: 30px;
     margin: 0 auto;
     display: flex;
@@ -1152,22 +1210,22 @@ footer h6{
     left: 0;
     padding: 10px 5px;
     background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 20px #426a63b2;
     border: none;
     display: none;
 }
 
 .exhinfo h3{
     font-family: "MinSans-Bold";
-    font-size: 2.7em;
-    margin-top: 100px;
+    font-size: 2em;
+    margin-top: 80px;
     line-height: 1.1;
     margin-left: 15px;
 }
 
 .exhinfo h4{
     font-family: "NotoSans";
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 100;
     margin-left: 15px;
 }
@@ -1175,6 +1233,13 @@ footer h6{
 .exhinfo p{
     margin:10px 15px;
     /* margin-left: 15px; */
+    font-weight: 100;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -1187,10 +1252,9 @@ footer h6{
     color: white;
     width: 130px;
     height: 35px;
-    font-size: 1em;
+    font-size: 1rem;
     border-radius: 8px;
     text-align: center;
-    line-height: 1em;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -1201,10 +1265,9 @@ footer h6{
     color: rgb(0, 0, 0);
     width: 120px;
     height: 35px;
-    font-size: 1em;
+    font-size: 1rem;
     border-radius: 8px;
     text-align: center;
-    line-height: 1em;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -1297,11 +1360,16 @@ footer h6{
 
 /* -------------------event-------------------- */
 .evbanner{
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
     margin-bottom: 150px;
+}
+
+.evbanner img{
+    width: 100%;
+    min-width: 1200px;
 }
 
 .evbanner h1{
@@ -1309,14 +1377,14 @@ footer h6{
     font-family: 'MinSans-Bold';
     bottom: 170px;
     left: 300px;
-    font-size: 4em;
+    font-size: 3.5em;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.8);
     background:radial-gradient(ellipse 50% 50% at center,#0000001b);
 }
 
 .evlist{
-    width: 1440px;
+    width: 1240px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 100px;   
@@ -1346,7 +1414,7 @@ footer h6{
 
 .evlist .listev li{
     margin: 10px 10px;
-    width: 700px;
+    width: 600px;
 }
 
 .evlist .listev a{
@@ -1386,6 +1454,7 @@ footer h6{
     position: absolute;
     bottom: 10px;
     right: 20px;
+    font-size: 0.9em;
 }
 
 .finalcall{
@@ -1530,9 +1599,14 @@ footer h6{
 /* -------------------eticket-------------------- */
 
 .ticketbanner{
-    width: 100vw;
+    min-width: 1200px;
     margin: 0 auto;
     position: relative; 
+}
+
+.ticketbanner img{
+    width: 100%;
+    min-width: 1200px;
 }
 
 .ticketbanner ul{
@@ -2137,31 +2211,47 @@ footer h6{
     }
 
     .ques1 input{
-        height: 30px;
+        height: 35px;
         width: 300px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques2 input{
-        height: 30px;
+        height: 35px;
         width: 450px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques3 input{
-        height: 30px;
+        height: 35px;
         width: 800px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques4 input{
-        height: 30px;
+        height: 35px;
         width: 800px;
-        border-radius:  10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .paymentmethod{
@@ -2194,29 +2284,45 @@ footer h6{
     .ques6 input{
         height: 30px;
         width: 800px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques7 input{
         height: 30px;
         width: 800px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques8 input{
         height: 30px;
         width: 385px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .ques9 input{
         height: 30px;
         width: 385px;
-        border-radius: 10px;
+        border-radius: 15px;
         outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(138, 138, 138);
+        color: white;
+        padding-left: 5px;
     }
 
     .submitbnt {
