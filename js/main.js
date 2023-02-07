@@ -1,26 +1,43 @@
 
 
-    // window.onload = function () {
-    //     let imgs = Array("img/Banner1.png", "img/Banner2.png", "img/Banner3.png", "img/Banner4.png");
-    //     let image = document.getElementById("bannerimg");
-    //     let i = 0;
-    //     setInterval(function () {
-    //          if(i <= 3){
-    //              image.src = imgs[i];
-    //              i++;
-    //          }else{
-    //              i = 0;
-    //          }
-    //     }, 2500);
-    // }
+$('.banner').each(function(){
+    
+    let slideImgs = $(this).find('img'),
+        slideImgsCount = slideImgs.length,
+        currentIndex = 0;
+    
+    slideImgs.eq(currentIndex).fadeIn();
+    
+    setInterval(showNextSlide, 5000);
+    
+    function showNextSlide(){
+        let nextIndex = (currentIndex + 1) % slideImgsCount;
+        console.log(nextIndex)
+        slideImgs.eq(currentIndex).fadeOut();
+        slideImgs.eq(nextIndex).fadeIn();
+        currentIndex = nextIndex;
+    }
+})
 
 
 $('.slider').slick({
-            centerMode: true,
-            centerPadding: '150px',
-            slidesToShow: 2,
+            // centerMode: true,
+            // centerPadding: '5px',
+            slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                  breakpoint: 480,
+                  settings: 
+                  {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: false,
+                  dots: true
+                  }
+                }
+              ]
         });
 
 $('.flooronelist').slick({
@@ -29,6 +46,16 @@ $('.flooronelist').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
+            responsive: [
+                {
+                  breakpoint: 480,
+                  settings: 
+                  {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  }
+                }
+              ]
         });
 
 $('.exhpiclist').slick({
@@ -46,6 +73,17 @@ $('.evpiclist').slick({
             slidesToScroll: 1,
             arrows: true,
         });
+
+$('.visibtn').click(function(e) {
+        e.preventDefault();
+        $('.secondbar').toggleClass('show')
+    })   
+
+
+$('.burger').click(function(e) {
+        e.preventDefault();
+        $('.topbar').toggleClass('active')
+    })      
 
 
 //加減按鈕

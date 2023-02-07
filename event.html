@@ -11,19 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
 
 
 </head>
 <body>
-<main>
+
     <div class="top">
-        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+        <a href="index.html"><img src="img/Logo2.png" alt=""></a>
+        <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
-                <li><a href="#">Visit<span class="material-icons">arrow_drop_down</span></a>
+                <li class ="visit">
+                    <a href="#" class = "visibtn">Visit
+                        <span class="material-icons">arrow_drop_down</span>
+                        <span class="material-symbols-outlined">arrow_left</span>
+                    </a>
                     <ul class = secondbar>
                         <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
                         <li><a href="floorplan1.html">Floor Plan</a></li>
@@ -49,7 +56,10 @@
 
     <div class="evbanner">
         <h1>Event</h1>
-        <img src="img/ev_banner.png" alt="">
+        <picture>
+            <source srcset="img/ev_banner_m.png" media="(max-width: 415px)">
+            <img src="img/ev_banner.png" alt="">
+          </picture>
     </div>
 
 
@@ -70,7 +80,10 @@
         <ul class ="listev">
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_tips strategies.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_tips strategies_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_tips strategies.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>SEMINAR</h4>
                         <h3>Tips and Strategies for Building a Personal Art Collection</h4>
@@ -81,7 +94,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_explore history.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_explore history_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_explore history.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>WORKSHOP</h4>
                         <h3>Exploring the History of Art: From the Ancient World to the Present Day</h3>
@@ -92,7 +108,10 @@
             </li>
             <li>
                 <a href="artdraw_evp.html">
-                    <img src="img/evlist_art drawing.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_art drawing_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_art drawing.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>Workshop</h4>
                         <h3>Exploring the Art of Drawing</h3>
@@ -106,7 +125,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_art pohotgraphy.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_art pohotgraphy_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_art pohotgraphy.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>Workshop</h4>
                         <h3>The Art of Photography</h3>
@@ -117,7 +139,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_pottery.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_pottery_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_pottery.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>Workshop</h4>
                         <h3>Pottery 101</h3>
@@ -128,7 +153,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_garden.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_garden_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_garden.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>Tours</h4>
                         <h3>Garden of Wonders</h3>
@@ -139,7 +167,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_cinematic.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_cinematic_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_cinematic.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>FILM SCREENING</h4>
                         <h3>Cinematic Masterpieces: A Retrospective of Classic Films</h3>
@@ -150,7 +181,10 @@
             </li>
             <li>
                 <a href="temp_evp.html">
-                    <img src="img/evlist_interactice sound.png" alt="">
+                    <picture>
+                        <source srcset="img/evlist_interactice sound_m.png" media="(max-width: 415px)">
+                        <img src="img/evlist_interactice sound.png" alt="">
+                    </picture>
                     <div class = "evinfo">
                         <h4>PERFORMANCE</h4>
                         <h3>Interactive Soundscapes:  A Performance Art Experience</h3>
@@ -160,7 +194,7 @@
             </li>
         </ul>
     </div>    
-</main>
+
 
 
     <footer>

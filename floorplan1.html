@@ -11,19 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
 
 
 </head>
 <body>
 <main>
     <div class="top">
-        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+        <a href="index.html"><img src="img/Logo2.png" alt=""></a>
+        <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
-                <li><a href="#">Visit<span class="material-icons">arrow_drop_down</span></a>
+                <li class ="visit">
+                    <a href="#" class = "visibtn">Visit
+                        <span class="material-icons">arrow_drop_down</span>
+                        <span class="material-symbols-outlined">arrow_left</span>
+                    </a>
                     <ul class = secondbar>
                         <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
                         <li><a href="floorplan1.html">Floor Plan</a></li>
@@ -50,7 +57,10 @@
 
     <div class="floorbanner">
         <h1>Floor Plan</h1>
-        <img src="img/floor_banner.png" alt="">
+        <picture>
+            <source srcset="img/floor_banner_m.png" media="(max-width: 415px)">
+            <img src="img/floor_banner.png" alt="">
+        </picture>
     </div>
 
 <div class="floormap">
@@ -60,7 +70,10 @@
         <a href="floorplan3.html" class = otherfloor>3F</a>
     </div>
     <div class="firstF">
-        <img src="img/floor1.png" alt="">
+        <picture>
+            <source srcset="img/floor1_m.png" media="(max-width: 415px)">
+            <img src="img/floor1.png" alt="">
+        </picture>
             <button class = "noone">1<span class="tooltip">Sculpture Garden</span></button>
             <button class = "notwo">2<span class="tooltip">The Main Showroom</span></button>
             <button class = "nothree">3<span class="tooltip">The Historical Room</span></button>
