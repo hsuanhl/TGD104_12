@@ -1674,6 +1674,7 @@ footer h6{
 /* -------------------eticket-------------------- */
 
 .ticketbanner{
+    /* padding-top: 130px; */
     width: 100%;
     min-height: 300px;
     margin: 0 auto;
@@ -1715,20 +1716,18 @@ footer h6{
     border-top: 1px solid rgb(73, 73, 73);
 }
 
-.ticketbanner ul.ttitle{
-    color: rgb(59, 59, 59);
-    top: 63%;
-}
 
 .ticketbanner .ttitle{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "MinSans-Medium";
+    color: rgb(59, 59, 59);
+    margin-top: 10px;
 }
 
 .ticketbanner .ttitle .center{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "MinSans-Medium";
-    margin: 0 110px;
+    margin: 0 95px;
 }
 
 /* ---calendar--- */

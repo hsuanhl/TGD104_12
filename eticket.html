@@ -25,13 +25,19 @@
 <body>
 <main>
     <div class="top">
-        <a href="index.html"><img src="img/Logo2.png" alt=""></a>
+        <a href="index.html">
+            <picture>
+                <source srcset="img/m-logo2.png" media="(max-width: 415px)">
+                <img src="img/Logo2.png" alt="">
+              </picture>
+            
+        </a>
         <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
                 <li class ="visit">
                     <a href="#" class = "visibtn">Visit
                         <span class="material-icons">arrow_drop_down</span>
-                        <span class="material-symbols-outlined">arrow_left</span>
+                        <span class="material-symbols-outlined">arrow_right</span>
                     </a>
                     <ul class = secondbar>
                         <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
@@ -74,7 +80,7 @@
         </picture> -->
     </div>
     
-    <!-- <div class="selectdate">
+    <div class="selectdate">
         <h2>1. Select a day</h2>
         <div class="wrapper">
             <div class="icons">
@@ -195,11 +201,11 @@
                 </li>
             </ul>
         </div>
-    </div> -->
-    <!-- <div class="checkoutone">
+    </div>
+    <div class="checkoutone">
         <h3 class = "total">Total &nbsp<i class="fa-solid fa-dollar-sign"></i><span class = "totalmoney">&nbsp500</span></h3>
         <button type="button"  onclick="javascript:location.href='eticket2.html'">Continue to Review<img src="img/whitearrow.png"></button>
-    </div> -->
+    </div>
 
 
 </main>

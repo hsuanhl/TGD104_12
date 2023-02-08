@@ -23,13 +23,19 @@
 <body>
 <main>
     <div class="top">
-        <a href="index.html"><img src="img/Logo2.png" alt=""></a>
+        <a href="index.html">
+            <picture>
+                <source srcset="img/m-logo2.png" media="(max-width: 415px)">
+                <img src="img/Logo2.png" alt="">
+              </picture>
+            
+        </a>
         <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
                 <li class ="visit">
                     <a href="#" class = "visibtn">Visit
                         <span class="material-icons">arrow_drop_down</span>
-                        <span class="material-symbols-outlined">arrow_left</span>
+                        <span class="material-symbols-outlined">arrow_right</span>
                     </a>
                     <ul class = secondbar>
                         <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
