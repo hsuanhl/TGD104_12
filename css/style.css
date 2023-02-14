@@ -1009,29 +1009,29 @@ footer h6{
 .facility1F{
     margin: 0 auto;
     margin-top: 150px;
-    width: 1800px;
+    width: 1200px;
     margin-bottom: 150px;
 }
 
 .facility1F img{
-    width: 500px;
+    width: 350px;
     margin: 0 auto;
     transition:1s ease-in-out;
 }
-
+/* 
 .facility1F img:hover{
-    margin-top: -25px;
+    /* margin-top: -25px;
     width: 550px;
-    /* margin: 0 auto; */
-}
+    margin: 0 auto;
+* }  */
 
 .facility1F ul{
     margin: 0 auto;
-    width: 1800px;;
+    width: 1200px;;
 }
 
 .facility1F li{
-    width: 500px;
+    width: 350px;
     margin: 0 auto;
 
 }
@@ -1039,12 +1039,12 @@ footer h6{
 .title{
     display: flex;
     justify-content: center;
-    margin: 20px auto;
-    width: 500px;
+    margin: 10px auto;
+    width: 350px;
 }
 
 .facility1F h3{
-    font-size: 2em;
+    font-size: 1.5em;
     text-align:center;
     font-family: 'MinSans-Medium';
 
@@ -1065,7 +1065,7 @@ footer h6{
 
 .facility1F ul li p{
     margin: 0 auto;
-    width: 500px;
+    width: 350px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -1676,22 +1676,27 @@ footer h6{
 .ticketbanner{
     /* padding-top: 130px; */
     width: 100%;
-    min-height: 300px;
+    height: 300px;
     margin: 0 auto;
     background-image: url("../img/ticketbanner.png");
+    background-size: cover;
 }
 
-.ticketbanner picture img{
+/* .ticketbanner picture img{
     width: 100%;
     min-width: 1200px;
+} */
+
+.threesteps{
+    width: 500px;
+    height: 150px;
+    margin: 0 auto;
+    padding-top: 90px;
 }
 
 .ticketbanner ul{
     display: flex;
-    width: 500px;
     margin: 0 auto;
-    
-
 }
 
 .ticketbanner li.icon{
@@ -1734,8 +1739,8 @@ footer h6{
 
 .selectdate{
     /* position: relative; */
-    width: 900px;
-    min-height: 750px;
+    width: 1200px;
+    min-height: 700px;
     margin: 0 auto;
   }
   
@@ -1746,135 +1751,139 @@ footer h6{
       margin-bottom: 50px;
   }
 
-  .wrapper{
-    background: black;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    /* position: absolute; */
-    top: 80px;
-    width: 900px;
-    margin: 20px auto;
-  }
-
-  .wrapper .icons{
-    display: flex;
-    align-items: center;
-    padding: 25px 30px 10px;
-    justify-content: center;
-  }
-
-  .wrapper .icons p{
-      font-size: 2em;
-      font-family: 'MinSans-Bold';
-  }
-  
-  .wrapper .icons span{
-    height: 38px;
-    width: 38px;
-    margin: 0 20px;
-    cursor: pointer;
-    color: white;
-    text-align: center;
-    line-height: 38px;
-    font-size: 1.9rem;
-    user-select: none;
-  }
-  
-  .icons span:hover{
-    background: #3a3a3a;
-  }
-
-  .current-date{
-    font-size: 1.45rem;
-    font-weight: 500;
-  }
-
-  .calendar{
-    padding: 20px;
-  }
-
-  .calendar ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    text-align: center;
-  }
-
-  .calendar .days{
-    /* margin-bottom: 20px; */
-    font-size: 1.5em;
-    font-family: 'MinSans-Bold';
-  }
-
-  .calendar li{
-    /* color: white; */
-    width: calc(100% / 7);
-    font-size: 1.5em;
-  }
-
-  .calendar .weeks li{
-    font-weight: 500;
-    cursor: default;
-    font-family: 'MinSans-Bold';
-  }
-  
-  .days{
-      background-color: transparent;
-  }
-
-  .calendar .days li{
-    z-index: 1;
-    cursor: pointer;
-    position: relative;
-    /* margin-top: 30px; */
-    border-radius: 5%;
-    background-image: linear-gradient(to top left,#426a639c,#000000);
-    color: rgb(255, 255, 255);
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
-  }
-
-  .calendar .days li:hover{
-    color: black;
-  }
-  
-  .days li:nth-child(7n+2){
-      color: rgb(56, 56, 56);
-      cursor: default;
-  }
-
-  .days li.inactive{
-    color: rgba(59, 59, 59, 0);
-    cursor: default;
-  }
-
-  .days li.inactive:hover{
-    color: rgba(255, 255, 255, 0);
-  }
-
-  .days li::before{
-    position: absolute;
-    content: "";
-    left: 50%;
-    top: 50%;
-    height: 100px;
-    width: 122px;
-    z-index: -1;
-    border-radius: 5%;
-    transform: translate(-50%, -50%);
-  }
-
-  .days li.active::before{
-    background-color: #ffadad;
-  }
-
-  .days li:not(.active):hover::before{
-    background: #ffffff;
-  }
-
-  .days li.active:hover::before{
-      background: #ffffff;
+#datepicker{
+    margin: 0 auto;
+    min-height: 700px;
+    width: 800px;
+   
     }
+
+    
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+.ui-widget-content {
+    width: 800px;
+    min-height: 700px;
+    background-color: transparent;
+    border: none;
+}
+
+.ui-datepicker .ui-datepicker-header{
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    /* border: 1px solid #b91f1f; */
+}
+
+.ui-datepicker .ui-datepicker-title {
+    /* width: 200px; */
+    font-size: 2em;
+    font-family: "MinSans-Medium";
+    line-height: 70px;
+    color: white;
+
+}
+.ui-datepicker .ui-datepicker-next{
+    width: 50px;
+    height: 50px;
+    right: 150px;
+    top: 10px;
+}
+    
+
+.ui-datepicker .ui-datepicker-prev{
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    top: 10px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover{
+    background: radial-gradient(circle, rgba(66,106,99,1) 0%, rgba(255,255,255,0) 66%);
+    border: none;
+}
+
+.ui-datepicker .ui-datepicker-next-hover{
+    background: radial-gradient(circle, rgba(66,106,99,1) 0%, rgba(255,255,255,0) 66%);
+    border: none;
+}
+
+.ui-widget-content .ui-icon-circle-triangle-w{
+    background-image: url(images/angle-small-left.png);
+    z-index: 2;
+    background-position: 0px 0px;
+    height: 32px;
+    width: 32px;
+    
+    
+}
+
+.ui-widget-content .ui-icon-circle-triangle-e{
+    background-image: url(images/angle-small-right.png);
+    z-index: 2;
+    background-position: 0px 0px;
+    height: 32px;
+    width: 32px;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    top: 40%;
+    left: 40%;
+}
+
+
+.ui-datepicker th{
+    padding: 0;
+    color: white;
+    font-size: 1.8em;
+    font-family: "MinSans-Medium";
+    /* border: 1px solid #b91f1f; */
+    height: 60px;
+    line-height: 60px;
+}
+
+.ui-datepicker td{
+    height: 90px;
+    width: calc(100%/7);
+    padding: 0;
+    /* background-image: linear-gradient(to top left,#426a639c,#000000); */
+    /* background-color: #dd9a9a; */
+    border-radius: 10px;
+
+}
+
+.ui-datepicker td a {
+    line-height: 90px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    font-size: 1.6em;
+    font-family: "MinSans-Medium";
+
+    
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    background: rgb(255, 255, 255);
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+    border: none;
+    border-radius: 10px;
+    font-weight: normal;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    background:#f8c7cc;
+    color: black;
+}
+
+
 
 
   /* ---select ticket--- */
@@ -1897,8 +1906,9 @@ footer h6{
         margin-top: 20px;
         margin-left: 50px;
         color: black;
-        background-color: white;
-        line-height: 2em;
+        background-color: rgb(214, 214, 214);
+        vertical-align:baseline;
+        /* line-height: 2em; */
     }
 
     .dateexlist h3{
@@ -1920,14 +1930,14 @@ footer h6{
     }
     .dateexlist .role{
         font-size: 1.6em;
-        width: 600px;
+        width: 650px;
         line-height: 60px;
     }
     .dateexlist .money{
         font-size: 1.4em;
-        width: 200px;
+        width: 150px;
         line-height: 60px;
-        text-align: center;
+        text-align: left;
     }
 
     .pmbutton{
@@ -1995,20 +2005,22 @@ footer h6{
 
     .tevlist h5{
         font-size: 1em;
+        color: #aaa;
+    }
+    .priceNum{
+        width: 310px;
+        margin-top: 50px;
+        margin-left: 60px;
+        display: flex;
+        
     }
 
     .tevlist h6{
         font-size: 1.4em;
-        position: absolute;
-        bottom: 5px;
-        left: 110px;
+        flex-grow: 1;
 
     }
     .tevlist .pmbutton{
-        position: absolute;
-        bottom: 5px;
-        right: 150px;
-
     }
 
     .checkoutone{
@@ -2032,7 +2044,7 @@ footer h6{
     .checkoutone button{
         width: 300px;
         height: 80px;
-        background-color: #426a63;
+        background-color: #000000;
         cursor: pointer;
         font-size: 1.3em;
         line-height: 1.3em;
@@ -2044,10 +2056,17 @@ footer h6{
         position: absolute;
         right: 10px;
         bottom: 20px;
+        outline: none;
+        border: 1px solid #426a63;
 
     }
 
-    .checkoutone .checkoutbtn button:hover{
+    .checkoutone button:hover{
+            background-color: rgb(66, 106, 99);
+            -webkit-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+            -moz-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+            box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+
     }
 
     .checkoutone button img{
@@ -2067,6 +2086,7 @@ footer h6{
         font-size: 2em;
         margin-top: 130px;
         margin-bottom: 50px;
+        
    }
    .confirmbooking table{
     margin: 0 auto;
@@ -2074,7 +2094,7 @@ footer h6{
    }
 
    .confirmbooking table th{
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(92, 92, 92);
         height: 50px;
         text-align: center;
         font-size: 1.4em;
@@ -2116,11 +2136,12 @@ footer h6{
         text-align: center;
     }
 
-    .cartitems button{
+    .cartitems .trash{
         color: white;
         background-color: transparent;
         font-size: 1.2em;
         cursor: pointer;
+        border: none;
 
     }
     .cartitems td:nth-child(4){
@@ -2140,14 +2161,14 @@ footer h6{
         height: 80px;
         font-size: 1.4em;
         line-height: 80px;
-        border-top: 1px solid white;
+        border-top: 1px solid rgb(92, 92, 92);
     }
 
-    .carttotal td.ttotal{
+    .carttotal .ttotal{
         text-align: right;
 
     }
-    .carttotal td.ttmoney{
+    .carttotal .ttmoney{
         padding-left: 25px;
 
     }
@@ -2155,7 +2176,7 @@ footer h6{
 
 
     .checkouttwo{
-        width: 1200px;
+        width: 800px;
         height: 250px;
         margin: 0 auto;
         position: relative;
@@ -2173,23 +2194,21 @@ footer h6{
     } */
 
     .checkouttwo button.previous{
+        border: none;
         background-color: transparent;
-        color: white;
+        color: rgb(116, 116, 116);
         text-align: right;
         position: relative;
         position: absolute;
         left: 90px;
         bottom: 45px;
         cursor: pointer;
-
-
-
     }
 
     .checkouttwo button.proceed{
         width: 300px;
-        height: 80px;
-        background-color: #426a63;
+        height: 70px;
+        background-color: #000000;
         cursor: pointer;
         font-size: 1.3em;
         line-height: 1.3em;
@@ -2201,19 +2220,29 @@ footer h6{
         position: absolute;
         right: 10px;
         bottom: 20px;
+        outline: none;
+        border: 1px solid #426a63;
 
     }
+
+    .checkouttwo button.proceed:hover{
+        background-color: rgb(66, 106, 99);
+        -webkit-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+        -moz-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+        box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+
+}
 
     .checkouttwo button.proceed img{
         position: absolute;
         right: 30px;
-        bottom: 26px;
+        bottom: 20px;
     }
 
     .checkouttwo button.previous img{
         position: absolute;
-        left: -25px;
-        bottom: 0px;
+        left: -20px;
+        bottom: -6px;
         scale: 0.5;
     }
 
@@ -2242,7 +2271,7 @@ footer h6{
     }
 
     .orderdetail table th{
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(92, 92, 92);
         height: 50px;
         text-align: center;
         font-size: 1.4em;
@@ -2293,7 +2322,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2304,7 +2333,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2315,7 +2344,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2326,7 +2355,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2364,7 +2393,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2375,7 +2404,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2386,7 +2415,7 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
@@ -2397,33 +2426,48 @@ footer h6{
         border-radius: 15px;
         outline: none;
         background-color: transparent;
-        border: 1px solid rgb(138, 138, 138);
+        border: 1px solid rgb(102, 102, 102);
         color: white;
         padding-left: 5px;
     }
 
     .submitbnt {
-        margin-top: 100px;
+        margin-top: 70px;
         margin-left:830px;
 
         width: 150px;
         height: 50px;
-        background-color: #426a63;
+       
         color: white;
         font-size: 1em;
         border-radius: 25px;
         cursor: pointer;
+        background-color: #000000;
+        line-height: 1.3em;
+        border-radius: 40px;
+        color: white;
+        outline: none;
+        border: 1px solid #426a63;
     }
+
+    .submitbnt:hover{
+        background-color: rgb(66, 106, 99);
+        -webkit-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+        -moz-box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+        box-shadow: 10px 10px 99px 6px rgba(66, 106, 99,1);
+
+}
 
     form button.previous{
         background-color: transparent;
-        color: white;
+        color: rgb(146, 146, 146);
         position: relative;
         position: absolute;
         left: 250px;
         bottom: 5px;
         text-align: right;
         cursor: pointer;
+        border: none;
     }
 
 
@@ -2563,6 +2607,7 @@ footer h6{
     margin: 0 auto; */
     margin-bottom: 60px;
     text-align: center;
+    color: #b1b1b1;
 }
 
 .hideme{
@@ -2726,3 +2771,72 @@ footer h6{
 }
 
 
+/*   testing about */
+
+.triback{
+
+}
+
+
+.triang1{
+    border-left: 180px solid transparent;
+    border-bottom: 400px solid rgba(109, 109, 109, 0.363);
+    border-right: 180px solid transparent;
+    display:inline-block;
+    transform: rotate(0deg);
+    animation: rotation2 ease-in-out 5s;
+}
+
+.triang2{
+    border-left: 180px solid transparent;
+    border-bottom: 400px solid rgba(109, 109, 109, 0.059);
+    border-right: 180px solid transparent;
+    display:inline-block;
+    margin-left: -180px;
+    transform: rotate(0deg);
+    animation: rotation2 ease-in-out 5s;
+}
+
+.triang3{
+    border-left: 180px solid transparent;
+    border-bottom: 400px solid rgba(109, 109, 109, 0.363);
+    border-right: 180px solid transparent;
+    display:inline-block;
+    margin-left: -180px;
+    transform: rotate(0deg);
+    animation: rotation2 ease-in-out 5s;
+}
+
+.triang4{
+    border-left: 180px solid transparent;
+    border-top: 400px solid rgba(109, 109, 109, 0.363);
+    border-right: 180px solid transparent;
+    display:inline-block;
+    margin-left: -548px;
+    transform: rotate(0deg);
+    animation: rotation ease-in-out 5s;
+}
+
+@keyframes rotation  {
+	0% {
+		transform: rotate(0deg)
+	}
+	50% {
+		transform: rotate(180deg)
+	}
+	100% {
+		transform: rotate(0deg)
+	}
+}
+
+    @keyframes rotation2  {
+        0% {
+            transform: rotate(0deg)
+        }
+        50% {
+            transform: rotate(-180deg)
+        }
+        100% {
+            transform: rotate(0deg)
+        }
+    }

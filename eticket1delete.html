@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +13,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link href="css/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-   
-    
-    
-    
+    <script src="js/calscript.js" defer></script>
+
 
 </head>
 <body>
@@ -80,16 +77,38 @@
                 <li>Payment</li>
             </ul>
         </div>
+
+        <!-- <picture>
+            <source srcset="img/ticketbanner_m.png" media="(max-width: 415px)">
+            <img src="img/ticketbanner.png" alt="">
+        </picture> -->
     </div>
     
     <div class="selectdate">
         <h2>1. Select a day</h2>
-        <div id="datepicker"></div>
-    </div>
-
+        <div class="wrapper">
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <p class="current-date"></p>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+            <div class="calendar">
+                <ul class="weeks">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                </ul>
+                <ul class="days"></ul>
+            </div>
+        </div>
+        </div>
     <div class="dateexlist">
         <h2>2. Select the Tickets</h2>
-        <p class ="selectedD"></p>
+        <p>&nbsp 2023/04/09  (Tuesday)</p>
         <h3>&nbsp Exhibition</h3>
         <table>
             <tr>
@@ -126,7 +145,7 @@
             </tr>
             <tr>
                 <td class = "role">Children</td>
-                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>0</td>
+                <td class = "money">0</td>
                 <td class = "count">
                     <div class = "pmbutton">
                         <button id="minus3" class="minus"><i class="fa-solid fa-minus"></i></button>
@@ -135,24 +154,21 @@
                     </div>
                 </td>
             </tr>
-        </table> 
+        </table> -->
         <div class="ticketevent">
             <h3>&nbsp Event</h3>
             <ul>
-
                 <li>
                     <img src="img/booking_ad.png" alt="">
                     <div class="tevlist">
                         <h4>Workshop | Exploring the Art of Drawing </h4>
                         <h5>14:00 -15:00 @ Art Center</h5>
                         <h5>Remaining Spots: <span>10</span></h5>
-                        <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>150</h6>
-                            <div class = "pmbutton">
-                                <button id="minus4" class="minus"><i class="fa-solid fa-minus"></i></button>
-                                <input type="text" class="input-num" id="input-num4" value="0" />
-                                <button id="plus4" class="plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>150</h6>
+                        <div class = "pmbutton">
+                            <button id="minus4" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num4" value="0" />
+                            <button id="plus4" class="plus"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </li>
@@ -163,13 +179,11 @@
                         <h4>Performance | Interactive Soundscapes </h4>
                         <h5>19:00 - 21:00 @ Auditorium</h5>
                         <h5>Remaining Spots: <span>50</span></h5>
-                        <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
-                            <div class = "pmbutton">
-                                <button id="minus5" class="minus"><i class="fa-solid fa-minus"></i></button>
-                                <input type="text" class="input-num" id="input-num5" value="0" />
-                                <button id="plus5" class="plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
+                        <div class = "pmbutton">
+                            <button id="minus5" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num5" value="0" />
+                            <button id="plus5" class="plus"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </li>
@@ -180,23 +194,21 @@
                         <h4>Tour | Garden of Wonders </h4>
                         <h5>9:00 - 11:00 @ Sculpture garden</h5>
                         <h5>Remaining Spots: <span>25</span></h5>
-                        <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
-                            <div class = "pmbutton">
-                                <button id="minus6" class="minus"><i class="fa-solid fa-minus"></i></button>
-                                <input type="text" class="input-num" id="input-num6" value="0" />
-                                <button id="plus6" class="plus"><i class="fa-solid fa-plus"></i></button>
-                            </div>
+                        <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
+                        <div class = "pmbutton">
+                            <button id="minus6" class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <input type="text" class="input-num" id="input-num6" value="0" />
+                            <button id="plus6" class="plus"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
+
                 </li>
-                <div class="line"></div>
             </ul>
         </div>
     </div>
     <div class="checkoutone">
         <h3 class = "total">Total &nbsp<i class="fa-solid fa-dollar-sign"></i><span class = "totalmoney">&nbsp500</span></h3>
-        <button type="button"  onclick="javascript:location.href='eticket2.html'">Continue to Review<img src="img/caret-right_32.png"></button>
+        <button type="button"  onclick="javascript:location.href='eticket2.html'">Continue to Review<img src="img/whitearrow.png"></button>
     </div>
 
 
@@ -273,29 +285,6 @@
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script src="js/external/jquery.js"></script>
-<script src="js/jquery-ui.js"></script>
-
-<script>
-   $( "#datepicker" ).datepicker({
-	inline: true,
-    dayNamesMin: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ], 
-    dateFormat: "yy/mm/dd",
-    
-        onSelect: function(){
-            var selected = $(this).val();
-            $('.selectedD').html(`&nbsp&nbsp&nbsp&nbsp` + selected);
-            console.log(selected);
-
-            let dayNamesMin = $(this).datepicker( "option", "dayNamesMin" );
-            console.log(dayNamesMin);
-        }
-});
-
-  
-
-    </script>
-
 
 </body>
 </html>

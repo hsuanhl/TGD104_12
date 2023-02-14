@@ -13,7 +13,7 @@ body{
 }
 .top img{
     width: 225px;
-    margin: 20px 10px;
+    margin: 20px 20px;
 }
 
 .top a.burger{
@@ -22,11 +22,11 @@ body{
     /* flex-grow: 1; */
     font-size: 2em;
     margin-top: 10px;
-    margin-right: 130px;
+    margin-right: 110px;
 }
 
 .top .topbar{
-    width: 414px;
+    width: 900px;
     display: block;
     flex-direction: column;
     position: absolute;
@@ -37,18 +37,26 @@ body{
     transition:all ease-in-out .8s;
     max-height: 0;
     overflow: hidden;
+    z-index: 3;
 }
 
 .top .topbar.active{
-    max-height: 250px;
+    /* left: 0px; */
+    max-height: 100vh;
 }
+
+.topbar.left{
+    left: -200px;
+}
+
 
 .top li{
     /* margin: auto; */
     margin-left: 0px;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
+    width: 300px;
+    height: 15vh;
+    line-height: 15vh;
+    font-size: 1.4rem;
     border-bottom: 1px solid rgb(31, 31, 31);
     background-color: black;
     /* max-height: 0; */
@@ -56,16 +64,16 @@ body{
 
 .top .secondbar{
     width: 0px;
-    max-height: 100px;
+    max-height: 160px;
     top: 0px;
-    left: 200px;
-    z-index: 2;
+    left: 300px;
+    z-index: 4;
 }
 
 .top .secondbar li{
-    height: 50px;
+    height: 80px;
     margin: auto;
-    line-height: 1;
+    line-height: 80px;
     padding-left: 0px;
     border-bottom: 1px solid rgb(48, 48, 48);
 }
@@ -75,8 +83,8 @@ body{
 }
 
 .secondbar.show{
-    max-height: 100px;
-    width: 200px;
+    max-height: 160px;
+    width: 300px;
 
 }
 
@@ -88,16 +96,21 @@ body{
 
 .top li a span.material-icons{
     display: none;
-    top: 7px;
-    left: 165px;
-    font-size: 1.3em;
 }
 
 .top li a span.material-symbols-outlined{
     display: block;
-    top: 7px;
-    left: 165px;
-    font-size: 1.3em;
+    top: 50px;
+    left: 180px;
+    font-size: 1.4em;
+}
+
+
+.top li a span.material-symbols-outlined.left{
+    left: 260px;
+    transform: rotate(180deg);
+    transition: all ease-in-out .6s;
+
 }
 
 .search form {
@@ -181,11 +194,12 @@ body{
 
 }
 
-.slick-dots li button:before {
+.slider .slick-dots li button:before {
     color: rgb(255, 255, 255);
+    font-size: 12px;
 }
 
-.slick-dots li.slick-active button:before {
+.slider .slick-dots li.slick-active button:before {
     color: #426a63;
 }
 
@@ -706,7 +720,7 @@ main{
 
 .exhbanner{
     width: 414px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     z-index: -1;
 
 }
@@ -735,7 +749,7 @@ main{
 .choose{
     width: 120px;
     font-size: 1em;
-    z-index: 1;
+    z-index: 0;
 }
 
 .exhlist .listex{
@@ -829,20 +843,23 @@ main{
 /* ticket */
 .ticketbanner{
     width: 414px;
-    min-height: 200px;
-    margin-bottom: 30px;
+    height:170px;
+    /* margin-bottom: 30px; */
     z-index: -1;
     background-image: url(../img/ticketbanner_m.png);
-
 }
 
-/* .ticketbanner picture img{
-    min-width: 414px;
-}  */
+
 .ticketbanner ul{
-    width: 400px;
+    width: 300px;
+    height: 50px;
 }
+.threesteps{
+    width: 400px;
+    height: 100px;
+    padding-top: 40px;
 
+}
 
 .ticketbanner li.icon{
     height: 40px;
@@ -857,6 +874,444 @@ main{
     width: 40px;
     margin-top: 40px;
 }
+.ticketbanner .ttitle li{
+    font-size: 0.8rem;
+}
 
+.ticketbanner .ttitle .center{
+    font-size: 0.8rem;
+    margin: 0 40px ;
+}
+
+.selectdate{
+    /* position: relative; */
+    width: 400px;
+    min-height: 300px;
+  }
+  
+  .selectdate h2{
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 20px;
+  }
+
+  #datepicker{
+    width: 380px;
+    min-height: 400px;
+    margin: 0 auto;
+  }
+
+
+  .ui-widget-content {
+    width: 380px;
+    min-height: 350px;
+  }
+
+  .ui-datepicker .ui-datepicker-header{
+    height: 50px;
+  }
+
+  .ui-datepicker .ui-datepicker-title {
+    font-size: 1.4em;
+    line-height: 50px;
+  }
+
+  .ui-datepicker th{
+    font-size: 1.2em;
+  }
+
+  .ui-datepicker .ui-datepicker-next{
+    width: 30px;
+    height: 30px;
+    right: 50px;
+    top: 10px;
+}
+    
+
+.ui-datepicker .ui-datepicker-prev{
+    width: 30px;
+    height: 30px;
+    left: 50px;
+    top: 10px;
+}
+
+.ui-datepicker td{
+    height: 50px;
+}
+
+.ui-datepicker td a{
+    line-height: 50px;
+}
+
+.dateexlist{
+    width: 400px;
+    min-height: 100px;
+    margin: 0 auto;
+  }
+  
+  .dateexlist h2{
+    font-size: 1.5em;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+  .dateexlist p{
+    font-size: 1.4em;
+    margin-left: 5px;
+    width: 380px;
+  }
+
+  .dateexlist h3{
+    font-size: 1.5em;
+    margin: 20px 5px;
+  }
+
+  .dateexlist table{
+    width: 370px;
+  }
+
+  .dateexlist .role{
+    font-size: 1.3em;
+    width: 110px;
+  }
+
+  .dateexlist .money{
+    width: 80px;
+    font-size: 1.3em;
+  }
+
+ .pmbutton{
+    width: 180px;
+  }
+
+ .pmbutton .input-num{
+    width: 180px;
+  }
+
+  .ticketevent li{
+    width: 400px;
+    min-height: 300px;
+    display:inline-block;
+    margin: auto;
+  }
+
+  .ticketevent li img{
+    width: 360px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tevlist{
+    padding: 0 5px;
+  }
+
+  .tevlist h4{
+    font-size: 1.2em;
+    margin: 10px 20px;
+  }
+
+  .tevlist h5{
+    font-size: 1em;
+    margin: 10px 20px;
+  }
+  
+  .priceNum{
+    width: 270px;
+    margin-left:110px;
+  }
+  .tevlist h6{
+  
+  }
+  .tevlist .pmbutton{
+
+}
+
+  .checkoutone{
+    width: 380px;
+    height: 200px;
+    margin-bottom: 50px;
+    
+}
+
+.checkoutone .total{
+    font-size: 1.5rem;
+}
+
+.checkoutone button{
+    width: 230px;
+    height: 50px;
+    font-size: 1em;
+    line-height: 50px;
+    left: 80px;
+    bottom: 0px;
+}
+
+.checkoutone button img{
+    right: 12px;
+    bottom: 8px;
+}
+/* ticket2 */
+
+.confirmbooking{
+    width: 410px;
+}
+
+.confirmbooking table thead{
+    /* display: none; */
+    width: 410px;
+}
+
+
+.confirmbooking table th{
+    font-size: 1em;
+    height: 30px;
+}
+
+.confirmbooking h2{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: radial-gradient(ellipse, rgba(66,106,99,1) 0%, rgba(0,0,0,1) 90%);
+}
+
+
+.checkouttwo{
+    width: 400px;
+    height: 150px;
+}
+
+
+.checkouttwo button.proceed{
+    width: 200px;
+    height: 50px;
+    font-size: 1em;
+    right: 20px;
+    bottom: 30px;
+    padding-left: 15px;
+}
+
+.checkouttwo button.proceed img{
+    right: 5px;
+    bottom: 10px;
+}
+
+.checkouttwo button.previous{
+    left: 30px;
+    outline: none;
+    border: none;
+    color: #ccc;
+    font-size: 0.6em;
+}
+
+.checkouttwo button.previous img{
+    position: absolute;
+    left: -20px;
+    bottom: -9px;
+    scale: 0.5;
+}
+
+.cartitems .trash{
+    width: 30px;
+    font-size: 1em;
+    color: #aeaeae;
+}
+
+.cartitems{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    width: 400px;
+    
+}
+
+#items{
+ display: none;   
+}
+
+.cartitems td:nth-child(2){
+    font-size: 0.8em;
+}
+
+.cartitems .pmbutton{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.cartitems .pmbutton .input-num{
+    width: 120px;
+    height: 30px;
+    font-size: 1em;
+    
+}
+
+.cartitems td.times{
+    font-size: 0.4em;
+    color: darkgray;
+    font-weight: 100;
+}
+
+.cartitems .pmbutton .minus{
+    font-size: 1.2em;
+}
+
+.cartitems .pmbutton .plus{
+    font-size: 1.2em;
+}
+
+.cartitems td:nth-child(5){
+    font-size: 1em;
+}
+
+/* .confirmbooking table th{
+    width: 100px;
+} */
+
+.carttotal td{
+    width: 400px;
+    height: 60px;
+    font-size: 1.1em;
+    line-height: 60px;
+    border-top: 1px solid rgb(92, 92, 92);
+}
+
+/* ticket3 */
+.orderdetail{
+    width: 410px;
+}
+
+.orderdetail h2{
+    width: 400px;
+    height: 100px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 100px;
+}
+.orderdetail table th{
+    font-size: 1em;
+    height: 30px;
+}
+
+form{
+    width: 410px;
+}
+
+.purchaseinfo{
+    width: 410px;
+
+}
+
+.purchaseinfo h2{
+    width: 400px;
+    height: 100px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 100px;
+}
+
+.purchaseinfo .purinfo{
+    width: 400px;
+}
+
+.ques1 input{
+    height: 30px;
+}
+.ques2 input{
+    height: 30px;
+    width: 300px;
+}
+.ques3 input{
+    height: 30px;
+    width: 350px;
+}
+.ques4 input{
+    height: 30px;
+    width: 350px;
+}
+
+.paymentmethod{
+    width: 410px;
+}
+
+.paymentmethod h2{
+    width: 400px;
+    height: 100px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 100px;
+}
+
+.paymentmethod .paymethod{
+    width: 410px;
+}
+
+.ques6 input{
+    width: 350px;
+}
+.ques7 input{
+    width: 350px;
+
+}
+.ques8 input{
+    width: 350px;
+
+}
+.ques9 input{
+    width: 350px;
+
+}
+
+
+
+.submitbnt {
+    margin-left:130px;
+    
+}
+
+/* about page */
+
+.aboutbanner{
+    width: 414px;
+    margin-bottom: 30px;
+    z-index: -1;
+
+}
+
+.aboutbanner picture img{
+    min-width: 414px;
+} 
+
+
+.aboutbanner h1{
+    font-size: 1.6em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.aboutcontent{
+    width: 400px;
+}
+
+.aboutcontent h2{
+    height: 130px;
+    font-family: 'MinSans-Medium';
+    font-size: 1.3em;
+    line-height: 130px;
+    margin: 20px auto 20px;
+    }
+
+.aboutcontent p{
+    width: 380px;
+    font-size: 0.9em;
+    margin: 0 auto;
+}
 
 }
