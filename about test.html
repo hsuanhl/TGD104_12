@@ -20,8 +20,20 @@
 
 
 </head>
-<body>
-    <main>
+<body onload="myFunction()" style="margin:0;">
+    <div id="loader">
+        <div class="outter">
+            <div class="triback">
+                <div class="triang1"><img src="img/tri3.svg" alt=""></div>
+                <div class="triang2"><img src="img/tri3.svg" alt=""></div>
+                <div class="triang3"><img src="img/tri3.svg" alt=""></div>
+                <div class="triang4"><img src="img/tri3.svg" alt=""></div>
+            </div>
+            <p>The Museum of Visionary Art</p>
+        </div>
+    </div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
         <div class="top">
             <a href="index.html">
                 <picture>
@@ -67,16 +79,9 @@
             <img src="img/about_banner.png" alt="">
           </picture>
     </div>
-<div class="triback">
-    <div class="triang1"></div>
-    <div class="triang2"></div>
-    <div class="triang3"></div>
-    <div class="triang4"></div>
-   
 
-</div>
     
-    <!-- <div class="aboutcontent">
+<div class="aboutcontent">
         <section>
             <h2 class="hideme">Introduction</h2>
             <p class="hideme">The Museum of Visionary Art is a unique and one-of-a-kind cultural institution, dedicated to showcasing and preserving works of art that explore the boundaries of reality and imagination. The museum was founded with the mission of inspiring and empowering artists to explore their creative potential, and to provide a platform for their work to be seen and appreciated by the public.</p>
@@ -109,7 +114,7 @@
             <h2 class="hideme">Conclusion</h2>
             <p class="hideme">In addition to its exhibitions, the Museum of Visionary Art is also dedicated to education and outreach. The museum offers a wide range of programs, workshops, and events for visitors of all ages, designed to inspire creativity, curiosity, and critical thinking. The museum also partners with schools and community organizations to provide educational resources and opportunities for students and underrepresented communities.</p>
         </section>
-    </div> -->
+    </div>
 
     
     <footer>
@@ -178,27 +183,26 @@
     <div class="tibame">
         <p>本網站為緯育TibaMe前端工程師班第82期學員專題作品，本平台僅供學習、展示之用。<a href="#">參考資料</a></p>
     </div>
-   
+</div>
 </div>
 
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="flowup.js"></script> -->
 
-
-    <!-- <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
-    </script> -->
 
     <script type="text/javascript">
+
+        var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 4500);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
         
         $(document).ready(function() {
     

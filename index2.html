@@ -13,17 +13,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-
-<body onload="myFunction()">
+<!-- <body onload="myFunction()">
     <div id="loader">
         <div class="outter">
             <div class="triback">
@@ -34,79 +30,84 @@
             </div>
             <p>The Museum of Visionary Art</p>
         </div>
+    </div> -->
+<body>
+    <div class="top">
+        <a href="index.html">
+            <picture>
+                <source srcset="img/m-logo.svg" media="(max-width: 415px)">
+                <img src="img/Logo.svg" alt="">
+              </picture>
+            
+        </a>
+        <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
+            <ul class = topbar>
+                <li class ="visit">
+                    <a href="#" class = "visibtn">Visit
+                        <span class="material-icons">arrow_drop_down</span>
+                        <span class="material-symbols-outlined">arrow_right</span>
+                    </a>
+                    <ul class = secondbar>
+                        <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
+                        <li><a href="floorplan1.html">Floor Plan</a></li>
+                    </ul>
+                </li>
+                <li><a href="exhibition.html">Exhibition</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="eticket.html">eTicket</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <div class="search">
+                        <form action="#">
+                            <input type="text" placeholder=" Search" name="search">
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </li>
+            </ul> 
     </div>
-    <div style="display:none;" id="myDiv" class="animate-bottom">
-        <div class="top">
-            <a href="index.html">
-                <picture>
-                    <source srcset="img/m-logo.svg" media="(max-width: 415px)">
-                    <img src="img/Logo.svg" alt="">
-                </picture>
-                
-            </a>
-            <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
-                <ul class = topbar>
-                    <li class ="visit">
-                        <a href="#" class = "visibtn">Visit
-                            <span class="material-icons">arrow_drop_down</span>
-                            <span class="material-symbols-outlined">arrow_right</span>
-                        </a>
-                        <ul class = secondbar>
-                            <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
-                            <li><a href="floorplan1.html">Floor Plan</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="exhibition.html">Exhibition</a></li>
-                    <li><a href="event.html">Event</a></li>
-                    <li><a href="eticket.html">eTicket</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li>
-                        <div class="search">
-                            <form action="#">
-                                <input type="text" placeholder=" Search" name="search">
-                                <button>
-                                    <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </li>
-                </ul> 
-        </div>
 
 
-        <div class="banner">
-            <img src="img/Banner1.png" alt="">
-            <img src="img/Banner2.png" alt="">
-            <img src="img/Banner3.png" alt="">
-            <img src="img/Banner4.png" alt="">
-        </div>
+    <div class="banner">
+        <img src="img/Banner1.png" alt="">
+        <img src="img/Banner2.png" alt="">
+        <img src="img/Banner3.png" alt="">
+        <img src="img/Banner4.png" alt="">
+    </div>
 
     <div class="whatson">
         <h1>What's On</h1>
-        <h3>Explore exhibition gallery guides, videos, articles, and more.</h3>
-        <div class="sOut">
-        <div  class="swiper onAir" >
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><a href="mf_ep.html"><h2>Majestic Forms</h2><img src="img/H-Majestic Forms.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html"><h2>Luminescence</h2><img src="img/H-Luminescence.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html"><h2>Through the Lens</h2><img src="img/H-photoart.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html"><h2>Street Art Now</h2><img src="img/H-sprayart.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html#"><h2>Retro Tech</h2><img src="img/H-Retro.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html"><h2>Beauty of Brushstrokes</h2><img src="img/H-The Beauty of Brushstrokes.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="temp_ep.html"><h2>Fragments of Reality</h2><img src="img/H-stockart.png" alt=""></a></div>
-              <div class="swiper-slide"><a href="ai_ep.html"><h2>Surreal Dreams</h2><img src="img/H-aiart.png" alt=""></a></div>
-              
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-          </div>
-        </div>
+        <h3>Explore exhibition gallery guides, videos, articles, and more.</h3>     
+        <ul class = "slider">
+            <li>
+                <a href="mf_ep.html"><h2>Majestic Forms</h2><img src="img/H-Majestic Forms.png" alt=""></a>
+            </li>
+            <li>
+                <a href="temp_ep.html"><h2>Luminescence</h2><img src="img/H-Luminescence.png" alt=""></a>
+            </li>
+            
+            <li>
+                <a href="temp_ep.html"><h2>Through the Lens</h2><img src="img/H-photoart.png" alt=""></a>
+            </li>
+            <li>
+                <a href="temp_ep.html"><h2>Street Art Now</h2><img src="img/H-sprayart.png" alt=""></a>
+            </li>
+            <li>
+                <a href="temp_ep.html#"><h2>Retro Tech</h2><img src="img/H-Retro.png" alt=""></a>
+            </li>
+            <li>
+                <a href="temp_ep.html"><h2>Beauty of Brushstrokes</h2><img src="img/H-The Beauty of Brushstrokes.png" alt=""></a>
+            </li>
+            <li>
+                <a href="temp_ep.html"><h2>Fragments of Reality</h2><img src="img/H-stockart.png" alt=""></a>
+            </li>
+            <li>
+                <a href="ai_ep.html"><h2>Surreal Dreams</h2><img src="img/H-aiart.png" alt=""></a>
+            </li>
+        </ul>
+
     </div>
 
     <div class="slogan">
@@ -267,40 +268,18 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-<script>
+    <!-- <script type="text/javascript">
+        $('.slider').slick({
+            centerMode: true,
+            centerPadding: '280px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true
+        });
 
-    var mySwiper = new Swiper ('.swiper', {
-     // 垂直切换选项
-      loop: true, // 循环模式选项
-      slidesPerView: 1,
-      spaceBetween: 10, 
-      centeredSlides:true,
-      breakpoints: {
-        415: {
-            slidesPerView: 3,
-        },
-      },
+
     
-
-      
-      // 如果需要分页器
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      
-      // 如果需要前进后退按钮
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      
-      // 如果需要滚动条
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })        
-    </script>
+    </script> -->
 
 </body>
 </html>

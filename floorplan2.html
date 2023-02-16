@@ -13,10 +13,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -77,41 +80,47 @@
     </div>
 </div>
 
-<div class="facility1F">
-    <ul class = "flooronelist">  
-        <li>
+<div class="swiper facility1F" id="facility1F" >
+    <div class="swiper-wrapper">  
+        <div class="swiper-slide">
             <img src="img/specailexroom.png.png" alt="">
             <div class = title>
                 <span>7</span>
                 <h3>Special Exhibitions Showroom</h3>
             </div>
             <p>This room is used for special exhibitions and curated shows, which may be focused on a specific artist, theme, or period. It's designed to be a flexible space that can be adapted to the specific needs of each exhibition.</p>
-        </li>
-        <li>
+        </div>
+        <div class="swiper-slide">
             <img src="img/digiroom.png" alt="">
             <div class = title>
                 <span>8</span>
                 <h3>Digital Showroom</h3>
             </div> 
             <p>This high-tech room is dedicated to showcasing digital artworks and immersive installations that use the latest technology. The room is equipped with state-of-the-art projection and sound systems, and visitors can expect to experience art in a fully interactive and immersive way.</p>
-        </li>
-        <li>
+        </div>
+        <div class="swiper-slide">
             <img src="img/vrroom.png.png" alt="">
             <div class = title>
                 <span>9</span>
                 <h3>Virtual Reality Room</h3>
             </div>
             <p>This room offers virtual reality experiences that allow visitors to explore the artworks and galleries in a more immersive way, it's a great way to enhance the visitor's experience.</p>
-        </li>
-        <li>
+        </div>
+        <div class="swiper-slide">
             <img src="img/library.png" alt="">
             <div class = title>
                 <span>10</span>
                 <h3>Library and Research Center</h3>
             </div>
             <p>The museum's research library is a treasure trove of rare books and documents, available for scholars and researchers to use.</p>
-        </li>
-    </ul>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+          
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
     
 
@@ -188,7 +197,41 @@
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script>
 
+    var mySwiper = new Swiper ('.swiper', {
+     // 垂直切换选项
+      loop: true, // 循环模式选项
+      slidesPerView: 1,
+      spaceBetween: 10, 
+      centeredSlides:true,
+      breakpoints: {
+        415: {
+            slidesPerView: 3,
+            spaceBetween: 0, 
+        },
+      },
+    
+
+      
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+      // 如果需要滚动条
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })        
+    </script>
 
 </body>
 </html>

@@ -10,79 +10,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+   
+    
 
 </head>
 <body>
-
-    <div class="top">
-        <a href="index.html"><img src="img/Logo.png" alt=""></a>
-            <ul class = topbar>
-                <li><a href="#">Visit</a>
-                    <ul class = secondbar>
-                        <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
-                        <li><a href="floorplan1.html">Floor Plan</a></li>
-                    </ul>
-                </li>
-                <li><a href="exhibition.html">Exhibition</a></li>
-                <li><a href="event.html">Event</a></li>
-                <li><a href="eticket.html">eTicket</a></li>
-                <li><a href="about.html">About</a></li>
-                <li>
-                    <div class="search">
-                        <form action="#">
-                            <input type="text" placeholder=" Search" name="search">
-                            <button>
-                                <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
-                            </button>
-                        </form>
-                    </div>
-                </li>
-            </ul> 
-    </div>
+    <main>
+        <div class="top">
+            <a href="index.html">
+                <picture>
+                    <source srcset="img/m-logo.svg" media="(max-width: 415px)">
+                    <img src="img/Logo.svg" alt="">
+                  </picture>
+                
+            </a>
+            <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
+                <ul class = topbar>
+                    <li class ="visit">
+                        <a href="#" class = "visibtn">Visit
+                            <span class="material-icons">arrow_drop_down</span>
+                            <span class="material-symbols-outlined">arrow_right</span>
+                        </a>
+                        <ul class = secondbar>
+                            <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
+                            <li><a href="floorplan1.html">Floor Plan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exhibition.html">Exhibition</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="eticket.html">eTicket</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <div class="search">
+                            <form action="#">
+                                <input type="text" placeholder=" Search" name="search">
+                                <button>
+                                    <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                </ul> 
+        </div>
 
     <div class="newsbanner">
         <h1>News</h1>
-        <img src="img/news_banner.png" alt="">
+        <picture>
+            <source srcset="img/news_banner_m.png" media="(max-width: 415px)">
+            <img src="img/news_banner.png" alt="">
+          </picture>
     </div>
 
     <div class="news2023">
         <h2>2023</h2>
+        <div class="newsline"></div>
         <ul>
             <li>
                 <a href="news-3.html">
                     <p class="newsdate">2023/01/17</p>
                     <h3>COVID-19 Safety Measures in Museums</h3>
-                    <p>To ensure the safety of visitors and staff, all museums are required to implement strict COVID-19 safety measures...</p>
+                    <p>To ensure the safety of visitors and staff, all museums are required to implement strict COVID-19 safety measures. This includes mandatory face mask usage for all visitors and staff, as well as regular temperature checks at the entrance.</p>
                 </a>
             </li>
             <li>
                 <a href="news-2.html">
                     <p class="newsdate">2023/01/05</p>
                     <h3>Artist Talk Series Announced</h3>
-                    <p>The Museum of Visionary Art is excited to announce its new Artist Talk Series,a program of special events ... </p>
+                    <p>The Museum of Visionary Art is excited to announce its new Artist Talk Series, a program of special events featuring some of the most exciting and innovative artists in the visionary art community. Visitors will have the opportunity to engage with artists and learn about their creative processes, inspirations, and the stories behind their visionary works of art. </p>
                 </a>
             </li>
             <li>
                 <a href="news-1.html">
                     <p class="newsdate">2023/01/01</p>
                     <h3>Museum Store New Year Sale</h3>
-                    <p>The museum store is having a sale this weekend, with discounts on a wide range of art-themed merchandise. From handmade ...</p>
+                    <p>The Museum of Visionary Art is excited to announce a special Museum Store Sale, offering a wide selection of unique and inspired gifts, perfect for art lovers and collectors alike. Visitors will have the chance to take home a piece of visionary art from the museum's collection, including hand-made jewelry, limited-edition prints, and handmade sculptures.</p>
                 </a>
             </li>
         </ul>
-         
+        <div class="button-container">
+            <button id="btnClick1">
+                View More
+            </button>
+        </div>
            
     </div>
 
     <div class="oldnews">
         <select id="slt1" class="form-control">
-            <option value="#tab_1">2022</option>
-            <option value="#tab_2">2021</option>
+            <option value="0">--Year--</option>
+            <option value="tab_1">  2022</option>
+            <option value="tab_2">  2021</option>
         </select>
         <div class="newsline"></div>
 
@@ -116,21 +143,21 @@
                         <p>MoVA is excited to announce an exhibition of artworks inspired by the popular book series, Harry Potter. The exhibition, entitled "Wizarding World of Art," will feature a collection of ...</p>
                     </a>
                 </li>
-                <li>
+                <li class = "hideMore22">
                     <a href="">
                         <p class="newsdate">2022/09/01</p>
                         <h3>A new exhibition featuring artworks created by AI artists</h3>
                         <p>Musuem of Visionary Art is proud to announce a new exhibition featuring artworks created by AI artists. The exhibition, entitled "Artificial Creativity," will showcase a diverse collection of pieces created by cutting-edge AI algorithms...</p>
                     </a>
                 </li>
-                <li>
+                <li class = "hideMore22">
                     <a href="">
                         <p class="newsdate">2022/07/06</p>
                         <h3>The launch of a virtual reality experience that allows visitors to step inside famous paintings</h3>
                         <p>The XYZ Art Museum is excited to launch a virtual reality experience that allows visitors to step inside famous paintings...</p>
                     </a>
                 </li>
-                <li>
+                <li class = "hideMore22">
                     <a href="">
                         <p class="newsdate">2022/06/30</p>
                         <h3>A exhibition of artworks inspired by a popular video game series</h3>
@@ -138,6 +165,11 @@
                     </a>
                 </li>
             </ul>
+            <div class="button-container">
+                <button id="btnClick2">
+                    View More
+                </button>
+            </div>
         </div>
 
         
@@ -145,16 +177,23 @@
             <ul>
                 <li>
                     <a href="">
-                        <p class="newsdate"></p>
-                        <h3></h3>
-                        <p></p>
+                        <p class="newsdate">2021/11/20</p>
+                        <h3>The opening of a new interactive exhibit that allows visitors to create their own art</h3>
+                        <p>Musuem of Visionary Art is proud to announce the opening of a new interactive exhibit that allows visitors to create their own art. The exhibit, entitled "Art Lab," will feature a variety of materials and tools that visitors...</p>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p class="newsdate"></p>
-                        <h3></h3>
-                        <p></p>
+                        <p class="newsdate">2021/11/20</p>
+                        <h3>The opening of a new interactive exhibit that allows visitors to create their own art</h3>
+                        <p>Musuem of Visionary Art is proud to announce the opening of a new interactive exhibit that allows visitors to create their own art. The exhibit, entitled "Art Lab," will feature a variety of materials and tools that visitors...</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="newsdate">2021/11/20</p>
+                        <h3>The opening of a new interactive exhibit that allows visitors to create their own art</h3>
+                        <p>Musuem of Visionary Art is proud to announce the opening of a new interactive exhibit that allows visitors to create their own art. The exhibit, entitled "Art Lab," will feature a variety of materials and tools that visitors...</p>
                     </a>
                 </li>
             </ul>
@@ -233,6 +272,7 @@
 
 <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
         $('.slider').slick({
@@ -242,6 +282,42 @@
             slidesToScroll: 1,
             arrows: true
         });
+
+        $('.hideMore22').hide();
+        $('#btnClick2').on('click', function () {
+            if ($('#btnClick2').text() === 'View More') {
+                $('#btnClick2').text('View Less');
+                $('.hideMore22').show();
+            }
+            else {
+
+                $('#btnClick2').text('View More');
+                $('.hideMore22').hide();
+            }
+        });
+
+        $(function() {
+        //一開始所有資料都隱藏
+            $(".news2022").hide(); //第一個資料隱藏
+            $(".news2021").hide(); //第二個資料隱藏
+            $("#slt1").change(function(val) {
+                //因為是 select 所以綁定 change 事件
+                if ($("#slt1").val() === "tab_1") {
+                //當 select 中 option 的值等於 1 時
+                $(".news2022").show(); //第一個資料顯示
+                $(".news2021").hide(); //第二個資料隱藏
+                } else if ($("#slt1").val() === "tab_2") {
+                //當 select 中 option 的值等於 2 時
+                $(".news2021").show(); //第二個資料顯示
+                $(".news2022").hide(); //第一個資料隱藏
+                } else {
+                //否則兩筆都隱藏
+                $(".news2022").hide();
+                $(".news2021").hide();
+                }
+            });
+        });
+
     </script>
 
 </body>

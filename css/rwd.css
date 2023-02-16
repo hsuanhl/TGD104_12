@@ -27,6 +27,7 @@ body{
 
 .top .topbar{
     width: 900px;
+    /* height: 100vh; */
     display: block;
     flex-direction: column;
     position: absolute;
@@ -54,8 +55,8 @@ body{
     /* margin: auto; */
     margin-left: 0px;
     width: 300px;
-    height: 15vh;
-    line-height: 15vh;
+    height: 80px;
+    line-height: 80px;
     font-size: 1.4rem;
     border-bottom: 1px solid rgb(31, 31, 31);
     background-color: black;
@@ -154,6 +155,30 @@ body{
 .whatson h3{
     font-size: 13px;
     margin: 0 10px;
+    margin-bottom: 30px;
+}
+
+.sOut{
+    width: 414px;
+}
+
+
+.whatson .swiper {
+    width: 380px;
+    height: 300px;
+}
+
+.swiper-button-prev{
+   display: none;
+}
+
+.swiper-button-next{
+    display: none;
+}
+
+.whatson .swiper-slide img{
+    width: 380px;
+    margin-left: 0px;
 }
 
 .slider{
@@ -608,7 +633,7 @@ main{
 .firstF picture img{
     display: block;
     width: 380px;
-    margin: 60px auto;
+    margin: 60px auto 10px;
 }
 
 .firstF button{
@@ -667,15 +692,16 @@ main{
 
 .facility1F{
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 50px;
     width: 414px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .facility1F img{
     width: 380px;
     margin: 0 auto;
     transition:1s ease-in-out;
+    margin-left: 18px;
 }
 
 .facility1F img:hover{
@@ -684,12 +710,12 @@ main{
     /* margin: 0 auto; */
 }
 
-.facility1F ul{
+.facility1F .swiper-wrapper{
     margin: 0 auto;
     width: 414px;;
 }
 
-.facility1F li{
+.facility1F .swiper-slide{
     width: 380px;
     margin: 0 auto;
 
@@ -1312,6 +1338,87 @@ form{
     width: 380px;
     font-size: 0.9em;
     margin: 0 auto;
+}
+
+
+/* news page */
+.newsbanner{
+    width: 414px;
+    margin-bottom: 30px;
+    z-index: -1;
+
+}
+
+.newsbanner picture img{
+    min-width: 414px;
+} 
+
+
+.newsbanner h1{
+    font-size: 1.6em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.news2023{
+    width: 410px;
+}
+
+.news2023 h2{
+    font-size: 1.5em;
+}
+
+.news2023 li{
+    width: 400px;
+    min-height: 100px;
+}
+
+.news2023 li p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.oldnews{
+    width: 410px;
+    margin-top: 50px;
+}
+
+.form-control{
+    margin-left: 160px;
+    font-size: 1.5em;
+}
+
+.news2022 li, .news2021 li{
+    width: 400px;
+    min-height: 100px;
+}
+
+.news2022 li p, .news2021 li p{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.outter{
+    width: 230px;
+    height: 105px;
+}
+
+.triback{
+    scale: 0.3;
+    margin-right: 56px;
+}
+
+.outter p{
+    font-size: 1.1em;
+    margin-top: 80px;
 }
 
 }
