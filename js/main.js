@@ -115,41 +115,6 @@ $('.minus').click(function(){
     }
 })
 
-let btnOne = document.getElementsByClassName("noone")[0];
-btnOne.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[0];
-        slideOrder.click();
-    });
-
-let btnTwo = document.getElementsByClassName("notwo")[0];
-btnTwo.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[1];
-        slideOrder.click();
-    });
-
-let btnThree = document.getElementsByClassName("nothree")[0];
-btnThree.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[2];
-        slideOrder.click();
-    });
-
-let btnFour = document.getElementsByClassName("nofour")[0];
-btnFour.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[3];
-        slideOrder.click();
-    });
-
-let btnFive = document.getElementsByClassName("nofive")[0];
-btnFive.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[4];
-        slideOrder.click();
-    });
-            
-let btnSix = document.getElementsByClassName("nosix")[0];
-btnSix.addEventListener("click", function(){
-        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[5];
-        slideOrder.click();
-    });
 
 
 // $('.noone').click(function(){

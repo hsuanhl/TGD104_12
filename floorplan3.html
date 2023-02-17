@@ -31,7 +31,6 @@
                 <source srcset="img/m-logo.svg" media="(max-width: 415px)">
                 <img src="img/Logo.svg" alt="">
               </picture>
-            
         </a>
         <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
@@ -59,6 +58,9 @@
                         </form>
                     </div>
                 </li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
             </ul> 
     </div>
 
@@ -79,7 +81,10 @@
         <a href="floorplan3.html" class = thisfloor>3F</a>
     </div>
     <div class="firstF">
-        <img src="img/floor3.png" alt="">
+        <picture>
+            <source srcset="img/floor3_m.png" media="(max-width: 415px)">
+            <img src="img/floor3.png" alt="">
+        </picture>
             <button class = "notone">11<span class="tooltip">Auditorium</span></button>
             <button class = "nottwo">12<span class="tooltip">Creative Studio</span></button>
             <button class = "notthree">13<span class="tooltip">The Historical Room</span></button>
@@ -237,7 +242,31 @@
       scrollbar: {
         el: '.swiper-scrollbar',
       },
-    })        
+    })
+   
+    let btnS = document.getElementsByClassName("notone")[0];
+    btnS.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[0];
+        slideOrder.click();
+    });
+
+    let btnE = document.getElementsByClassName("nottwo")[0];
+    btnE.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[1];
+        slideOrder.click();
+    });
+
+    let btnN = document.getElementsByClassName("notthree")[0];
+    btnN.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[2];
+        slideOrder.click();
+    });
+            
+    let btnT = document.getElementsByClassName("notfour")[0];
+    btnT.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[3];
+        slideOrder.click();
+    });     
     </script>
 
 </body>

@@ -4,25 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploring the Art of Drawing</title>
+    <title>Majestic Forms</title>
     
     <script src="https://kit.fontawesome.com/b98dec1c1a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwd.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
 <body>
 <!-- <div class="main"> -->
     <div class="top">
-        <a href="index.html"><img src="img/Logo.png" alt=""></a>
+        <a href="index.html">
+            <picture>
+                <source srcset="img/m-logo.svg" media="(max-width: 415px)">
+                <img src="img/Logo.svg" alt="">
+              </picture>
+            
+        </a>
+        <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
-                <li><a href="#">Visit</a>
+                <li class ="visit">
+                    <a href="#" class = "visibtn">Visit
+                        <span class="material-icons">arrow_drop_down</span>
+                        <span class="material-symbols-outlined">arrow_right</span>
+                    </a>
                     <ul class = secondbar>
                         <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
                         <li><a href="floorplan1.html">Floor Plan</a></li>
@@ -42,12 +59,19 @@
                         </form>
                     </div>
                 </li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
             </ul> 
     </div>
 
     <div class="evpbanner">
         <h1>Exploring the Art of Drawing</h1>
-        <img src="img/artdraw_banner.png" alt="">
+        <picture>
+            <source srcset="img/artdraw_banner_m.png" media="(max-width: 415px)">
+            <img src="img/artdraw_banner.png" alt="">
+          </picture>
+        
     </div>
 
     <div class="evpcontent">
@@ -82,30 +106,39 @@
             You'll have the opportunity to work with a variety of drawing materials, including pencils, charcoal, and ink, and learn how to use them to create different effects. Our experienced instructor will guide you through the process of creating your own drawings, from planning your composition to adding details and finishing touches.
             
             </p>
-        <ul class = "evpiclist">
-            <li>
-                <img src="img/ad-1.png" alt="">
-                <p></p>
-            </li>
-            <li>
-                <img src="img/ad-2.png" alt="">
-                <p></p>
-            </li>
-            <li>
-                <img src="img/ad-3.png" alt="">
-                <p></p>
-            </li>
-            <li>
-                <img src="img/ad-4.png" alt="">
-                <p></p>
-            </li>
-            <li>
-                <img src="img/ad-5.png" alt="">
-                <p></p>
-            </li>
-        </ul>
+
+        <div class="swiper evPpic" id="evPpic" >
+            <div class="swiper-wrapper">  
+                <div class="swiper-slide">
+                    <img src="img/ad-1.png" alt="">
+                    <p></p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/ad-2.png" alt="">
+                    <p></p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/ad-3.png" alt="">
+                    <p></p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/ad-4.png" alt="">
+                    <p></p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/ad-5.png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->    
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
         <p class = "evdescript">This event is suitable for all skill levels, and no prior experience is necessary. Just bring your curiosity and a willingness to learn, and we'll provide the rest!</p>
     </div>
+
     <footer>
         <a href="index.html"><img src="img/vLogo.png" alt=""></a>
         <div class="visitus">
@@ -179,42 +212,41 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-    <!-- <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
-
-        $('.flooronelist').slick({
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-        });
-
-        $('.exhpiclist').slick({
-            // centerMode: true,
-            // centerPadding: '10px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
-        });
-
-        $('.evpiclist').slick({
-            // centerMode: true,
-            // centerPadding: '10px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
-        });
-
-
+    <script type="text/javascript">
+      
+    var mySwiper = new Swiper ('.swiper', {
+     // 垂直切换选项
+      loop: true, // 循环模式选项
+      slidesPerView: 1,
+      spaceBetween: 0, 
+    //   centeredSlides:true,
+      breakpoints: {
+        415: {
+            slidesPerView: 2,
+            spaceBetween:5, 
+        },
+      },
     
-    </script> -->
+
+      
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+      // 如果需要滚动条
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })        
+    </script>
 
 </body>
 </html>

@@ -66,7 +66,7 @@ body{
 .topbar li a{
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'MinSans-Reg';
     text-align:end;
     line-height: auto;   
@@ -76,7 +76,7 @@ body{
     display: none;
 }
 
-.top li a:hover{
+.top li:hover{
     background:radial-gradient(ellipse 70% 70% at center,#45867b, black);
 }
 
@@ -87,15 +87,20 @@ body{
 
 .top li:nth-child(1) span{
     position: absolute;
+    top: 5px;
 
 }
 
+.topFM{
+    display: none;
+}
+
 .secondbar{
-    width: 300px;
+    width: 380px;
     flex-direction: column;
     position: absolute;
     top: 40px;
-    left: 0px;
+    left: -10px;
     z-index: 1;
     align-items: flex-start;
     background-color: rgb(0, 0, 0);
@@ -158,7 +163,7 @@ body{
 
 .banner{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     height: 100%;
     min-height: 500px;
     margin: auto;
@@ -173,7 +178,7 @@ body{
     transform: translateX(-50%);
     display: none;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
 }
 
 
@@ -612,6 +617,7 @@ footer h6{
 
 .halbanner{
     width: 100%;
+    min-width: 1300px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -620,7 +626,7 @@ footer h6{
 
 .halbanner picture img{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     margin: 0 auto;
 }
 
@@ -629,8 +635,8 @@ footer h6{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    top: 130px;
-    left: 250px;
+    top: 230px;
+    left: 300px;
     font-size: 2.5rem;
     width: 400px;
     text-align: center;
@@ -836,6 +842,7 @@ footer h6{
 
 .floorbanner{
     width: 100%;
+    min-width: 1300px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -844,16 +851,16 @@ footer h6{
 
 .floorbanner picture img{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
 }
 
 .floorbanner h1{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    top: 150px;
-    left: 250px;
-    font-size: 2.5rem;
+    top: 230px;
+    left: 300px;
+    font-size: 2.6rem;
     /* width: 300px; */
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.6);
@@ -862,7 +869,7 @@ footer h6{
 
 
 .floormap{
-    width: 924px;
+    width: 1200px;
     margin: 0 auto;
 }
 .floorlist{
@@ -894,6 +901,10 @@ footer h6{
 
 .firstF{
     position: relative;
+}
+
+.firstF img{
+    margin-left: 180px;
 }
 
 .firstF button{
@@ -945,38 +956,38 @@ footer h6{
 }
 
 .firstF .noone{
-    top: 210px;  
-    left: 400px;
+    top: 200px;  
+    left: 540px;
 }
 
 
 .firstF .notwo{
-    top: 610px;  
-    left: 430px;
+    top: 520px;  
+    left: 540px;
 }
 
 
 .firstF .nothree{
-    top: 450px;  
-    left: 370px;
+    top: 380px;  
+    left: 490px;
 }
 
 
 .firstF .nofour{
-    top: 465px;  
-    left: 80px;
+    top: 400px;  
+    left: 245px;
 }
 
 
 .firstF .nofive{
-    top: 300px;  
-    left: 845px;
+    top: 260px;  
+    left: 910px;
 }
 
 
 .firstF .nosix{
-    top: 150px;  
-    left: 675px;
+    top: 120px;  
+    left: 760px;
 }
 
 
@@ -1059,46 +1070,46 @@ footer h6{
 /* -----------floor plan 2 -------------- */
 
 .firstF .nosev{
-    top: 500px;  
-    left: 430px;
+    top: 420px;  
+    left: 530px;
 }
 
 .firstF .noeig{
-    top: 460px;  
-    left: 110px;
+    top: 400px;  
+    left: 270px;
 }
 
 .firstF .nonine{
-    top: 310px;  
-    left: 845px;
+    top: 260px;  
+    left: 910px;
 }
 
 .firstF .noten{
-    top: 170px;  
-    left: 680px;
+    top: 130px;  
+    left: 770px;
 }
 
 /* -----------floor plan 2 -------------- */
 
 .firstF .notone{
     top: 170px;  
-    left: 680px;
+    left: 770px;
 }
 
 .firstF .nottwo{
-    top: 460px;  
-    left: 110px;
+    top: 400px;  
+    left: 290px;
 }
 
 .firstF .notthree{
-    top: 500px;  
-    left: 430px;
+    top: 420px;  
+    left: 540px;
     
 }
 
 .firstF .notfour{
     top: 310px;  
-    left: 845px;
+    left: 910px;
    
 }
 
@@ -1107,6 +1118,7 @@ footer h6{
 /* ----------------exhibition list--------------- */
 .exhbanner{
     width: 100%;
+    min-width: 1300px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -1115,7 +1127,7 @@ footer h6{
 
 .exhbanner picture img{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     margin: 0 auto;
 }
 
@@ -1123,8 +1135,8 @@ footer h6{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    top: 150px;
-    left: 250px;
+    top: 230px;
+    left: 300px;
     font-size: 3rem;
     /* width: 300px; */
     text-align: center;
@@ -1295,17 +1307,24 @@ footer h6{
 
 /* ---------exhibition page------------------ */
 .exhpbanner{
-    width: 1920px;
+    width: 100%;
+    min-width: 1400px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 100px;
 }
 
+.exhpbanner picture img{
+    width: 100%;
+    min-width: 1300px;
+    margin: 0 auto;
+}
+
 .exhpbanner h1{
     position: absolute;
     font-family: 'MinSans-Bold';
-    top:45%;
-    left:25%;
+    top: 230px;
+    left: 500px;
     font-size: 4em;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.6);
@@ -1314,8 +1333,8 @@ footer h6{
 .exhpbanner h2{
     position: absolute;
     font-family: 'MinSans-Medium';
-    top:60%;
-    left:25%;
+    top: 330px;
+    left: 500px;
     font-size: 3em;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.6);
@@ -1326,9 +1345,14 @@ footer h6{
     margin: 0 auto;
 }
 
-.exhpiclist{
-    width: 1040px;
+.exPpic{
+    width: 1180px;
+    height: 420px;
     margin:0 auto;
+}
+
+.exPpic img{
+    margin-left: 42px;
 }
 
 .exdescript{
@@ -1336,51 +1360,20 @@ footer h6{
     margin: 40px auto;
     line-height: 1.6;
     font-size: 1.2em;
+    color: #b4b4b4;
 }
 
-.exhpiclist .slick-prev {
-    width: 40px;
-    height: 40px;
-    left: -45px;   
-}
-
-.exhpiclist .slick-prev:before{
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f053";
-}
-
-.exhpiclist .slick-next{
-    width: 40px;
-    height: 40px;
-    right: -30px;
-}
-
-.exhpiclist .slick-next:before{
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f054";
-    color: #426a63;
-}
-
-.exhpiclist .slick-prev:before,.exhpiclist .slick-next:before {
-    /* font-family: 'slick'; */
-    font-size: 40px;
-    line-height: 1;
-    /* opacity: .5; */
-    color: #426a63;
-    -webkit-font-smoothing: antialiased;
-}
-
+.exPpic .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background: var(--primary-green) !important;
+   }
 
 
 /* -------------------event-------------------- */
 .evbanner{
     width: 100%;
+    min-width: 1300px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -1389,15 +1382,15 @@ footer h6{
 
 .evbanner picture img{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     margin: 0 auto;
 }
 
 .evbanner h1{
     position: absolute;
     font-family: 'MinSans-Bold';
-    top: 150px;
-    left: 250px;
+    top: 230px;
+    left: 300px;
     font-size: 3rem;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.8);
@@ -1495,7 +1488,7 @@ footer h6{
 
 /* --------------------event page------------------ */
 .evpbanner{
-    width: 1920px;
+    width: 1440px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 100px;
@@ -1624,6 +1617,7 @@ footer h6{
 .ticketbanner{
     /* padding-top: 130px; */
     width: 100%;
+    min-width: 1300px;
     height: 300px;
     margin: 0 auto;
     background-image: url("../img/ticketbanner.png");
@@ -2510,6 +2504,7 @@ footer h6{
 
 .aboutbanner{
     width: 100%;
+    min-width: 1300px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -2518,15 +2513,15 @@ footer h6{
 
 .aboutbanner img{
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
 }
 
 .aboutbanner h1{
     /* border: 1px solid yellow; */
     position: absolute;
     font-family: 'MinSans-Bold';
-    top: 150px;
-    left: 250px;
+    top: 230px;
+    left: 300px;;
     font-size: 3rem;
     /* width: 300px; */
     text-align: center;
@@ -2781,7 +2776,7 @@ footer h6{
 
 .outter{
     width: 410px;
-    height: 250px;
+    height: 200px;
     position: absolute;
     top: 50%;          
     left: 50%;
@@ -2790,16 +2785,17 @@ footer h6{
 
 .outter p{
     font-family: "MinSans-Medium";
-    font-size: 2em;
+    font-size: 1.7em;
     display: block;
     animation: titleanima ease-in-out 3s;
-    margin-top: 180px;
+    margin-top: 110px;
     opacity: 1;
+    text-align: center;
 }
 
 .triback{
     position: relative;
-    scale: 0.6;
+    scale: 0.4;
 }
 
 

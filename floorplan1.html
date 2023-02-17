@@ -34,7 +34,7 @@
         </a>
         <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
             <ul class = topbar>
-                <li class ="visit">
+                <li class ="visit topthisp">
                     <a href="#" class = "visibtn">Visit
                         <span class="material-icons">arrow_drop_down</span>
                         <span class="material-symbols-outlined">arrow_right</span>
@@ -58,6 +58,9 @@
                         </form>
                     </div>
                 </li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
             </ul> 
     </div>
 
@@ -259,7 +262,45 @@
       scrollbar: {
         el: '.swiper-scrollbar',
       },
-    })        
+    }) 
+    
+    
+    let btnOne = document.getElementsByClassName("noone")[0];
+btnOne.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[0];
+        slideOrder.click();
+    });
+
+let btnTwo = document.getElementsByClassName("notwo")[0];
+btnTwo.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[1];
+        slideOrder.click();
+    });
+
+let btnThree = document.getElementsByClassName("nothree")[0];
+btnThree.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[2];
+        slideOrder.click();
+    });
+
+let btnFour = document.getElementsByClassName("nofour")[0];
+btnFour.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[3];
+        slideOrder.click();
+    });
+
+let btnFive = document.getElementsByClassName("nofive")[0];
+btnFive.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[4];
+        slideOrder.click();
+    });
+            
+let btnSix = document.getElementsByClassName("nosix")[0];
+btnSix.addEventListener("click", function(){
+        let slideOrder = document.getElementsByClassName("swiper-pagination-bullet")[5];
+        slideOrder.click();
+    });
+
     </script>
 
 </body>
