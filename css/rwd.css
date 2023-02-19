@@ -948,30 +948,77 @@ main{
     right: 20px;
     font-size: 0.9em;
 }
+
 /* event page */
+
 .evpbanner{
     width: 100%;
     min-width: 380px;
-    margin-bottom: 50px
+    margin-bottom: 30px
 }
 
 .evpbanner picture img{
+    width: 100%;
     min-width: 380px;
 }
 
 .evpbanner h1{
-    position: absolute;
-    font-family: 'MinSans-Bold';
-    top: 130px;
-    left: 100px;
-    font-size: 2em;
-    text-align: center;
-
+    font-size: 1.6em;
 }
 
 .evpcontent{
-    width: 400px;
+    width: 100%;
 }
+
+.evpcontent h1{
+
+    font-size: 1.4em;
+   
+}
+
+.evpinfo{
+    width: 380px;
+    height: 100%;
+    min-height: 380px;
+    background:radial-gradient(ellipse 55% 55% at center,#426a63bd, transparent);
+    padding-top: 30px;
+}
+
+.evpinfotext{
+    width: 380px;
+    height: 100%;
+    min-height: 380px;
+    margin: 0 auto;
+
+}
+
+.evpinfo .evpinfotext ul{
+    margin: 20px;
+}
+
+.evpinfo .evpinfotext li{
+    display:block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.088);
+    height: auto;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    
+}
+
+.evpinfo h4{
+    width: auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.evpinfo p{
+    font-size: 1em;
+    text-align: center;
+    color: #ccc;
+    line-height: 1.6;
+}
+
 .evPpic{
     width: 400px;
     margin:0 auto;
@@ -981,12 +1028,21 @@ main{
     margin-left: 0;
 }
 
-.evdescript{
+.evpcontent .evdescript{
     width: 400px;
     margin: 20px auto;
     line-height: 1.6;
     font-size: 1em;
     text-align: center;
+}
+.evPpic{
+    width: 400px;
+    height: 330px;
+    margin:0 auto;
+}
+.evPpic img{
+    width: 390px;
+    margin-left: 5px;
 }
 
 
@@ -1140,7 +1196,7 @@ main{
   }
 
   .pmbutton .plus{
-    right: -15px;
+    right: 0px;
   }
 
  .pmbutton .input-num{
@@ -1213,12 +1269,13 @@ main{
 /* ticket2 */
 
 .confirmbooking{
-    width: 390px;
+    width: 100%;
+    min-width: 380px;
 }
 
 .confirmbooking table thead{
     /* display: none; */
-    width: 410px;
+    /* width: 370px; */
 }
 
 
@@ -1237,8 +1294,92 @@ main{
 }
 
 
+.confirmbooking table tr th.item{
+    width: 45%;
+    
+}
+.confirmbooking table tr th.amount{
+    width: 25%;
+}
+.confirmbooking table tr th.x{
+    width: 10%;
+}
+.confirmbooking table tr th.price{
+    width: 15%;
+}
+.confirmbooking table tr th.trash{
+    width: 5%;
+}
+
+
+
+.confirmbooking .cartitems{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* width: 390px; */
+}
+
+#items{
+ display: none;   
+}
+
+.confirmbooking .cartitems td:nth-child(1){
+    font-size: 0.8em;
+}
+
+.confirmbooking .cartitems .trash{
+    font-size: 1em;
+    color: #aeaeae;
+}
+
+.confirmbooking .cartitems .pmbutton{
+    width: 70px;
+    margin: 0 auto;
+}
+
+.confirmbooking .cartitems .pmbutton .input-num2{
+    width: 70px;
+    height: 30px;
+    font-size: 1em;
+}
+
+.confirmbooking .cartitems .pmbutton .minus2{
+    font-size: 1.2em;
+    display: none;
+}
+
+.confirmbooking .cartitems .pmbutton .plus2{
+    font-size: 1.2em;
+    display: none;
+}
+
+.confirmbooking .cartitems td.times{
+    font-size: 0.4em;
+    color: darkgray;
+    font-weight: 100;
+    width: 30px;
+}
+
+.confirmbooking .cartitems td:nth-child(4){
+    font-size: 1em;
+}
+
+/* .confirmbooking table th{
+    width: 100px;
+} */
+
+.confirmbooking .carttotal td{
+    width: 390px;
+    height: 60px;
+    font-size: 1.1em;
+    line-height: 60px;
+    border-top: 1px solid rgb(92, 92, 92);
+}
+
+
+
 .checkouttwo{
-    width: 400px;
+    width: 390px;
     height: 150px;
 }
 
@@ -1272,76 +1413,14 @@ main{
     scale: 0.5;
 }
 
-.cartitems .trash{
-    width: 30px;
-    font-size: 1em;
-    color: #aeaeae;
-}
-
-.cartitems{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    width: 400px;
-    
-}
-
-#items{
- display: none;   
-}
-
-.cartitems td:nth-child(2){
-    font-size: 0.8em;
-}
-
-.cartitems .pmbutton{
-    width: 120px;
-    margin: 0 auto;
-}
-
-.cartitems .pmbutton .input-num{
-    width: 120px;
-    height: 30px;
-    font-size: 1em;
-    
-}
-
-.cartitems td.times{
-    font-size: 0.4em;
-    color: darkgray;
-    font-weight: 100;
-}
-
-.cartitems .pmbutton .minus{
-    font-size: 1.2em;
-}
-
-.cartitems .pmbutton .plus{
-    font-size: 1.2em;
-}
-
-.cartitems td:nth-child(5){
-    font-size: 1em;
-}
-
-/* .confirmbooking table th{
-    width: 100px;
-} */
-
-.carttotal td{
-    width: 400px;
-    height: 60px;
-    font-size: 1.1em;
-    line-height: 60px;
-    border-top: 1px solid rgb(92, 92, 92);
-}
 
 /* ticket3 */
 .orderdetail{
-    width: 410px;
+    width: 390px;
 }
 
 .orderdetail h2{
-    width: 400px;
+    width: 390px;
     height: 100px;
     font-size: 1.3rem;
     text-align: center;
@@ -1354,17 +1433,86 @@ main{
     height: 30px;
 }
 
+.orderdetail table tr th.item{
+    width: 50%;
+    
+}
+.orderdetail table tr th.amount{
+    width: 25%;
+}
+.orderdetail table tr th.x{
+    width: 7%;
+}
+.orderdetail table tr th.price{
+    width: 18%;
+}
+
+.orderdetail .cartitems td:nth-child(1){
+    font-size: 0.8em;
+}
+
+.orderdetail .cartitems .pmbutton{
+    width: 70px;
+    margin: 0 auto;
+}
+
+.orderdetail .cartitems .pmbutton .input-num2{
+    width: 70px;
+    height: 30px;
+    font-size: 1em;
+    border: 1px solid rgb(52, 52, 52);
+    color: #7d7d7d;
+}
+
+
+.orderdetail .cartitems td.times{
+    font-size: 0.4em;
+    color: darkgray;
+    font-weight: 100;
+    width: 30px;
+}
+
+.orderdetail .cartitems td:nth-child(4){
+    font-size: 1em;
+    padding-left: 10px;
+}
+
+/* .confirmbooking table th{
+    width: 100px;
+} */
+
+.orderdetail .carttotal td{
+    width: 390px;
+    height: 60px;
+    font-size: 1.1em;
+    line-height: 60px;
+    border-top: 1px solid rgb(92, 92, 92);
+}
+
+/* .carttotal td{
+    height: 80px;
+    font-size: 1em;
+    line-height: 80px;
+    border-top: 1px solid rgb(92, 92, 92); */
+/* } */
+
+.orderdetail .carttotal .ttotal{
+}
+.orderdetail .carttotal .ttmoney{
+    padding-left: 10px;
+}
+
 form{
-    width: 410px;
+    width: 390px;
 }
 
 .purchaseinfo{
-    width: 410px;
+    width: 390px;
 
 }
 
 .purchaseinfo h2{
-    width: 400px;
+    width: 390px;
     height: 100px;
     font-size: 1.3rem;
     text-align: center;
@@ -1374,7 +1522,7 @@ form{
 }
 
 .purchaseinfo .purinfo{
-    width: 400px;
+    width: 390px;
 }
 
 .ques1 input{
@@ -1394,11 +1542,11 @@ form{
 }
 
 .paymentmethod{
-    width: 410px;
+    width: 390px;
 }
 
 .paymentmethod h2{
-    width: 400px;
+    width: 390px;
     height: 100px;
     font-size: 1.3rem;
     text-align: center;
@@ -1408,11 +1556,11 @@ form{
 }
 
 .paymentmethod .paymethod{
-    width: 410px;
+    width: 390px;
 }
 
 .ques6 input{
-    width: 350px;
+    width: 70px;
 }
 .ques7 input{
     width: 350px;
@@ -1555,4 +1703,42 @@ form{
     margin-top: 80px;
 }
 
+/* -----news content------ */
+.newscontent{
+    width: 100%;
+    min-width: 380px;
+    margin: 20px auto;
+}
+
+.newscontent img{
+    
+    width: 100%;
+    min-width: 380px;
+    margin: 0 auto;
+}
+
+.newscontent h4{
+    padding-left: 10px;
+    
+}
+
+.newscontent h3{
+    font-family: "MinSans-Reg";
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.newscontent p{
+    width: 380px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+.topthisp{
+    background:black ;
+}
 }

@@ -12,33 +12,11 @@ $('.banner').each(function(){
     
     function showNextSlide(){
         let nextIndex = (currentIndex + 1) % slideImgsCount;
-        console.log(nextIndex)
         slideImgs.eq(currentIndex).fadeOut();
         slideImgs.eq(nextIndex).fadeIn();
         currentIndex = nextIndex;
     }
 })
-
-
-$('.slider').slick({
-            // centerMode: true,
-            // centerPadding: '5px',
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [
-                {
-                  breakpoint: 480,
-                  settings: 
-                  {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  dots: true
-                  }
-                }
-              ]
-        });
 
         let myVar;
 
@@ -50,45 +28,6 @@ $('.slider').slick({
         document.getElementById("loader").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
         } 
-
-
-
-$('.flooronelist').slick({
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            responsive: [
-                {
-                  breakpoint: 480,
-                  settings: 
-                  {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  centerPadding: '5px',
-                  }
-                }
-              ]
-        });
-
-$('.exhpiclist').slick({
-            // centerMode: true,
-            // centerPadding: '10px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
-        });
-
-$('.evpiclist').slick({
-            // centerMode: true,
-            // centerPadding: '10px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true,
-        });
-
 
 $('.burger').click(function(e) {
         e.preventDefault();
@@ -147,28 +86,94 @@ $(function(){
         });
 
 
-function addMoney(){
-    var now_total = 0;
-    $('.chooseTicket tr').each(function(index){
-        var nowPrice = $(this).find('.money').attr('data-price');
-        var numbers = $(this).find('.input-num').val();
-        var now_price_total = nowPrice * numbers;
-        now_total += now_price_total;
-        
-        
-    })
-    var ex_total = 0;
-    $('.chooseExTi li').each(function(index){
-        var exPrice = $(this).find('.money').attr('data-price');
-        var exnums = $(this).find('.input-num').val();
-        var ex_price_total = exPrice * exnums;
-        ex_total += ex_price_total;
+        function addMoney(){
+            var now_total = 0;
+            $('.chooseTicket tr').each(function(index){
+                var nowPrice = $(this).find('.money').attr('data-price');
+                var numbers = $(this).find('.input-num').val();
+                var now_price_total = nowPrice * numbers;
+                now_total += now_price_total;
+                
+                
+            })
+            var ex_total = 0;
+            $('.chooseExTi li').each(function(index){
+                var exPrice = $(this).find('.money').attr('data-price');
+                var exnums = $(this).find('.input-num').val();
+                var ex_price_total = exPrice * exnums;
+                ex_total += ex_price_total;
 
-    })
-    var esubTotal = now_total + ex_total
-    $('.totalmoney').html(`&nbsp`+ esubTotal);
-}
+            })
+            var esubTotal = now_total + ex_total
+            $('.totalmoney').html(`&nbsp`+ esubTotal);
+        }
 })
+
+$(function(){
+    addMoneytwo();
+
+    $('.plus2').click(function(){
+        $(this).prev().val(+$(this).prev().val() + 1);
+        addMoneytwo();
+    })
+    
+    
+    $('.minus2').click(function(){
+        if($(this).next().val() > 0){
+            $(this).next().val(+$(this).next().val() - 1);
+            addMoneytwo();
+        }
+    })
+    
+         //input 输入事件
+    $('.input-num2').keyup(function(){
+        addMoneytwo();
+    });
+         
+        //input失焦事件
+        $('.input-num2').blur(function(){
+            var this_valtwo = $(this).val();
+            if(this_valtwo == '' || this_valtwo == 'undefind'){
+                $(this).val('0');
+            }else{
+                $(this).val(this_valtwo);
+            }
+        });
+
+
+        function addMoneytwo(){
+            var now_totaltwo = 0;
+            $('.cartitems').each(function(index){
+                var nowPricetwo = $(this).find('.money').attr('data-price');
+                var numberstwo = $(this).find('.input-num2').val();
+                var now_price_totaltwo = nowPricetwo * numberstwo;
+                now_totaltwo += now_price_totaltwo;
+                
+                $('.ttmoney span').html(`&nbsp`+ now_totaltwo);
+            })
+            
+        }
+});
+
+document.addEventListener("click", function(e){
+    // console.log(e.target); // 使用者點擊到的元素
+    if(e.target.classList.contains("fa-trash-can")){
+        let r = confirm("Confirm Delete?");
+        if (r){
+            
+            //刪除介面上的待辦
+            e.target.closest("tr").classList.add("fade_out");
+            setTimeout(function(){
+                e.target.closest("tr").remove();
+            }, 1000);
+
+
+        }
+    }
+
+});
+
+
 
 $('.choose').click(
     function () {
@@ -195,6 +200,10 @@ $('.choose').click(
     
 
     });
+
+
+
+
 //信用卡卡號
     document.addEventListener("DOMContentLoaded", function(){
         let cardnum = document.getElementsByClassName("card");
@@ -251,9 +260,132 @@ $('.choose').click(
         ).replace(
           /\/\//g, '/' // Prevent entering more than 1 `/`
         );
-      }
+      };
 
+
+      $('.hideMore22').hide();
+      $('#btnClick2').on('click', function () {
+          if ($('#btnClick2').text() === 'View More') {
+              $('#btnClick2').text('View Less');
+              $('.hideMore22').show();
+          }
+          else {
+
+              $('#btnClick2').text('View More');
+              $('.hideMore22').hide();
+          }
+      });
+
+      $(function() {
+      //一開始所有資料都隱藏
+          $(".news2022").hide(); //第一個資料隱藏
+          $(".news2021").hide(); //第二個資料隱藏
+          $("#slt1").change(function(val) {
+              //因為是 select 所以綁定 change 事件
+              if ($("#slt1").val() === "tab_1") {
+              //當 select 中 option 的值等於 1 時
+              $(".news2022").show(); //第一個資料顯示
+              $(".news2021").hide(); //第二個資料隱藏
+              } else if ($("#slt1").val() === "tab_2") {
+              //當 select 中 option 的值等於 2 時
+              $(".news2021").show(); //第二個資料顯示
+              $(".news2022").hide(); //第一個資料隱藏
+              } else {
+              //否則兩筆都隱藏
+              $(".news2022").hide();
+              $(".news2021").hide();
+              }
+          });
+      });
+
+    //   window.addEventListener("load", function(){
+    //     setTimeout(
+    //      function open(event){
+    //         document.querySelector(".popup").style.display = "block";
+    //     },
+    //     2000 
+    // )
+    // });
       
+          
+      
+
+    //   let the_forms = document.getElementById("the_form")
+    //   //submit
+    //   the_forms.addEventListener("submit", function(e){
+    //     //console.log('gggg') <----測試submit有被觸發
+
+    //     let f_name = document.getElementById("name");
+    //     let f_mail = document.getElementsByClassName("email");
+    //     let f_card = document.getElementsByClassName("card");
+    //     let f_phone = document.getElementById("phone");
+    //     let f_edate = document.getElementById("edate");
+    //     let f_cvv = document.getElementById("cvv");
+
+    //     let card_str ="";
+    //     for(let i = 0; i < f_card.length; i++){
+    //         card_str = card_str + f_card[i].value; 
+    //     }
+    //     // console.log(card_str);
+    //       let send_data = true;
+
+    //       //驗證填寫的資料 驗證通過則send_data保持true, 否則false且資料不送出
+
+    //       if(f_name.value ==""){
+    //           f_name.classList.add("-error");
+    //           send_data = false;
+    //       }else{
+    //           f_name.classList.remove("-error");
+    //       }
+
+    //       if(f_phone.value ==""){
+    //         f_phone.classList.add("-error");
+    //         send_data = false;
+    //     }else{
+    //         f_phone.classList.remove("-error");
+    //     }
+
+    //     if(f_edate.value ==""){
+    //         f_edate.classList.add("-error");
+    //         send_data = false;
+    //     }else{
+    //         f_edate.classList.remove("-error");
+    //     }
+    //     if(f_cvv.value ==""){
+    //         f_cvv.classList.add("-error");
+    //         send_data = false;
+    //     }else{
+    //         f_cvv.classList.remove("-error");
+    //     }
+
+    //       //使用is.js套件驗證email
+    //       if(is.email("f_mail.value")){
+    //           f_mail.classList.remove("-error");
+    //       }else{
+    //           f_mail.classList.add("-error");
+    //           send_data = false;
+    //       }
+
+
+    //       //卡號
+    //       if( is.creditCard(card_str)){
+    //           for(let i = 0; i < cardnum.length; i++){
+    //               cardnum[i].classList.remove("-error");
+    //           }
+    //       }else{
+    //           for (let i = 0; i < cardnum.length; i++){
+    //               cardnum[i].classList.add("-error");
+    //               send_data = false;
+    //           }
+              
+    //       }
+      
+
+    //       if(!send_data){
+    //           e.preventDefault();
+    //       }
+    //     });
+
 // $('.money').each(function(){
 //     let tiPrice = parseInt($(this).text()) *parseInt($(this).closest('.input-num').val());
 //     console.log(tiPrice)

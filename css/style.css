@@ -24,7 +24,7 @@ body{
 }
 
 
-.main{
+main{
     width: 1300px;
 }
 
@@ -1546,7 +1546,7 @@ footer h6{
 .evpinfo h4{
     font-size: 1.5rem;
     line-height: 1.6;
-    width: 180px;
+    
     vertical-align: baseline;
 }
 
@@ -1567,50 +1567,22 @@ footer h6{
     margin: 50px auto;
 }
 
-.evpiclist{
+.evPpic{
     width: 1030px;
+    height: 420px;
     margin:0 auto;
 }
 
-
-.evpiclist .slick-prev {
-    width: 40px;
-    height: 40px;
-    left: -45px;   
+.evPpic img{
+    width: 430px;
+    margin-left: 40px;
 }
 
-.evpiclist .slick-prev:before{
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f053";
-}
-
-.evpiclist .slick-next{
-    width: 40px;
-    height: 40px;
-    right: -30px;
-}
-
-.evpiclist .slick-next:before{
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f054";
-    color: #426a63;
-}
-
-.evpiclist .slick-prev:before,.evpiclist .slick-next:before {
-    /* font-family: 'slick'; */
-    font-size: 40px;
-    line-height: 1;
-    /* opacity: .5; */
-    color: #426a63;
-    -webkit-font-smoothing: antialiased;
-}
-
+.evPpic .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background: var(--primary-green) !important;
+   }
 
 /* -------------------eticket-------------------- */
 
@@ -2042,10 +2014,6 @@ footer h6{
         font-size: 1.4em;
    }
 
-  .checkbox{
-        width: 50px;
-        
-   }
     .item{
         width: 600px;
         
@@ -2054,22 +2022,55 @@ footer h6{
         width: 210px;
     }
    .x{
-        width: 50px;
+        width: 70px;
    }
    .price{
-        width: 90px;
+        width: 120px;
     }
    .trash{
         width: 50px;
     }
+    .pmbutton .input-num2{
+        width: 200px;
+        height: 35px;
+        border-radius: 25px;
+        text-align: center;
+        font-size: 1.2em;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border:1px solid #575757;
+    }
 
+    .pmbutton .plus2{
+        background-color: transparent;
+        color:#426a63;
+        cursor: pointer;
+        font-size: 1.6em;
+        position: absolute;
+        top: 5px;
+        right: 8px;
+        border: none;
+
+    }
+
+    .pmbutton .minus2{
+        background-color: transparent;
+        color:#426a63;
+        cursor: pointer;
+        font-size: 1.6em;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        border: none;
+    }
     .cartitems td{
         height: 80px;
         vertical-align: middle;
         border-top: 1px solid rgb(30, 30, 30);
     }
 
-    .cartitems td:nth-child(2){
+    .cartitems td:nth-child(1){
+        padding-left: 3px;
         font-size: 1.2em;
     }
 
@@ -2086,34 +2087,25 @@ footer h6{
         border: none;
 
     }
-    .cartitems td:nth-child(4){
+    .cartitems td:nth-child(3){
         font-size: 1.1em;
-        text-align: center
-    }
-
-    .cartitems td:nth-child(5){
-        font-size: 1.4em;
-        text-align: center
-    }
-
-    .carttotal{
+        text-align: center;
         
     }
-    .carttotal td{
-        height: 80px;
+
+    .cartitems td:nth-child(4){
         font-size: 1.4em;
-        line-height: 80px;
-        border-top: 1px solid rgb(92, 92, 92);
+        text-align: left;
     }
 
-    .carttotal .ttotal{
-        text-align: right;
-
-    }
-    .carttotal .ttmoney{
-        padding-left: 25px;
-
-    }
+    .confirmbooking table tbody > tr{
+        opacity: 1;
+        transition: opacity 1s;
+      }
+    
+      .confirmbooking table tbody > tr.fade_out{
+        opacity: 0;
+      }
 
 
 
@@ -2217,6 +2209,26 @@ footer h6{
         height: 50px;
         text-align: center;
         font-size: 1.4em;
+   }
+
+   .carttotal{
+        
+   }
+   .carttotal td{
+       height: 80px;
+       font-size: 1.4em;
+       line-height: 80px;
+       border-top: 1px solid rgb(92, 92, 92);
+   }
+
+   .carttotal .ttotal{
+       text-align: right;
+       padding-right: 30px;
+
+   }
+   .carttotal .ttmoney{
+        text-align: left
+
    }
 
    form{
@@ -2555,6 +2567,15 @@ footer h6{
     text-align: center;
     color: #b1b1b1;
 }
+.cover{
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    background-image: url('../img/about1.png');
+    background-color:#426a63;
+    box-shadow:0 0 20px 10px rgba(0, 0, 0, 0.8) inset;
+}
 
 .hideme{
     opacity:0;
@@ -2748,11 +2769,17 @@ footer h6{
 /* ---------------news content--------------------- */
 .newscontent{
     width: 1080px;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
+.newscontent img{
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+}
 .newscontent h4{
     font-family: "MinSans-Reg";
+    color: #aaa;
 }
 
 .newscontent h3{
@@ -2944,3 +2971,7 @@ footer h6{
 #myDiv {
   display: none;
 }
+
+.-error{
+    border: 1px solid red;
+  }

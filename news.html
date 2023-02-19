@@ -97,11 +97,11 @@
                 </a>
             </li>
         </ul>
-        <div class="button-container">
+        <!-- <div class="button-container">
             <button id="btnClick1">
                 View More
             </button>
-        </div>
+        </div> -->
            
     </div>
 
@@ -275,48 +275,7 @@
 <script type="text/javascript" src="js/main.js"></script>
 
     <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
-
-        $('.hideMore22').hide();
-        $('#btnClick2').on('click', function () {
-            if ($('#btnClick2').text() === 'View More') {
-                $('#btnClick2').text('View Less');
-                $('.hideMore22').show();
-            }
-            else {
-
-                $('#btnClick2').text('View More');
-                $('.hideMore22').hide();
-            }
-        });
-
-        $(function() {
-        //一開始所有資料都隱藏
-            $(".news2022").hide(); //第一個資料隱藏
-            $(".news2021").hide(); //第二個資料隱藏
-            $("#slt1").change(function(val) {
-                //因為是 select 所以綁定 change 事件
-                if ($("#slt1").val() === "tab_1") {
-                //當 select 中 option 的值等於 1 時
-                $(".news2022").show(); //第一個資料顯示
-                $(".news2021").hide(); //第二個資料隱藏
-                } else if ($("#slt1").val() === "tab_2") {
-                //當 select 中 option 的值等於 2 時
-                $(".news2021").show(); //第二個資料顯示
-                $(".news2022").hide(); //第一個資料隱藏
-                } else {
-                //否則兩筆都隱藏
-                $(".news2022").hide();
-                $(".news2021").hide();
-                }
-            });
-        });
+      
 
     </script>
 

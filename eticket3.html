@@ -90,86 +90,78 @@
         <table>
             <thead>
                 <tr>
-                    <th class= "checkbox"></th>
                     <th class= "item">Item</th>
                     <th class= "amount">Amount</th>
                     <th class= "x"></th>
                     <th class= "price">Price</th>
-                    <!-- <th class= "trash"></th> -->
                   </tr>
             </thead>
             <tbody>
                 <tr class ="cartitems">
-                    <td></td>
                     <td>Exhibition Ticket - Adult  2023/04/09</td>
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="2" disabled/>
+                            <input type="text" class="input-num2" id="input-num" value="2" disabled/>
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
-                    <td class="times"></td>
-                    <td><i class="fa-solid fa-dollar-sign"></i>150</td>
-                    <!-- <td></td> -->
+                    <td class="times"><i class="fa-solid fa-xmark"></i></td>
+                    <td><i class="fa-solid fa-dollar-sign money" data-price="150"></i>150</td>
                   </tr>
                   <tr class ="cartitems">
-                    <td></td>
                     <td>Exhibition Ticket - Child  2023/04/09</td>
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="1" disabled />
+                            <input type="text" class="input-num2" id="input-num" value="1" disabled />
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
-                    <td class="times"></td>
-                    <td><i class="fa-solid fa-dollar-sign"></i>0</td>
-                    <!-- <td></td> -->
+                    <td class="times"><i class="fa-solid fa-xmark"></i></td>
+                    <td><i class="fa-solid fa-dollar-sign money" data-price="0"></i>0</td>
                   </tr>
                   <tr class ="cartitems">
-                    <td></td>
                     <td>The Conference of Outsider Visions -  2023/04/09 </td>
                     <td>
                         <div class = "pmbutton">
                             <!-- <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button> -->
-                            <input type="text" class="input-num" id="input-num" value="2" disabled />
+                            <input type="text" class="input-num2" id="input-num" value="2" disabled />
                             <!-- <button id="plus" class="plus"><i class="fa-solid fa-plus"></i></button> -->
                         </div>
                     </td>
-                    <td class="times"></td>
-                    <td><i class="fa-solid fa-dollar-sign"></i>75</td>
-                    <!-- <td></td> -->
+                    <td class="times"><i class="fa-solid fa-xmark"></i></td>
+                    <td><i class="fa-solid fa-dollar-sign money" data-price="75"></i>75</td>
                   </tr>
             </tbody>
             <tfoot>
                 <tr class = "carttotal">
-                    <td class= "ttotal" colspan = "4">Total</td>
+                    <td class= "ttotal" colspan = "3">Total</td>
                     <td class= "ttmoney" colspan = "2" ><i class="fa-solid fa-dollar-sign"></i><span>450</span></td>
                 </tr>
             </tfoot>
         </table>
     </div>
 
-    <form action="" method="post">
+    <form action="" method="post" id="the_form">
         <div class="purchaseinfo">
             <h2>Purchaser Information</h2>
                 <div class="purinfo">
                     <div class="ques1">
                         <p>Name:</p>
-                        <input type="text" name="name" value="">
+                        <input type="text" name="name" value="" id="name">
                     </div>
                     <div class="ques2">
                         <p>Phone:</p>
-                        <input type="text" name="phone" value="" maxlength="10">
+                        <input type="text" name="phone" value="" maxlength="10" id="phone">
                     </div>
                     <div class="ques3">
                         <p>Email:</p>
-                        <input name="pemail" type="email">
+                        <input name="pemail" type="email" id="email">
                     </div>
                     <div class="ques4">
                         <p>Confirm Email:</p>
-                        <input name="address" type="email">
+                        <input name="address" type="email" id="email2">
                     </div>
                 </div>
         </div>
@@ -192,25 +184,25 @@
                     <div class="ques7">
                         <label>Card Holder Name：</label>
                         <br>
-                        <input type="text" name="phone" value="" placeholder ="Card Holder Name">
+                        <input type="text" name="phone" value="" placeholder ="Card Holder Name" id="cardname">
                     </div>
                     <div class="ques8">
                         <label>Expiry Date：</label>
                         <br>
-                        <input maxlength='5' placeholder="MM/YY" type="text" onkeyup="formatString(event);">
+                        <input maxlength='5' placeholder="MM/YY" type="text" onkeyup="formatString(event);" id="edate">
                     </div>
                     <div class="ques9">
                         <label>CVV Code：</label>
-                        <button><span class="material-symbols-outlined">info
-                            </span></button>
+                        <!-- <button><span class="material-symbols-outlined">info
+                            </span></button> -->
                         <br>
-                        <input name="address" type="text" placeholder ="CVV Code">
+                        <input name="address" type="text" placeholder ="CVV Code" id="cvv">
                     </div>
                 </div>
         </div>
 
         
-        <input type="button" class ="submitbnt" value="Submit" onclick="javascript:location.href='#popup-one'">
+        <input type="button" class ="submitbnt" value="Submit" onclick="javascript:location.href='#popup-one'" >
 
         <a href="eticket2.html"><button class="previous" type="button"><img src="img/leftwhitearrow.png">Previous Page</button></a>
 
@@ -310,17 +302,8 @@
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-    <!-- <script type="text/javascript">
-        $('.slider').slick({
-            centerMode: true,
-            centerPadding: '280px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: true
-        });
-    </script> -->
+    <script type="text/javascript">
 
-         <script type="text/javascript">
         window.addEventListener("load", function(){
         setTimeout(
          function open(event){
@@ -330,10 +313,6 @@
     )
     });
 
-
-    document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
-    });
     </script>
 
 </body>
