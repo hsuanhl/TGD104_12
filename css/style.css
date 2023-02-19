@@ -25,7 +25,7 @@ body{
 
 
 .main{
-    width: 1366px;
+    width: 1300px;
 }
 
 
@@ -918,7 +918,7 @@ footer h6{
     font-size: 1.3em;
     border: none;
     box-shadow:1px 1px 6px rgba(0,0,0,.4);
-
+    text-align: center;
     transition-duration:.5s; 
 
 }
@@ -2328,10 +2328,13 @@ footer h6{
         margin: 25px 10px;
         
     }
+    .ques6{
+        width: 800px;
+    }
 
     .ques6 input{
         height: 30px;
-        width: 800px;
+        width: 80px;
         border-radius: 15px;
         outline: none;
         background-color: transparent;

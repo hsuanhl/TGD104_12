@@ -74,7 +74,7 @@
 
 
     <div class="exhlist">
-        <input class ="choose" type="text" placeholder = "Sorted by:   ⮟" readonly="readonly">
+        <input class ="choose" type="text" placeholder = "Sorted by:" readonly="readonly">
         <div class="option">
             <ul>
                 <li>Featured</li>
@@ -319,23 +319,23 @@
     <script type="text/javascript">
         AOS.init();
 
-   $('.choose').click(
-function () {
-	console.log("a")
-	$('.option').toggle();
-});
+//    $('.choose').click(
+// function () {
+// 	console.log("a")
+// 	$('.option').toggle();
+// });
 
-$("body").click(function (e) {
-	if (!$(e.target).closest(".choose,.option").length) {
-		$(".option").hide();
-	}
-});
+// $("body").click(function (e) {
+// 	if (!$(e.target).closest(".choose,.option").length) {
+// 		$(".option").hide();
+// 	}
+// });
 
-$(".option li").click(function () {
-  var _text = ($(this).text())
-  $(".choose").val(_text)
-  $(".option").hide()
-});
+// $(".option li").click(function () {
+//   var _text = ($(this).text())
+//   $(".choose").val(_text)
+//   $(".option").hide()
+// });
 
     
     </script>

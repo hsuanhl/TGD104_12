@@ -91,10 +91,10 @@
         <h2>2. Select the Tickets</h2>
         <p class ="selectedD"></p>
         <h3>&nbsp Exhibition</h3>
-        <table>
+        <table class="chooseTicket">
             <tr>
                 <td class = "role">Adult</td>
-                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>150</td>
+                <td class = "money" data-price="150"><i class="fa-solid fa-dollar-sign"></i>150</td>
                 <td class = "count">
                     <div class = "pmbutton">
                         <button id="minus" class="minus"><i class="fa-solid fa-minus"></i></button>
@@ -104,7 +104,7 @@
                 </td>
             <tr>
                 <td class = "role">Senior</td>
-                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+                <td class = "money" data-price="75"><i class="fa-solid fa-dollar-sign"></i>75</td>
                 <td class = "count">
                     <div class = "pmbutton">
                         <button id="minus1" class="minus"><i class="fa-solid fa-minus"></i></button>
@@ -115,7 +115,7 @@
             </tr>
             <tr>
                 <td class = "role">Student</td>
-                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>75</td>
+                <td class = "money" data-price="75"><i class="fa-solid fa-dollar-sign"></i>75</td>
                 <td class = "count">
                     <div class = "pmbutton">
                         <button id="minus2" class="minus"><i class="fa-solid fa-minus"></i></button>
@@ -126,7 +126,7 @@
             </tr>
             <tr>
                 <td class = "role">Children</td>
-                <td class = "money"><i class="fa-solid fa-dollar-sign"></i>0</td>
+                <td class = "money" data-price="0"><i class="fa-solid fa-dollar-sign"></i>FREE</td>
                 <td class = "count">
                     <div class = "pmbutton">
                         <button id="minus3" class="minus"><i class="fa-solid fa-minus"></i></button>
@@ -138,7 +138,7 @@
         </table> 
         <div class="ticketevent">
             <h3>&nbsp Event</h3>
-            <ul>
+            <ul class = "chooseExTi">
 
                 <li>
                     <img src="img/booking_ad.png" alt="">
@@ -147,7 +147,7 @@
                         <h5>14:00 -15:00 @ Art Center</h5>
                         <h5>Remaining Spots: <span>10</span></h5>
                         <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>150</h6>
+                            <h6 class = "money" data-price="150"><i class="fa-solid fa-dollar-sign"></i>150</h6>
                             <div class = "pmbutton">
                                 <button id="minus4" class="minus"><i class="fa-solid fa-minus"></i></button>
                                 <input type="text" class="input-num" id="input-num4" value="0" />
@@ -164,7 +164,7 @@
                         <h5>19:00 - 21:00 @ Auditorium</h5>
                         <h5>Remaining Spots: <span>50</span></h5>
                         <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
+                            <h6 class = "money" data-price="60"><i class="fa-solid fa-dollar-sign"></i>60</h6>
                             <div class = "pmbutton">
                                 <button id="minus5" class="minus"><i class="fa-solid fa-minus"></i></button>
                                 <input type="text" class="input-num" id="input-num5" value="0" />
@@ -181,7 +181,7 @@
                         <h5>9:00 - 11:00 @ Sculpture garden</h5>
                         <h5>Remaining Spots: <span>25</span></h5>
                         <div class="priceNum">
-                            <h6><i class="fa-solid fa-dollar-sign"></i>0</h6>
+                            <h6 class = "money" data-price="0"><i class="fa-solid fa-dollar-sign"></i>FREE</h6>
                             <div class = "pmbutton">
                                 <button id="minus6" class="minus"><i class="fa-solid fa-minus"></i></button>
                                 <input type="text" class="input-num" id="input-num6" value="0" />

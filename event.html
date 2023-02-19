@@ -77,20 +77,20 @@
 
 
     <div class="evlist">
-        <input class ="choose" type="text" placeholder = "Filter by: Type    ⮟" readonly="readonly">
+        <input class ="choose" type="text" placeholder = "Filter by: Type" readonly="readonly">
         <div class="option">
             <ul>
-                <li>All</li>
-                <li>Seminar</li>
-                <li>Workshop</li>
-                <li>Tours</li>
-                <li>Film Screening</li>
-                <li>Performance</li>
+                <li data-filter="all">All</li>
+                <li data-filter="seminar">Seminar</li>
+                <li data-filter="workshop">Workshop</li>
+                <li data-filter="tours">Tours</li>
+                <li data-filter="film">Film Screening</li>
+                <li data-filter="perform">Performance</li>
             </ul>
         </div>
 
         <ul class ="listev">
-            <li data-aos="flip-up">
+            <li class="all seminar">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_tips strategies_m.png" media="(max-width: 415px)">
@@ -104,7 +104,7 @@
                     
                 </a>
             </li>
-            <li data-aos="flip-right">
+            <li class="all workshop">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_explore history_m.png" media="(max-width: 415px)">
@@ -118,7 +118,7 @@
                 </a>
                 
             </li>
-            <li data-aos="flip-left">
+            <li class="all workshop">
                 <a href="artdraw_evp.html">
                     <picture>
                         <source srcset="img/evlist_art drawing_m.png" media="(max-width: 415px)">
@@ -135,7 +135,7 @@
                 </a>
                 
             </li>
-            <li data-aos="flip-up">
+            <li class="all workshop">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_art pohotgraphy_m.png" media="(max-width: 415px)">
@@ -149,7 +149,7 @@
                 </a>
             
             </li>
-            <li data-aos="flip-down">
+            <li class="all workshop">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_pottery_m.png" media="(max-width: 415px)">
@@ -163,7 +163,7 @@
                 </a>
                 
             </li>
-            <li data-aos="flip-right">
+            <li class="all tours">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_garden_m.png" media="(max-width: 415px)">
@@ -177,7 +177,7 @@
                 </a>
                 
             </li>
-            <li data-aos="flip-down">
+            <li class="all film">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_cinematic_m.png" media="(max-width: 415px)">
@@ -191,7 +191,7 @@
                 </a>
                 
             </li>
-            <li data-aos="flip-right">
+            <li class="all perform">
                 <a href="temp_evp.html">
                     <picture>
                         <source srcset="img/evlist_interactice sound_m.png" media="(max-width: 415px)">
@@ -285,23 +285,23 @@
     <script type="text/javascript">
             AOS.init();
 
-            $('.choose').click(
-            function () {
-                console.log("a")
-                $('.option').toggle();
-            });
+            // $('.choose').click(
+            // function () {
+            //     console.log("a")
+            //     $('.option').toggle();
+            // });
 
-            $("body").click(function (e) {
-                if (!$(e.target).closest(".choose,.option").length) {
-                    $(".option").hide();
-                }
-            });
+            // $("body").click(function (e) {
+            //     if (!$(e.target).closest(".choose,.option").length) {
+            //         $(".option").hide();
+            //     }
+            // });
 
-            $(".option li").click(function () {
-            var _text = ($(this).text())
-            $(".choose").val(_text)
-            $(".option").hide()
-            });
+            // $(".option li").click(function () {
+            // var _text = ($(this).text())
+            // $(".choose").val(_text)
+            // $(".option").hide()
+            // });
     </script>
 
 </body>
