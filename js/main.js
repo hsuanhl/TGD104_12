@@ -42,17 +42,11 @@ $('.burger').click(function(e) {
         $('.visit span').last().toggleClass('left')
     });
     
+$(".methodToggole").click(function(){
+        $(this).next().slideToggle();
+        $(this).children("span").toggleClass('down')
+        });
 
-// $('.plus').click(function(){
-//     $(this).prev().val(+$(this).prev().val() + 1);
-// })
-
-
-// $('.minus').click(function(){
-//     if($(this).next().val() > 0){
-//         $(this).next().val(+$(this).next().val() - 1);
-//     }
-// })
 
 $(function(){
     addMoney();

@@ -495,7 +495,7 @@ main{
 
 .mailtext button{
     position: absolute;
-    top:8px;
+    top:6px;
     right: 6px;
     border-radius: 8px;
     background-color: transparent;
@@ -732,6 +732,7 @@ footer h6{
 
 
 .adfees .role p{
+    width: 320px;
     font-size: 0.7em;
     color: rgb(88, 88, 88);
     line-height: 1.4;
@@ -830,9 +831,55 @@ footer h6{
     width: 700px;
     margin: 0 auto;
 }
+
+.pinfo h4{
+    width: 850px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-family: "MinSans-Reg";
+}
+.pinfo h5{
+    width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    background-color: #426a63;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.pinfo h5{
+    width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    background-color: #426a63bb;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 10px;
+    font-family: "MinSans-Reg";
+}
+
+.pinfo h5 span{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    color: #ffffff;
+    
+}
+
+.pinfo h5 span.down{
+    color: #ffffff;
+    transform: rotate(180deg);
+    transition: all ease-in-out .6s;
+}
+
 .pinfo p{
-    width: 800px;
+    width: 680px;
     margin: 20px auto;
+    display: none;
+    color: #ccc;
 }
 
 
@@ -1172,7 +1219,7 @@ footer h6{
 
 .choose::placeholder{
     color: white;
-    text-align: center;
+    text-align: left;
     font-family: "Noto Sans";
 }
 
