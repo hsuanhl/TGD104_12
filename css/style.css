@@ -637,8 +637,8 @@ footer h6{
     font-family: 'MinSans-Bold';
     top: 230px;
     left: 300px;
-    font-size: 2.5rem;
-    width: 400px;
+    font-size: 3rem;
+    width: 450px;
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.8);
     background:radial-gradient(ellipse 50% 50% at center,#000000a8, rgba(0, 0, 0, 0));
@@ -907,7 +907,7 @@ footer h6{
     font-family: 'MinSans-Bold';
     top: 230px;
     left: 300px;
-    font-size: 2.6rem;
+    font-size: 3rem;
     /* width: 300px; */
     text-align: center;
     text-shadow: 1px 1px 10px rgba(0,0,0,.6);
