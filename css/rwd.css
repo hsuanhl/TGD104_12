@@ -2,12 +2,12 @@
 
 body{
     width: 100%;
-    min-width: 380px;
+    min-width: 350px;
     background-color: #000000;
 }
 .top{
     width: 100%;
-    min-width: 380px;
+    min-width: 370px;
     background-color: rgb(0, 0, 0);
     position: relative;
     height: 70px;
@@ -53,7 +53,7 @@ body{
 }
 
 
-.top li{
+.topbar li{
     /* margin: auto; */
     margin-left: 0px;
     width: 300px;
@@ -76,30 +76,25 @@ body{
 .secondbar li{
     height: 80px;
     margin: auto;
-    line-height: 80px;
-    padding-left: 0px;
     border-bottom: 1px solid rgb(48, 48, 48);
-    font-size: 1.3rem;
+    padding-left: 0px;
+    line-height: 80px;
+    font-size: 1.2rem;
 }
 
-.secondbar li a{
-    font-size: 3rem;
-}
-
-.secondbar li a:nth-child(1){
-    font-size: 1rem;;
+.secondbar li:nth-child(1) a{
+    font-size: 1.1rem;
+    color: rgb(227, 255, 255);
 }
 
 .secondbar.show{
     max-height: 160px;
     width: 310px;
-
 }
 
 .top li a{
     display:block; 
     text-align: center;
-    
 }
 
 .top li a span.material-icons{
@@ -113,12 +108,10 @@ body{
     font-size: 1.4em;
 }
 
-
 .top li a span.material-symbols-outlined.left{
     left: 260px;
     transform: rotate(180deg);
     transition: all ease-in-out .6s;
-
 }
 
 .topFM{
@@ -135,6 +128,7 @@ body{
     height:20px;
     padding-left: 5px;
 }
+
 .search form button{
     font-size: 5px;
     top: 32px;
@@ -143,7 +137,7 @@ body{
 
 .banner{
     width: 100%;
-    min-width: 380px;
+    min-width: 370px;
     min-height: 300px;
     z-index: -2;
 }
@@ -151,13 +145,12 @@ body{
 .banner img{
     min-width: 800px;
     min-height: 300px;
-
 }
 
 .whatson{
-    width: 400px;
-    
+    width: 100%;
 }
+
 .whatson h1{
     font-size: 1.6em;
     margin: auto;
@@ -171,12 +164,12 @@ body{
 }
 
 .sOut{
-    width: 400px;
+    width: 100%;
 }
 
 
 .whatson .swiper {
-    width: 380px;
+    width: 370px;
     height: 300px;
 }
 
@@ -189,19 +182,19 @@ body{
 }
 
 .whatson .swiper-slide img{
-    width: 380px;
+    width: 370px;
     margin-left: 0px;
 }
 
 
 .slogan{
-    width: 400px;
+    width: 100%;
     height: 200px;
     padding-top: 30px;
 }
 
 .slogantext{
-    width: 400px;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
     flex-direction: column;
@@ -219,7 +212,7 @@ body{
 }
 
 .homenews{
-    width: 380px;
+    width: 370px;
 }
 
 .homenews h1{
@@ -233,7 +226,7 @@ body{
 
 .homenews ul{
     padding-top: 60px;
-    width: 380px;
+    width: 370px;
 }
 
 .homenews ul li a{
@@ -253,7 +246,7 @@ body{
 
 .sbanner{
     width: 100%;
-    min-width: 380px;
+    min-width: 370px;
 margin-top: 20px;
 
 }
@@ -327,7 +320,7 @@ margin-top: 20px;
 .subscribe{
     flex-direction: column;
     width: 100%;
-    min-width: 380px;
+    min-width: 370px;
 }
 
 .subscribe h6{
@@ -343,15 +336,12 @@ margin-top: 20px;
 
 footer{
     width: 100%;
-    min-width: 380px;
+    min-width: 370px;
     /* flex-direction: column; */
     flex-wrap: wrap;
     height: 100%;
     padding-top: 10px;
     justify-content: space-evenly;
-}
-.foot div{
-    width: 200px;
 }
 
 footer > a{
@@ -366,18 +356,18 @@ footer > a img{
 }
 
 .visitus{
-    width: 180px;
+    width: 170px;
 }
 
 .mova{
-    width: 180px;
+    width: 170px;
 }
 .openhour{
-    width: 180px;
+    width: 170px;
     padding-top: 15px;
 }
 .contactus{
-    width: 180px;
+    width: 170px;
     padding-top: 15px;
 }
 .tibame p{
@@ -392,12 +382,12 @@ footer > a img{
 
 main{
     width: 100%;
-    min-width: 390px;
+    min-width: 350px;
  }
 
 .halbanner{
     width: 100%;
-    min-width: 390px;
+    min-width: 350px;
     margin-bottom: 30px;
     z-index: -1;
 
@@ -405,7 +395,7 @@ main{
 
 .halbanner picture img{
     width: 100%;
-    min-width: 390px;
+    min-width: 30px;
 } 
 
 
@@ -419,7 +409,7 @@ main{
 
 .openhours{
     width: 100%;
-    width: 390px;
+    width: 350px;
     
 }
 .openhours h1{
@@ -431,13 +421,14 @@ main{
 .ohcontent{
     display: flex;
     flex-direction: column;
-    width: 390px;
+    width: 350px;
     margin: 0 auto;
     justify-content:center;
 }
 
 .openhours img{
-    width: 390px;
+    width: 100%;
+    width: 350px;
  
 }
 .openhours table{
@@ -449,13 +440,14 @@ main{
 }
 
 .line{
-    width: 390px;
+    width: 350px;
     margin: 30px auto;
     border-bottom: 1px solid rgba(68, 68, 68, .5);
 }
 
 .adfees{
-    width: 390px;
+    width: 100%;
+    width: 350px;
 }
 .adfees h1{
     font-size: 1.6em;
@@ -498,26 +490,26 @@ main{
 }
 
 .location{
-    width: 390px;
+    width: 360px;
 }
 .location h1{
     font-size: 1.6em;
-    margin:10px auto;
+    margin: 10px auto;
     text-align: center;
 }
 .map{
     /* border: 1px solid red; */
     margin: 0 auto;
-    width: 390px;
+    width: 360px;
 }
 
 .map iframe{
-    width: 390px;
-    height: 250px;
+    width: 360px;
+    height: 240px;
 }
 
 .transportation{
-    width: 390px;
+    width: 360px;
 }
 .transportation h1{
     font-size: 1.6em;
@@ -526,7 +518,7 @@ main{
 }
 
 .transportation ul{
-    width: 390px;
+    width: 350px;
 }
 
 .transportation li{
@@ -535,12 +527,12 @@ main{
 }
 
 .transportation li div{
-    width: 390px;
+    width: 360px;
     margin: 0 auto;
 }
 
 .transportation li p {
-    width: 370px;
+    width: 360px;
     padding-top: 10px;
     font-size: 0.9rem;
     color: #d4d4d4;
@@ -548,7 +540,7 @@ main{
 }
 
 .pinfo{
-    width: 390px;
+    width: 360px;
 }
 .pinfo h1{
     font-size: 1.6em;
@@ -558,19 +550,19 @@ main{
 
 .pinfo img{
     display: block;
-    width: 370px;
+    width: 360px;
     margin: 0 auto;
 }
 
 .pinfo h4{
-    width: 380px;
+    width: 360px;
     text-align: center;
     margin: 10px auto;
     font-size: 1.1em;
     font-family: "MinSans-Reg";
 }
 .pinfo h5{
-    width: 700px;
+    width: 350px;
     margin: 0 auto;
     font-size: 1.1em;
     background-color: #426a63;
@@ -579,12 +571,8 @@ main{
     padding-left: 10px;
 }
 
-.pinfo h5{
-    width: 370px;
-}
-
 .pinfo p{
-    width: 370px;
+    width: 360px;
     font-size: 0.9rem;
 }
 
@@ -592,7 +580,7 @@ main{
 /* Floor */
 main{
     width: 100%;
-    min-width: 390px;
+    min-width: 350px;
  }
 
 .floorbanner{

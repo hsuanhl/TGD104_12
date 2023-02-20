@@ -45,35 +45,35 @@
                 
             </a>
             <a href="#" class="burger"><span class="material-symbols-outlined">menu</span></a>
-                <ul class = topbar>
-                    <li class ="visit">
-                        <a href="#" class = "visibtn">Visit
+            <ul class = "topbar">
+                <li class ="visit">
+                    <a href="#" class = "visibtn">Visit
                             <span class="material-icons">arrow_drop_down</span>
                             <span class="material-symbols-outlined">arrow_right</span>
-                        </a>
-                    </li>
-                    <li><a href="exhibition.html">Exhibition</a></li>
-                    <li><a href="event.html">Event</a></li>
-                    <li><a href="eticket.html">eTicket</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li>
-                        <div class="search">
-                            <form action="#">
-                                <input type="text" placeholder=" Search" name="search">
-                                <button>
-                                    <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </li>
-                    <li class="topFM"></li>
-                    <li class="topFM"></li>
-                    <li class="topFM"></li>
-                </ul>
-                <ul class = "secondbar">
-                    <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
-                    <li><a href="floorplan1.html">Floor Plan</a></li>
-                </ul> 
+                    </a>
+                </li>
+                <li><a href="exhibition.html">Exhibition</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="eticket.html">eTicket</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <div class="search">
+                        <form action="#">
+                            <input type="text" placeholder=" Search" name="search">
+                            <button>
+                                <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
+                <li class="topFM"></li>
+            </ul>
+            <ul class="secondbar">
+                <li><a href="hour-ad-loca.html">Hours & Admission & Location</a></li>
+                <li><a href="floorplan1.html">Floor Plan</a></li>
+            </ul> 
         </div>
 
 
@@ -273,8 +273,8 @@
 <script>
 
     var mySwiper = new Swiper ('.swiper', {
-     // 垂直切换选项
-      loop: true, // 循环模式选项
+    
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 10, 
       centeredSlides:true,
@@ -284,21 +284,16 @@
         },
       },
     
-
-      
-      // 如果需要分页器
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
       
-      // 如果需要前进后退按钮
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       
-      // 如果需要滚动条
       scrollbar: {
         el: '.swiper-scrollbar',
       },

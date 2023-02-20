@@ -2990,7 +2990,6 @@ footer h6{
     }
 
 
-
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -3055,7 +3054,6 @@ footer h6{
         grid-area: 1 / 4 / 3 / 6;
         background-image: url("../img/about1.png"); 
         background-size: cover;
-        background-position:
     }
     .div3 {
          grid-area: 3 / 1 / 8 / 3;
@@ -3094,6 +3092,7 @@ footer h6{
         height: 100%;
         transform-style: preserve-3d;
         transition: all 0.8s ease-in-out;
+        cursor: pointer;
     }
 
     .nocard{
