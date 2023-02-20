@@ -99,8 +99,8 @@ main{
     width: 380px;
     flex-direction: column;
     position: absolute;
-    top: 40px;
-    left: -10px;
+    top: 70px;
+    right: 520px;
     z-index: 1;
     align-items: flex-start;
     background-color: rgb(0, 0, 0);
@@ -112,18 +112,28 @@ main{
     transition: all ease-in-out .5s;
 }
 .secondbar.show{
-    max-height: 80px;
+    max-height: 100px;
 }
 
 
 .secondbar li{
-    height: 40px;
+    height: 50px;
     text-align: left;
     margin-left: 0px;
     justify-self: flex-start;
-    line-height: 40px;
+    line-height: 50px;
     padding-left: 10px;
 }
+
+.secondbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'MinSans-Reg';
+    text-align:end;
+    line-height: auto;   
+}
+
 
 
 .search form {

@@ -28,7 +28,7 @@ body{
 }
 
 .top .topbar{
-    width: 900px;
+    width: 300px;
     /* height: 100vh; */
     display: block;
     flex-direction: column;
@@ -65,32 +65,33 @@ body{
     /* max-height: 0; */
 }
 
-.top .secondbar{
+.secondbar{
     width: 0px;
     max-height: 160px;
-    top: 0px;
-    left: 300px;
-    z-index: 4;
+    top: 70px;
+    left: 80px;
+    z-index: 2;
 }
 
-.top .secondbar li{
-    height: 90px;
+.secondbar li{
+    height: 80px;
     margin: auto;
-    line-height: 90px;
+    line-height: 80px;
     padding-left: 0px;
     border-bottom: 1px solid rgb(48, 48, 48);
+    font-size: 1.3rem;
 }
 
-.top .secondbar li a{
-    /* padding-top: 10px; */
+.secondbar li a{
+    font-size: 3rem;
 }
 
-.top .secondbar li a:nth-child(1){
-    font-size: 1em;;
+.secondbar li a:nth-child(1){
+    font-size: 1rem;;
 }
 
 .secondbar.show{
-    max-height: 180px;
+    max-height: 160px;
     width: 310px;
 
 }
