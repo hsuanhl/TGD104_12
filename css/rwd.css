@@ -1763,7 +1763,7 @@ form{
 
 
 .topthisp{
-    background:black ;
+    /* background:black ; */
 }
 
 .popup-dialog {
@@ -1771,4 +1771,21 @@ form{
     min-width: 380px;
 }
 
+.parent {
+    width: 100%;
+    min-width:380px;
+    height: 2016px;
+    margin: 0 auto;
+    display:block;
+}
+.parent div{
+    height: 250px;
+    border: 1px solid #3f3f3f;
+}
+.front{
+    font-size: 1.3em;
+}
+.back{
+    font-size: 0.6em;
+}
 }

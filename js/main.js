@@ -292,6 +292,10 @@ $('.choose').click(
           });
       });
 
+    // const card = document.getElementsById("card")
+    $(".card").click(function(){
+        $(this).toggleClass("flipCard")
+    });
     //   window.addEventListener("load", function(){
     //     setTimeout(
     //      function open(event){
@@ -401,4 +405,3 @@ $('.choose').click(
 //     console.log($this);
 // })
 
-$
