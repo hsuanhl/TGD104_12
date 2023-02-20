@@ -3112,7 +3112,7 @@ footer h6{
         backface-visibility: hidden;
         text-align: center;
         transform: rotateY(180deg);
-        font-size: 1.3em;
+        font-size: 1em;
         display: flex;
         justify-content: center;
         align-items: center; 
