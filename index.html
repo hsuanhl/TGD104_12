@@ -23,7 +23,7 @@
 
 </head>
 
-<body onload="myFunction()">
+<body>
     <div id="loader">
         <div class="outter">
             <div class="triback">
@@ -271,6 +271,20 @@
 <script type="text/javascript" src="js/main.js"></script>
 
 <script>
+
+    window.onload = function() {
+     myFunction();
+    }
+
+    function myFunction() {
+    setTimeout(showPage, 4000);
+    }
+        
+    function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+    } 
+
 
     var mySwiper = new Swiper ('.swiper', {
     

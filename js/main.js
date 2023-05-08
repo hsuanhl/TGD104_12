@@ -18,16 +18,7 @@ $('.banner').each(function(){
     }
 })
 
-    let myVar;
-    function myFunction() {
-    myVar = setTimeout(showPage, 4000);
-        }
-        
-    function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
-        } 
-
+    
 $('.burger').click(function(e) {
         e.preventDefault();
         $('.topbar').toggleClass('active')
