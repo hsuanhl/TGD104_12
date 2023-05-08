@@ -63,43 +63,43 @@ $(function(){
         }
     })
     
-         //input 输入事件
-    $('.input-num').keyup(function(){
-        addMoney();
-    });
-         
-        //input失焦事件
-        $('.input-num').blur(function(){
-            var this_val = $(this).val();
-            if(this_val == '' || this_val == 'undefind'){
-                $(this).val('0');
-            }else{
-                $(this).val(this_val);
+                //input 输入事件
+            $('.input-num').keyup(function(){
+                var this_val = $(this).val();
+                if(isNaN(this_val)){
+                    $(this).val('0');
+                }
+                addMoney();
+            });
+                    
+            //input失焦事件
+            $('.input-num').blur(function(){
+                var this_val = $(this).val();
+                if(isNaN(this_val)){
+                    $(this).val('0');
+                }else{
+                    $(this).val(this_val);
+                }
+            });
+
+            function addMoney(){
+                var now_total = 0;
+                $('.chooseTicket tr').each(function(index){
+                    var nowPrice = $(this).find('.money').attr('data-price');
+                    var numbers = $(this).find('.input-num').val();
+                    var now_price_total = nowPrice * numbers;
+                    now_total += now_price_total;
+                })
+                var ex_total = 0;
+                $('.chooseExTi li').each(function(index){
+                    var exPrice = $(this).find('.money').attr('data-price');
+                    var exnums = $(this).find('.input-num').val();
+                    var ex_price_total = exPrice * exnums;
+                    ex_total += ex_price_total;
+                })
+                var esubTotal = now_total + ex_total
+                $('.totalmoney').html(`&nbsp`+ esubTotal);
             }
-        });
-
-
-        function addMoney(){
-            var now_total = 0;
-            $('.chooseTicket tr').each(function(index){
-                var nowPrice = $(this).find('.money').attr('data-price');
-                var numbers = $(this).find('.input-num').val();
-                var now_price_total = nowPrice * numbers;
-                now_total += now_price_total;
-                
-                
-            })
-            var ex_total = 0;
-            $('.chooseExTi li').each(function(index){
-                var exPrice = $(this).find('.money').attr('data-price');
-                var exnums = $(this).find('.input-num').val();
-                var ex_price_total = exPrice * exnums;
-                ex_total += ex_price_total;
-
-            })
-            var esubTotal = now_total + ex_total
-            $('.totalmoney').html(`&nbsp`+ esubTotal);
-        }
 })
 
 $(function(){
@@ -120,13 +120,17 @@ $(function(){
     
          //input 输入事件
     $('.input-num2').keyup(function(){
+            var this_val = $(this).val();
+            if(isNaN(this_val)){
+                $(this).val('0');
+            }
         addMoneytwo();
     });
          
         //input失焦事件
         $('.input-num2').blur(function(){
             var this_valtwo = $(this).val();
-            if(this_valtwo == '' || this_valtwo == 'undefind'){
+            if(isNaN(this_val)){
                 $(this).val('0');
             }else{
                 $(this).val(this_valtwo);
@@ -134,17 +138,17 @@ $(function(){
         });
 
 
-        function addMoneytwo(){
+        function addMoneytwo() {
             var now_totaltwo = 0;
-            $('.cartitems').each(function(index){
+            $('.cartitems').each(function (index) {
                 var nowPricetwo = $(this).find('.money').attr('data-price');
                 var numberstwo = $(this).find('.input-num2').val();
-                var now_price_totaltwo = nowPricetwo * numberstwo;
-                now_totaltwo += now_price_totaltwo;
-                
-                $('.ttmoney span').html(`&nbsp`+ now_totaltwo);
+                if (!isNaN(numberstwo)) {
+                    var now_price_totaltwo = nowPricetwo * numberstwo;
+                    now_totaltwo += now_price_totaltwo;
+                }
+                $('.ttmoney span').html(`&nbsp` + now_totaltwo);
             })
-            
         }
 });
 
@@ -295,112 +299,3 @@ $('.choose').click(
     $(".card").click(function(){
         $(this).toggleClass("flipCard")
     });
-    //   window.addEventListener("load", function(){
-    //     setTimeout(
-    //      function open(event){
-    //         document.querySelector(".popup").style.display = "block";
-    //     },
-    //     2000 
-    // )
-    // });
-      
-          
-      
-
-    //   let the_forms = document.getElementById("the_form")
-    //   //submit
-    //   the_forms.addEventListener("submit", function(e){
-    //     //console.log('gggg') <----測試submit有被觸發
-
-    //     let f_name = document.getElementById("name");
-    //     let f_mail = document.getElementsByClassName("email");
-    //     let f_card = document.getElementsByClassName("card");
-    //     let f_phone = document.getElementById("phone");
-    //     let f_edate = document.getElementById("edate");
-    //     let f_cvv = document.getElementById("cvv");
-
-    //     let card_str ="";
-    //     for(let i = 0; i < f_card.length; i++){
-    //         card_str = card_str + f_card[i].value; 
-    //     }
-    //     // console.log(card_str);
-    //       let send_data = true;
-
-    //       //驗證填寫的資料 驗證通過則send_data保持true, 否則false且資料不送出
-
-    //       if(f_name.value ==""){
-    //           f_name.classList.add("-error");
-    //           send_data = false;
-    //       }else{
-    //           f_name.classList.remove("-error");
-    //       }
-
-    //       if(f_phone.value ==""){
-    //         f_phone.classList.add("-error");
-    //         send_data = false;
-    //     }else{
-    //         f_phone.classList.remove("-error");
-    //     }
-
-    //     if(f_edate.value ==""){
-    //         f_edate.classList.add("-error");
-    //         send_data = false;
-    //     }else{
-    //         f_edate.classList.remove("-error");
-    //     }
-    //     if(f_cvv.value ==""){
-    //         f_cvv.classList.add("-error");
-    //         send_data = false;
-    //     }else{
-    //         f_cvv.classList.remove("-error");
-    //     }
-
-    //       //使用is.js套件驗證email
-    //       if(is.email("f_mail.value")){
-    //           f_mail.classList.remove("-error");
-    //       }else{
-    //           f_mail.classList.add("-error");
-    //           send_data = false;
-    //       }
-
-
-    //       //卡號
-    //       if( is.creditCard(card_str)){
-    //           for(let i = 0; i < cardnum.length; i++){
-    //               cardnum[i].classList.remove("-error");
-    //           }
-    //       }else{
-    //           for (let i = 0; i < cardnum.length; i++){
-    //               cardnum[i].classList.add("-error");
-    //               send_data = false;
-    //           }
-              
-    //       }
-      
-
-    //       if(!send_data){
-    //           e.preventDefault();
-    //       }
-    //     });
-
-// $('.money').each(function(){
-//     let tiPrice = parseInt($(this).text()) *parseInt($(this).closest('.input-num').val());
-//     console.log(tiPrice)
-// })
-
-
-
-// let iSelDate = $(`.ui-state-active`).attr('data-date');
-//     console.log(iSelDate);
-
-
-// let itemMoney = parseInt($('.money')) * $('input-num').val()
-// if(){
-
-// }
-
-
-// $('.days').click(function(){
-//     console.log($this);
-// })
-
