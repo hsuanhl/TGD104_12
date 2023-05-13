@@ -25,17 +25,33 @@ $('.burger').click(function(e) {
     })      
 
 
-    $('.visibtn').click(function(e) {
-        e.preventDefault();
-        $('.topbar').toggleClass('left')
-        $('.secondbar').toggleClass('show')
-        $('.visit span').last().toggleClass('left')
+$('.visibtn').mouseenter(function() {
+    $('.topbar').addClass('left');
+    $('.secondbar').addClass('show');
+    $('.visit span').last().addClass('left');
+});
+
+$(document).mouseup(function(e) {
+    let container = $('.visibtn, .secondbar');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.topbar').removeClass('left');
+        $('.secondbar').removeClass('show');
+        $('.visit span').last().removeClass('left');
+    }
+});
+    
+    $('.secondbar').mouseleave(function() {
+        if (!$('.visibtn:hover').length) {
+            $('.topbar').removeClass('left');
+            $('.secondbar').removeClass('show');
+            $('.visit span').last().removeClass('left');
+        }
     });
     
 $(".methodToggole").click(function(){
         $(this).next().slideToggle();
         $(this).children("span").toggleClass('down')
-        });
+    });
 
 
 $(function(){
@@ -73,24 +89,24 @@ $(function(){
                 }
             });
 
-            function addMoney(){
-                var now_total = 0;
-                $('.chooseTicket tr').each(function(index){
-                    var nowPrice = $(this).find('.money').attr('data-price');
-                    var numbers = $(this).find('.input-num').val();
-                    var now_price_total = nowPrice * numbers;
-                    now_total += now_price_total;
-                })
-                var ex_total = 0;
-                $('.chooseExTi li').each(function(index){
-                    var exPrice = $(this).find('.money').attr('data-price');
-                    var exnums = $(this).find('.input-num').val();
-                    var ex_price_total = exPrice * exnums;
-                    ex_total += ex_price_total;
-                })
-                var esubTotal = now_total + ex_total
-                $('.totalmoney').html(`&nbsp`+ esubTotal);
-            }
+        function addMoney(){
+            var now_total = 0;
+            $('.chooseTicket tr').each(function(index){
+                var nowPrice = $(this).find('.money').attr('data-price');
+                var numbers = $(this).find('.input-num').val();
+                var now_price_total = nowPrice * numbers;
+                now_total += now_price_total;
+            })
+            var ex_total = 0;
+            $('.chooseExTi li').each(function(index){
+                var exPrice = $(this).find('.money').attr('data-price');
+                var exnums = $(this).find('.input-num').val();
+                var ex_price_total = exPrice * exnums;
+                ex_total += ex_price_total;
+            })
+            var esubTotal = now_total + ex_total
+            $('.totalmoney').html(`&nbsp`+ esubTotal);
+        }
 })
 
 $(function(){
@@ -154,8 +170,6 @@ document.addEventListener("click", function(e){
             setTimeout(function(){
                 e.target.closest("tr").remove();
             }, 1000);
-
-
         }
     }
 
@@ -194,6 +208,71 @@ $('.choose').click(
 
 //信用卡卡號
     document.addEventListener("DOMContentLoaded", function(){
+        let phone = document.getElementById("phone");
+        let pattern = /^09\d{8}$/; 
+        if (phone) {
+            phone.addEventListener("keyup", function(e) {
+                let numonly = (e.target.value).replace(/\D/g, "");
+                e.target.value = numonly;
+
+                if (pattern.test(e.target.value)){
+                    let span = document.querySelector(".ques2 .alert");
+                    if (span !== null) {
+                        span.classList.remove("showAlert");
+                    }
+                    // console.log("符合");
+
+                } else {
+                    let span = document.querySelector(".ques2 .alert");
+                    if (span !== null) {
+                        span.classList.add("showAlert");
+                    }
+                    // console.log("不符合");
+                }            
+            });
+        }
+        let email = document.getElementById("email");
+        let emailtwo = document.getElementById("emailtwo");
+        
+        if(emailtwo){
+            emailtwo.disabled = true;
+        }
+            
+        
+        if (email && emailtwo) {
+          email.addEventListener("keyup", function(e) {
+            if(e.target.checkValidity()){
+                let span = document.querySelector(".ques3 .alert");
+                    if (span !== null) {
+                        span.classList.remove("showAlert");
+                    }
+                } else {
+                    let span = document.querySelector(".ques3 .alert");
+                    if (span !== null) {
+                        span.classList.add("showAlert");
+                    }
+            }
+            if (e.target.value != "" && e.target.checkValidity()){
+              emailtwo.disabled = false;
+            } 
+          });
+
+          emailtwo.addEventListener("keyup", function(e){
+            if(e.target.value === email.value){
+                let span = document.querySelector(".ques4 .alert");
+                    if (span !== null) {
+                        span.classList.remove("showAlert");
+                    }
+                } else {
+                    let span = document.querySelector(".ques4 .alert");
+                    if (span !== null) {
+                        span.classList.add("showAlert");
+                    }
+            }
+          });
+        }
+
+
         let cardnum = document.getElementsByClassName("card");
         for(let i = 0; i < cardnum.length; i++){
             cardnum[i].addEventListener("keydown", function(e){
@@ -219,21 +298,30 @@ $('.choose').click(
                 }
               
             });
+        };
+
+        let cvcode = document.getElementById("cvv");
+        if (cvcode) {
+            cvcode.addEventListener("keyup", function(e) {
+              let numonly = (e.target.value).replace(/\D/g, "");
+              e.target.value = numonly;
+            });
         }
+        
     });
 
 
 
 
     function formatString(e) {
-        var inputChar = String.fromCharCode(event.keyCode);
-        var code = event.keyCode;
+        var inputChar = String.fromCharCode(e.keyCode);
+        var code = e.keyCode;
         var allowedKeys = [8];
         if (allowedKeys.indexOf(code) !== -1) {
           return;
         }
       
-        event.target.value = event.target.value.replace(
+        e.target.value = e.target.value.replace(
           /^([1-9]\/|[2-9])$/g, '0$1/' // 3 > 03/
         ).replace(
           /^(0[1-9]|1[0-2])$/g, '$1/' // 11 > 11/
@@ -287,6 +375,6 @@ $('.choose').click(
       });
 
     // const card = document.getElementsById("card")
-    $(".card").click(function(){
+    $(".cards").mouseenter(function(){
         $(this).toggleClass("flipCard")
     });

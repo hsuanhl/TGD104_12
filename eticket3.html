@@ -152,16 +152,17 @@
                         <input type="text" name="name" value="" id="name">
                     </div>
                     <div class="ques2">
-                        <p>Phone:</p>
+                        <p>Cell Phone:<span class="alert">* Please enter correct cell phone number </span></p>
                         <input type="text" name="phone" value="" maxlength="10" id="phone">
                     </div>
+
                     <div class="ques3">
-                        <p>Email:</p>
+                        <p>Email:<span class="alert">* Please enter correct email address </span></p>
                         <input name="pemail" type="email" id="email">
                     </div>
                     <div class="ques4">
-                        <p>Confirm Email:</p>
-                        <input name="address" type="email" id="email2">
+                        <p>Confirm Email:<span class="alert">* Email and Confirm Email must match. </span></p>
+                        <input name="address" type="email" id="emailtwo">
                     </div>
                 </div>
         </div>
@@ -189,14 +190,14 @@
                     <div class="ques8">
                         <label>Expiry Date：</label>
                         <br>
-                        <input maxlength='5' placeholder="MM/YY" type="text" onkeyup="formatString(event);" id="edate">
+                        <input maxlength="5" placeholder="MM/YY" type="text" onkeyup="formatString(event);" id="edate">
                     </div>
                     <div class="ques9">
                         <label>CVV Code：</label>
                         <!-- <button><span class="material-symbols-outlined">info
                             </span></button> -->
                         <br>
-                        <input name="address" type="text" placeholder ="CVV Code" id="cvv">
+                        <input maxlength='3' name="address" type="text" placeholder ="CVV Code" id="cvv">
                     </div>
                 </div>
         </div>
