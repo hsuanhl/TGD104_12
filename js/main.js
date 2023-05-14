@@ -19,10 +19,21 @@ $('.banner').each(function(){
 })
 
     
-$('.burger').click(function(e) {
-        e.preventDefault();
-        $('.topbar').toggleClass('active')
-    })      
+$(document).ready(function() {
+    $('.burger').click(function(e) {
+      e.preventDefault();
+      $('.topbar').toggleClass('active');
+    });
+  
+    $(document).on('mousedown', function(e) {
+      let target = e.target;
+      let topbar = $('.topbar')[0];
+      let burger = $('.burger')[0];
+      if (!topbar.contains(target) && !target.isSameNode(burger)) {
+        $('.topbar').removeClass('active');
+      }
+    });
+  });
 
 
 $('.visibtn').mouseenter(function() {
@@ -211,7 +222,7 @@ $('.choose').click(
         let phone = document.getElementById("phone");
         let pattern = /^09\d{8}$/; 
         if (phone) {
-            phone.addEventListener("keyup", function(e) {
+            phone.onkeyup = function(e) {
                 let numonly = (e.target.value).replace(/\D/g, "");
                 e.target.value = numonly;
 
@@ -229,7 +240,7 @@ $('.choose').click(
                     }
                     // console.log("不符合");
                 }            
-            });
+            };
         }
         let email = document.getElementById("email");
         let emailtwo = document.getElementById("emailtwo");
@@ -240,7 +251,7 @@ $('.choose').click(
             
         
         if (email && emailtwo) {
-          email.addEventListener("keyup", function(e) {
+          email.onkeyup = function(e) {
             if(e.target.checkValidity()){
                 let span = document.querySelector(".ques3 .alert");
                     if (span !== null) {
@@ -255,9 +266,9 @@ $('.choose').click(
             if (e.target.value != "" && e.target.checkValidity()){
               emailtwo.disabled = false;
             } 
-          });
+          };
 
-          emailtwo.addEventListener("keyup", function(e){
+          emailtwo.onkeyup = function(e){
             if(e.target.value === email.value){
                 let span = document.querySelector(".ques4 .alert");
                     if (span !== null) {
@@ -269,7 +280,7 @@ $('.choose').click(
                         span.classList.add("showAlert");
                     }
             }
-          });
+          };
         }
 
 
@@ -302,10 +313,10 @@ $('.choose').click(
 
         let cvcode = document.getElementById("cvv");
         if (cvcode) {
-            cvcode.addEventListener("keyup", function(e) {
+            cvcode.onkeyup = function(e) {
               let numonly = (e.target.value).replace(/\D/g, "");
               e.target.value = numonly;
-            });
+            };
         }
         
     });
