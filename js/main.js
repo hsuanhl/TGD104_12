@@ -83,7 +83,7 @@ $(function(){
     
                 //input 输入事件
             $('.input-num').keyup(function(){
-                var this_val = $(this).val();
+                let this_val = $(this).val();
                 if(isNaN(this_val)){
                     $(this).val('0');
                 }
@@ -92,7 +92,7 @@ $(function(){
                     
             //input失焦事件
             $('.input-num').blur(function(){
-                var this_val = $(this).val();
+                let this_val = $(this).val();
                 if(isNaN(this_val)){
                     $(this).val('0');
                 }else{
@@ -101,21 +101,21 @@ $(function(){
             });
 
         function addMoney(){
-            var now_total = 0;
+            let now_total = 0;
             $('.chooseTicket tr').each(function(index){
-                var nowPrice = $(this).find('.money').attr('data-price');
-                var numbers = $(this).find('.input-num').val();
-                var now_price_total = nowPrice * numbers;
+                let nowPrice = $(this).find('.money').attr('data-price');
+                let numbers = $(this).find('.input-num').val();
+                let now_price_total = nowPrice * numbers;
                 now_total += now_price_total;
             })
-            var ex_total = 0;
+            let ex_total = 0;
             $('.chooseExTi li').each(function(index){
-                var exPrice = $(this).find('.money').attr('data-price');
-                var exnums = $(this).find('.input-num').val();
-                var ex_price_total = exPrice * exnums;
+                let exPrice = $(this).find('.money').attr('data-price');
+                let exnums = $(this).find('.input-num').val();
+                let ex_price_total = exPrice * exnums;
                 ex_total += ex_price_total;
             })
-            var esubTotal = now_total + ex_total
+            let esubTotal = now_total + ex_total
             $('.totalmoney').html(`&nbsp`+ esubTotal);
         }
 })
@@ -200,14 +200,14 @@ $('.choose').click(
     });
 
     $(".option li").click(function () {
-    var _text = ($(this).text())
+    let _text = ($(this).text())
     $(".choose").val(_text)
     $(".option").hide()
 
-    var classToFilter = $(this).attr('data-filter');
+    let classToFilter = $(this).attr('data-filter');
     
-    var hide = $('.listev li').not('.' + classToFilter);
-    var show = $('.listev li.' + classToFilter)
+    let hide = $('.listev li').not('.' + classToFilter);
+    let show = $('.listev li.' + classToFilter)
     show.show();
     hide.hide();
     
@@ -217,7 +217,7 @@ $('.choose').click(
 
 
 
-//信用卡卡號
+//手機,信用卡卡號
     document.addEventListener("DOMContentLoaded", function(){
         let phone = document.getElementById("phone");
         let pattern = /^09\d{8}$/; 
@@ -325,9 +325,9 @@ $('.choose').click(
 
 
     function formatString(e) {
-        var inputChar = String.fromCharCode(e.keyCode);
-        var code = e.keyCode;
-        var allowedKeys = [8];
+        let inputChar = String.fromCharCode(e.keyCode);
+        let code = e.keyCode;
+        let allowedKeys = [8];
         if (allowedKeys.indexOf(code) !== -1) {
           return;
         }
@@ -348,6 +348,11 @@ $('.choose').click(
           /\/\//g, '/' // Prevent entering more than 1 `/`
         );
       };
+
+      document.getElementById("submitButton").addEventListener("click", function() {
+        location.href = "#popup-one";
+        });
+    
 
 
       $('.hideMore22').hide();

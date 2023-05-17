@@ -3025,21 +3025,6 @@ footer h6{
 }
 
 
-/* .animate-bottom {
-    opacity: 1;
-    animation: showing ease-in 1s;
-  }
-  
-  @keyframes showing {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-
-  } */
-
 #myDiv {
   display: none;
 }
