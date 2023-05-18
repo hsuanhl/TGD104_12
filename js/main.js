@@ -349,9 +349,13 @@ $('.choose').click(
         );
       };
 
-      document.getElementById("submitButton").addEventListener("click", function() {
-        location.href = "#popup-one";
+      let submitButton = document.getElementById("submitButton");
+
+      if (submitButton) {
+        submitButton.addEventListener("click", function() {
+          location.href = "#popup-one";
         });
+      }
     
 
 
@@ -369,8 +373,8 @@ $('.choose').click(
       });
 
       $(function() {
-      //一開始所有資料都隱藏
-          $(".news2022").hide(); //第一個資料隱藏
+      
+          $(".news2022").show(); 
           $(".news2021").hide(); //第二個資料隱藏
           $("#slt1").change(function(val) {
               //因為是 select 所以綁定 change 事件
